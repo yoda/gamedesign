@@ -1,6 +1,8 @@
 type Human
 {
 	class = PlayerCharacter
+	walkMaxVelocity = 7
+	walkForce = 2500
 	attachedObjects
 	{
 		mesh

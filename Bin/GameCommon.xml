@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameCommon</name>
+    </assembly>
+    <members>
+        <member name="T:GameCommon.FPSWeaponMaterial">
+            <summary>
+            Material for correct rendering of weapons in a FPS mode.
+            </summary>
+        </member>
+        <member name="T:GameCommon.ShaderBaseMaterial">
+            <summary>
+            Base template for shader materials.
+            </summary>
+        </member>
+        <member name="T:GameCommon.GameEngineInitialization">
+            <summary>
+            Class for execute actions after initialization of the engine.
+            </summary>
+            <remarks>
+            It is class works in simulation application and editors (Resource Editor, Map Editor).
+            </remarks>
+        </member>
+        <member name="T:GameCommon.LDRBloomCompositorInstance">
+            <summary>
+            Bloom for low dynamic range scene post processing compositor instance.
+            </summary>
+        </member>
+        <member name="T:GameCommon.MotionBlurCompositorInstance">
+            <summary>
+            Represents work with the MotionBlur post effect.
+            </summary>
+        </member>
+        <member name="T:GameCommon.VegetationMaterial">
+            <summary>
+            Material for grass and trees. Adds wave in the vertex shader.
+            </summary>
+        </member>
+        <member name="P:GameCommon.VegetationMaterial.ReceiveObjectsPositionsFromVertices">
+            <summary>
+            Gets or sets a value which indicates it is necessary to reveice objects 
+            positions from the vertices.
+            </summary>
+            <remarks>
+            <para>
+            Usually it is necessary for batched geometry (for waving).
+            </para>
+            <para>
+            Positions will be taken from Type: TextureCoordinates, Index: 4.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:GameCommon.GameControlsManager">
+            <summary>
+            Represents the player control management.
+            </summary>
+        </member>
+        <member name="M:GameCommon.GameControlsManager.Init">
+            <summary>
+            Initialization the class.
+            </summary>
+            <returns><b>true</b> if the object successfully initialized; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:GameCommon.GameControlsManager.Shutdown">
+            <summary>
+            Shutdown the class.
+            </summary>
+        </member>
+        <member name="M:GameCommon.GameControlsManager.DoKeyDown(Engine.KeyEvent)">
+            <summary>
+            Sends the notice on pressing a system key.
+            </summary>
+            <param name="e">Key event arguments.</param>
+            <returns><b>true</b> if such system key is used; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:GameCommon.GameControlsManager.DoKeyUp(Engine.KeyEvent)">
+            <summary>
+            Sends the notice on releasing a system key.
+            </summary>
+            <param name="e">Key event arguments.</param>
+            <returns><b>true</b> if such system key is used; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:GameCommon.GameControlsManager.DoMouseDown(Engine.EMouseButtons)">
+            <summary>
+            Sends the notice on pressing a mouse button.
+            </summary>
+            <param name="button">A value indicating which button was clicked.</param>
+            <returns><b>true</b> if such system key is used; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:GameCommon.GameControlsManager.DoMouseUp(Engine.EMouseButtons)">
+            <summary>
+            Sends the notice on releasing a mouse button.
+            </summary>
+            <param name="button">A value indicating which button was clicked.</param>
+            <returns><b>true</b> if such system key is used; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:GameCommon.GameControlsManager.DoMouseMoveRelative(Engine.MathEx.Vec2)">
+            <summary>
+            Sends the notice on cursor moved.
+            </summary>
+            <param name="mouseOffset">Current mouse position.</param>
+        </member>
+        <member name="P:GameCommon.GameControlsManager.Instance">
+            <summary>
+            Gets an instance of the <see cref="T:GameCommon.GameControlsManager"/>.
+            </summary>
+        </member>
+        <member name="P:GameCommon.GameControlsManager.Items">
+            <summary>
+            Gets the key information collection. <b>Don't modify</b>.
+            </summary>
+        </member>
+        <member name="P:GameCommon.GameControlsManager.GameControlItem.DefaultKeyboardMouseValues">
+            <summary>
+            <b>Don't modify</b>.
+            </summary>
+        </member>
+        <member name="P:GameCommon.GameControlsManager.GameControlItem.DefaultJoystickValues">
+            <summary>
+            <b>Don't modify</b>.
+            </summary>
+        </member>
+        <member name="T:GameCommon.SimpleExampleMaterial">
+            <summary>
+            Simple example of high level material.
+            </summary>
+        </member>
+        <member name="T:GameCommon.GameMusic">
+            <summary>
+            Class for management of music in game.
+            </summary>
+        </member>
+        <member name="M:GameCommon.GameMusic.MusicPlay(System.String,System.Boolean)">
+            <summary>
+            Play music.
+            </summary>
+            <param name="fileName">The file name.</param>
+            <param name="loop">Looping flag.</param>
+        </member>
+        <member name="M:GameCommon.GameMusic.MusicStop">
+            <summary>
+            Stop music.
+            </summary>
+        </member>
+        <member name="P:GameCommon.GameMusic.MusicChannelGroup">
+            <summary>
+            Gets the music channel group.
+            </summary>
+        </member>
+        <member name="T:GameCommon.HDRCompositorInstance">
+            <summary>
+            HDR scene post processing compositor instance.
+            </summary>
+        </member>
+        <member name="T:GameCommon.HeatVisionCompositorInstance">
+            <summary>
+            Represents work with the HeatVision post effect.
+            </summary>
+        </member>
+        <member name="T:GameCommon.BlurCompositorInstance">
+            <summary>
+            GaussianBlur scene post processing compositor instance.
+            </summary>
+        </member>
+        <member name="T:GameCommon.DebugInformationWindow">
+            <summary>
+            Defines a debug information window class.
+            </summary>
+        </member>
+    </members>
+</doc>

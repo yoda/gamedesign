@@ -1,0 +1,12 @@
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameCommon.dll
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameCommon.pdb
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameCommon.xml
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameCommon\obj\Debug\GameCommon.dll
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameCommon\obj\Debug\GameCommon.pdb
+C:\Users\yoda\Desktop\gamedesign\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\gamedesign\GameCommon\obj\Debug\GameCommon.dll
+C:\Users\yoda\Desktop\gamedesign\GameCommon\obj\Debug\GameCommon.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.dll
+C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.xml

@@ -4,11 +4,6 @@
         <name>DedicatedServer</name>
     </assembly>
     <members>
-        <member name="M:DedicatedServer.Program.Main">
-            <summary>
-            The main entry point for the application.
-            </summary>
-        </member>
         <member name="F:DedicatedServer.MainForm.components">
             <summary>
             Required designer variable.
@@ -40,6 +35,11 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:DedicatedServer.Program.Main">
+            <summary>
+            The main entry point for the application.
             </summary>
         </member>
     </members>

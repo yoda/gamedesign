@@ -117,6 +117,8 @@
     <Compile Include="GameWorld.cs" />
     <Compile Include="General.cs" />
     <Compile Include="Gun.cs" />
+    <Compile Include="TS Specific\Statue.cs" />
+    <Compile Include="TS Specific\HumanPlayerCharacter.cs" />
     <Compile Include="WaterPlane.cs" />
     <Compile Include="WeaponItem.cs" />
     <Compile Include="HealthItem.cs" />

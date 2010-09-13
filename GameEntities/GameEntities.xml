@@ -1120,5 +1120,15 @@
         <member name="M:GameEntities.TurretAI.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
+        <member name="T:GameEntities.StatueCharacterType">
+            <summary>
+            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.HumanPlayerCharacterType">
+            <summary>
+            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
+            </summary>
+        </member>
     </members>
 </doc>

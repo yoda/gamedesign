@@ -59,8 +59,8 @@ namespace GameEntities
 		float flyControlForce = flyControlForceDefault;
 
 		const float jumpVelocityDefault = 4;
-		[FieldSerialize]
-		float jumpVelocity = jumpVelocityDefault;
+        [FieldSerialize]
+        float jumpVelocity = 0; //jumpVelocityDefault;
 
 		[FieldSerialize]
 		string soundJump;

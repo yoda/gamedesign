@@ -25,16 +25,16 @@ namespace GameEntities
 		string idleAnimationName = "idle";
 
 		[FieldSerialize]
-		[DefaultValue( "Walk" )]
-		string walkAnimationName = "Walk";
+		[DefaultValue( "walk" )]
+		string walkAnimationName = "walk";
 
 		[FieldSerialize]
 		[DefaultValue( 1.0f )]
 		float walkAnimationVelocityMultiplier = 1;
 
 		[FieldSerialize]
-		[DefaultValue( "jump" )]
-		string jumpAnimationName = "jump";
+		[DefaultValue( "blow" )]
+		string jumpAnimationName = "blow";
 
 		//
 
@@ -52,7 +52,7 @@ namespace GameEntities
 			set { idleAnimationName = value; }
 		}
 
-		[DefaultValue( "Walk" )]
+		[DefaultValue( "walk" )]
 		public string WalkAnimationName
 		{
 			get { return walkAnimationName; }
@@ -66,7 +66,7 @@ namespace GameEntities
 			set { walkAnimationVelocityMultiplier = value; }
 		}
 
-		[DefaultValue( "jump" )]
+		[DefaultValue( "blow" )]
 		public string JumpAnimationName
 		{
 			get { return jumpAnimationName; }

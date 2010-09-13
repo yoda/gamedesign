@@ -3,10 +3,11 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 55.19177 6.430205 0.9040804
+editorCameraPosition = 89.50393 -9.858107 3.473165
 editorCameraDirection = 2.865486 -0.06848797
 shadowColor = 1 1 1
 logicSystemManager = 3
+sceneGraphDynamicTree = True
 shadowTechnique = ShadowmapMedium
 rootEditorLayer
 {
@@ -24,143 +25,8 @@ entity
 }
 entity
 {
-	type = SkyBox
-	uin = 5
-	classPrompt = SkyBox
-	textureName = Types\Base\SkyBox\DefaultSkyBox.jpg
-	color = 1 1 1
-	power = 1
-}
-entity
-{
-	type = HeightmapTerrain
-	uin = 6
-	classPrompt = HeightmapTerrain
-	position = 0 0 -50
-	horizontalSize = 1000
-	verticalSize = 100
-	dataDirectory = HeightmapTerrain
-	masksSize = 1024
-	detailMapsDistance = 50
-	renderQueueGroup = WorldGeometry1
-	collisionMaterialName = Default
-	bottomClipHeight = -10000
-	castDynamicShadows = False
-	receiveStaticShadows = True
-	simpleRendering = False
-	tileSize = 16
-	layers
-	{
-		item
-		{
-			name = base
-			baseMap = Types\Base\HeightmapTerrain\DefaultLayer0Base.jpg
-			baseScale = 10
-			detailMap = Types\Base\HeightmapTerrain\DefaultLayer0Detail.jpg
-			detailScale = 2
-		}
-		item
-		{
-			name = second
-			baseMap = Types\Base\HeightmapTerrain\DefaultLayer1Base.jpg
-			baseScale = 10
-			detailMap = Types\Base\HeightmapTerrain\DefaultLayer1Detail.jpg
-			detailScale = 2
-		}
-	}
-}
-entity
-{
-	type = Light
-	uin = 7
-	classPrompt = Light
-	lightType = Spot
-	diffuseColor = 1 1 1
-	diffusePower = 1
-	specularColor = 0 0 0
-	specularPower = 1
-	attenuationRangeAutomatic = True
-	attenuationRange = Infinity
-	attenuationConstant = 1
-	attenuationLinear = 0
-	attenuationQuadric = 0
-	spotlightInnerAngle = 30
-	spotlightOuterAngle = 40
-	spotlightFalloff = 1
-	castShadows = True
-	allowStaticLighting = False
-	allowDynamicLighting = True
-	position = -29.83819 199.4587 107.3407
-	rotation = -0.228795 -0.1484123 0.6727221 -0.6878018
-	name = Light_1
-}
-entity
-{
-	type = SpawnPoint
-	uin = 8
-	classPrompt = SpawnPoint
-	defaultPoint = False
-	position = 74.90825 6.696418 0.04474201
-	name = SpawnPoint_0
-}
-entity
-{
-	type = StaticBox
-	uin = 9
-	classPrompt = MapObject
-	position = 3.148905 14.93677 0.5029107
-	name = StaticBox_0
-}
-entity
-{
-	type = PipeCorner
-	uin = 10
-	classPrompt = MapObject
-	position = -149.4117 -403.4888 0.4996593
-	name = PipeCorner_0
-}
-entity
-{
-	type = Human
-	uin = 11
-	classPrompt = PlayerCharacter
-	contusionTimeRemaining = 0
-	torch = 19
-	intellectShouldDeleteAfterDetach = False
-	position = 7.888262 16.0738 1.916694
-	name = Human_0
-	weapons
-	{
-		item
-		{
-			exists = False
-			normalBulletCount = 0
-			normalMagazineCount = 0
-			alternativeBulletCount = 0
-			alternativeMagazineCount = 0
-		}
-		item
-		{
-			exists = False
-			normalBulletCount = 0
-			normalMagazineCount = 0
-			alternativeBulletCount = 0
-			alternativeMagazineCount = 0
-		}
-		item
-		{
-			exists = False
-			normalBulletCount = 0
-			normalMagazineCount = 0
-			alternativeBulletCount = 0
-			alternativeMagazineCount = 0
-		}
-	}
-}
-entity
-{
 	type = Plane001
-	uin = 12
+	uin = 5
 	classPrompt = MapObject
 	position = 83.41403 0.2219959 0.01
 	name = Plane001_0
@@ -168,7 +34,7 @@ entity
 entity
 {
 	type = Plane002
-	uin = 13
+	uin = 6
 	classPrompt = MapObject
 	position = 1.872562 0.4564896 0.01
 	name = Plane002_0
@@ -176,7 +42,7 @@ entity
 entity
 {
 	type = Plane003
-	uin = 14
+	uin = 7
 	classPrompt = MapObject
 	position = -44.61867 6.915591 0.01
 	name = Plane003_0
@@ -184,7 +50,7 @@ entity
 entity
 {
 	type = Plane004
-	uin = 15
+	uin = 8
 	classPrompt = MapObject
 	position = 43.18708 0.5203495 0.01
 	rotation = 0 0 -0.7019681 0.7122083
@@ -193,7 +59,7 @@ entity
 entity
 {
 	type = Plane005
-	uin = 16
+	uin = 9
 	classPrompt = MapObject
 	position = 1.751673 41.30046 0.01
 	rotation = 0 0 -0.7009559 -0.7132046
@@ -202,40 +68,7 @@ entity
 entity
 {
 	type = Light
-	uin = 17
-	classPrompt = Light
-	lightType = Directional
-	diffuseColor = 1 1 1
-	diffusePower = 1
-	specularColor = 0 0 0
-	specularPower = 1
-	attenuationRangeAutomatic = True
-	attenuationRange = Infinity
-	attenuationConstant = 1
-	attenuationLinear = 0
-	attenuationQuadric = 0
-	spotlightInnerAngle = 30
-	spotlightOuterAngle = 40
-	spotlightFalloff = 1
-	castShadows = True
-	allowStaticLighting = False
-	allowDynamicLighting = True
-	position = -15.70552 57.29614 86.47574
-	rotation = -0.6789373 -0.1320479 0.7012514 0.1727831
-	name = Light_0
-}
-entity
-{
-	type = SubmachineGunItem
-	uin = 18
-	classPrompt = WeaponItem
-	respawnTime = 10
-	position = 80.09946 -2.70215 0.3491153
-}
-entity
-{
-	type = Light
-	uin = 19
+	uin = 10
 	classPrompt = Light
 	lightType = Spot
 	diffuseColor = 1 1 1
@@ -253,6 +86,15 @@ entity
 	castShadows = True
 	allowStaticLighting = False
 	allowDynamicLighting = True
-	position = 7.888262 16.0738 1.916694
-	name = Light_3
+	position = 0 0 0
+	name = Light_2
+}
+entity
+{
+	type = SpawnPoint
+	uin = 11
+	classPrompt = SpawnPoint
+	defaultPoint = False
+	position = 80.71687 -4.723415 0.05142869
+	name = SpawnPoint_0
 }

@@ -1,0 +1,14 @@
+type Plane005
+{
+	class = MapObject
+	allowEditorCreate = True
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\StaticObjects\Rooms\Plane.005.mesh
+			collision = True
+			scale = 20 20 20
+		}
+	}
+}

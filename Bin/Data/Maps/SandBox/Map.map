@@ -3,8 +3,8 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 47.88203 34.7781 31.55866
-editorCameraDirection = 3.615697 -0.7117567
+editorCameraPosition = 14.46914 -2.030064 90.17622
+editorCameraDirection = 0.9082994 -1.560796
 shadowColor = 1 1 1
 logicSystemManager = 3
 shadowTechnique = ShadowmapMedium
@@ -24,32 +24,8 @@ entity
 }
 entity
 {
-	type = Light
-	uin = 5
-	classPrompt = Light
-	lightType = Spot
-	diffuseColor = 1 1 1
-	diffusePower = 1
-	specularColor = 0 0 0
-	specularPower = 1
-	attenuationRangeAutomatic = True
-	attenuationRange = Infinity
-	attenuationConstant = 1
-	attenuationLinear = 0
-	attenuationQuadric = 0
-	spotlightInnerAngle = 30
-	spotlightOuterAngle = 40
-	spotlightFalloff = 1
-	castShadows = True
-	allowStaticLighting = False
-	allowDynamicLighting = True
-	position = 9.691893 11.08639 -0.06747847
-	name = Light_0
-}
-entity
-{
 	type = SkyBox
-	uin = 6
+	uin = 5
 	classPrompt = SkyBox
 	textureName = Types\Base\SkyBox\DefaultSkyBox.jpg
 	color = 1 1 1
@@ -58,7 +34,7 @@ entity
 entity
 {
 	type = HeightmapTerrain
-	uin = 7
+	uin = 6
 	classPrompt = HeightmapTerrain
 	position = 0 0 -50
 	horizontalSize = 1000
@@ -96,7 +72,7 @@ entity
 entity
 {
 	type = Light
-	uin = 8
+	uin = 7
 	classPrompt = Light
 	lightType = Spot
 	diffuseColor = 1 1 1
@@ -114,64 +90,136 @@ entity
 	castShadows = True
 	allowStaticLighting = False
 	allowDynamicLighting = True
-	position = 2.674722 5.234593 21.95737
-	rotation = -0.6337542 -0.5643508 0.3950816 -0.3518156
+	position = -29.83819 199.4587 107.3407
+	rotation = -0.228795 -0.1484123 0.6727221 -0.6878018
 	name = Light_1
 }
 entity
 {
-	type = Light
-	uin = 9
-	classPrompt = Light
-	lightType = Spot
-	diffuseColor = 1 1 1
-	diffusePower = 1
-	specularColor = 0 0 0
-	specularPower = 1
-	attenuationRangeAutomatic = True
-	attenuationRange = Infinity
-	attenuationConstant = 1
-	attenuationLinear = 0
-	attenuationQuadric = 0
-	spotlightInnerAngle = 30
-	spotlightOuterAngle = 40
-	spotlightFalloff = 1
-	castShadows = True
-	allowStaticLighting = False
-	allowDynamicLighting = True
-	position = 2.775246 21.31339 0.2536698
-	name = Light_2
-}
-entity
-{
-	type = Light
-	uin = 10
-	classPrompt = Light
-	lightType = Spot
-	diffuseColor = 1 1 1
-	diffusePower = 1
-	specularColor = 0 0 0
-	specularPower = 1
-	attenuationRangeAutomatic = True
-	attenuationRange = Infinity
-	attenuationConstant = 1
-	attenuationLinear = 0
-	attenuationQuadric = 0
-	spotlightInnerAngle = 30
-	spotlightOuterAngle = 40
-	spotlightFalloff = 1
-	castShadows = True
-	allowStaticLighting = False
-	allowDynamicLighting = True
-	position = 4.348 -4.376683 0.2551125
-	name = Light_3
-}
-entity
-{
 	type = SpawnPoint
-	uin = 11
+	uin = 8
 	classPrompt = SpawnPoint
 	defaultPoint = False
 	position = 15.46959 6.696418 0.04474201
 	name = SpawnPoint_0
+}
+entity
+{
+	type = StaticBox
+	uin = 9
+	classPrompt = MapObject
+	position = 3.148905 14.93677 0.5029107
+	name = StaticBox_0
+}
+entity
+{
+	type = PipeCorner
+	uin = 10
+	classPrompt = MapObject
+	position = -149.4117 -403.4888 0.4996593
+	name = PipeCorner_0
+}
+entity
+{
+	type = Human
+	uin = 11
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	intellectShouldDeleteAfterDetach = False
+	position = 7.888262 16.0738 1.916694
+	name = Human_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Plane001
+	uin = 12
+	classPrompt = MapObject
+	position = 83.41403 0.2219959 0.01
+	name = Plane001_0
+}
+entity
+{
+	type = Plane002
+	uin = 13
+	classPrompt = MapObject
+	position = 1.872562 0.4564896 0.01
+	name = Plane002_0
+}
+entity
+{
+	type = Plane003
+	uin = 14
+	classPrompt = MapObject
+	position = -44.61867 6.915591 0.01
+	name = Plane003_0
+}
+entity
+{
+	type = Plane004
+	uin = 15
+	classPrompt = MapObject
+	position = 43.18708 0.5203495 0.01
+	rotation = 0 0 -0.7019681 0.7122083
+	name = Plane004_0
+}
+entity
+{
+	type = Plane005
+	uin = 16
+	classPrompt = MapObject
+	position = 1.751673 41.30046 0.01
+	rotation = 0 0 -0.7009559 -0.7132046
+	name = Plane005_0
+}
+entity
+{
+	type = Light
+	uin = 17
+	classPrompt = Light
+	lightType = Directional
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 0 0 0
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = -15.70552 57.29614 86.47574
+	rotation = -0.6789373 -0.1320479 0.7012514 0.1727831
+	name = Light_0
 }

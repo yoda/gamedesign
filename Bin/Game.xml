@@ -4,34 +4,14 @@
         <name>Game</name>
     </assembly>
     <members>
-        <member name="T:Game.Program">
+        <member name="T:Game.ActionGameWindow">
             <summary>
-            Defines an input point in the application.
-            </summary>
-        </member>
-        <member name="M:Game.Program.Main">
-            <summary>
-            The main entry point for the application.
-            </summary>
-        </member>
-        <member name="T:Game.MessageBoxWindow">
-            <summary>
-            Defines a "MessageBox" window.
-            </summary>
-        </member>
-        <member name="T:Game.JigsawPuzzleGameWindow">
-            <summary>
-            Defines a game window for Jigsaw Puzzle Game Example
+            Defines a game window for FPS and TPS games.
             </summary>
         </member>
         <member name="T:Game.GameWindow">
             <summary>
             Defines a base window of game.
-            </summary>
-        </member>
-        <member name="T:Game.ActionGameWindow">
-            <summary>
-            Defines a game window for FPS and TPS games.
             </summary>
         </member>
         <member name="M:Game.ActionGameWindow.UpdateCurrentPlayerUseObjects">
@@ -81,14 +61,19 @@
             <param name="cameraFov">The camera FOV.</param>
             <returns><b>true</b>if the player is in any area; otherwise <b>false</b>.</returns>
         </member>
-        <member name="T:Game.DebugDrawOptionsWindow">
+        <member name="T:Game.Program">
             <summary>
-            Defines a "Debug Draw Options" window.
+            Defines an input point in the application.
             </summary>
         </member>
-        <member name="T:Game.AboutWindow">
+        <member name="M:Game.Program.Main">
             <summary>
-            Defines a about us window.
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Game.MenuWindow">
+            <summary>
+            Defines a system game menu.
             </summary>
         </member>
         <member name="T:Game.GameEngineApp">
@@ -121,14 +106,14 @@
             Destroys the background world.
             </summary>
         </member>
-        <member name="T:Game.MapsWindow">
+        <member name="T:Game.PostEffectsWindow">
             <summary>
-            Defines a window of map choice.
+            Defines a "PostEffects" window.
             </summary>
         </member>
-        <member name="T:Game.TurretDemoGameWindow">
+        <member name="T:Game.ProductLogoWindow">
             <summary>
-            Defines a game window for TurretDemo
+            Defines a your project logo window.
             </summary>
         </member>
         <member name="T:Game.Properties.Resources">
@@ -152,24 +137,39 @@
             Defines a window of options.
             </summary>
         </member>
+        <member name="T:Game.AboutWindow">
+            <summary>
+            Defines a about us window.
+            </summary>
+        </member>
+        <member name="T:Game.TurretDemoGameWindow">
+            <summary>
+            Defines a game window for TurretDemo
+            </summary>
+        </member>
+        <member name="T:Game.JigsawPuzzleGameWindow">
+            <summary>
+            Defines a game window for Jigsaw Puzzle Game Example
+            </summary>
+        </member>
+        <member name="T:Game.DebugDrawOptionsWindow">
+            <summary>
+            Defines a "Debug Draw Options" window.
+            </summary>
+        </member>
+        <member name="T:Game.MapsWindow">
+            <summary>
+            Defines a window of map choice.
+            </summary>
+        </member>
         <member name="T:Game.EngineLogoWindow">
             <summary>
             Defines a NeoAxis Engine Logo window.
             </summary>
         </member>
-        <member name="T:Game.MenuWindow">
+        <member name="T:Game.MessageBoxWindow">
             <summary>
-            Defines a system game menu.
-            </summary>
-        </member>
-        <member name="T:Game.PostEffectsWindow">
-            <summary>
-            Defines a "PostEffects" window.
-            </summary>
-        </member>
-        <member name="T:Game.ProductLogoWindow">
-            <summary>
-            Defines a your project logo window.
+            Defines a "MessageBox" window.
             </summary>
         </member>
     </members>

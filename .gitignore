@@ -2,11 +2,12 @@
 .DS_Store
 *.orig
 *.log
-<<<<<<< HEAD
 *.user
 *.suo
 _ReSharper.*
 *.sln.cache
-*/obj/*
-=======
->>>>>>> 0d8fe2c0f6b6e8999f2ade414a0334c78f6b27f8
+Game/obj/*
+GameCommon/obj/*
+GameEntities/obj/*
+DedicatedServer/obj/*
+

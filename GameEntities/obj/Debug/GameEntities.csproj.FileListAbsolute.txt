@@ -10,3 +10,9 @@ C:\Users\yoda\Desktop\gamedesign\GameEntities\obj\Debug\GameEntities.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.dll
 C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.xml
+C:\Users\Garry\gamedesign\Bin\GameEntities.dll
+C:\Users\Garry\gamedesign\Bin\GameEntities.pdb
+C:\Users\Garry\gamedesign\Bin\GameEntities.xml
+C:\Users\Garry\gamedesign\GameEntities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Garry\gamedesign\GameEntities\obj\Debug\GameEntities.dll
+C:\Users\Garry\gamedesign\GameEntities\obj\Debug\GameEntities.pdb

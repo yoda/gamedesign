@@ -3,7 +3,7 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 14.46914 -2.030064 90.17622
+editorCameraPosition = 21.34869 -6.99943 58.84011
 editorCameraDirection = 0.9082994 -1.560796
 shadowColor = 1 1 1
 logicSystemManager = 3
@@ -100,7 +100,7 @@ entity
 	uin = 8
 	classPrompt = SpawnPoint
 	defaultPoint = False
-	position = 15.46959 6.696418 0.04474201
+	position = 74.90825 6.696418 0.04474201
 	name = SpawnPoint_0
 }
 entity
@@ -125,6 +125,7 @@ entity
 	uin = 11
 	classPrompt = PlayerCharacter
 	contusionTimeRemaining = 0
+	torch = 18
 	intellectShouldDeleteAfterDetach = False
 	position = 7.888262 16.0738 1.916694
 	name = Human_0
@@ -222,4 +223,36 @@ entity
 	position = -15.70552 57.29614 86.47574
 	rotation = -0.6789373 -0.1320479 0.7012514 0.1727831
 	name = Light_0
+}
+entity
+{
+	type = Light
+	uin = 18
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 1 1 1
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = 7.888262 16.0738 1.916694
+	name = Light_2
+}
+entity
+{
+	type = SubmachineGunItem
+	uin = 19
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 80.09946 -2.70215 0.3491153
 }

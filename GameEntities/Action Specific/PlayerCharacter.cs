@@ -87,6 +87,9 @@ namespace GameEntities
 		[FieldSerialize]
 		float contusionTimeRemaining;
 
+        [FieldSerialize]
+        Light torch;
+
 		//for transer vertical direction of weapon to clients
 		Radian server_sentWeaponVerticalAngle;
 		Radian client_weaponVerticalAngle;
@@ -395,6 +398,15 @@ namespace GameEntities
 						CreateActiveWeaponAttachedObject();
 				}
 			}
+
+            {
+                torch = (Light)Entities.Instance.Create("Light", Map.Instance);
+                torch.LightType = RenderLightType.Spot;
+                torch.SpecularColor = new ColorValue(1, 1, 1);
+                torch.Position = Position;
+                torch.Rotation = Rotation;
+                torch.PostCreate();
+            }
 		}
 
 		/// <summary>Overridden from <see cref="Engine.EntitySystem.Entity.OnRelatedEntityDelete(Entity)"/></summary>
@@ -414,6 +426,10 @@ namespace GameEntities
 		protected override void OnTick()
 		{
 			base.OnTick();
+
+            // Torch where Character is facing.
+            torch.Position = Position;
+            torch.Rotation = Rotation;
 
 			if( Intellect != null )
 			{
@@ -472,6 +488,10 @@ namespace GameEntities
 			}
 		}
 
+        protected override void OnDie( MapObject prejudicial )
+        {
+            torch.SetDeleted();
+        }
 		/// <summary>Overridden from <see cref="Engine.MapSystem.MapObject.OnRender(Camera)"/>.</summary>
 		protected override void OnRender( Camera camera )
 		{

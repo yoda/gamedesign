@@ -1,0 +1,8 @@
+highLevelMaterial Rooms/FloorHall2
+{
+	template = ShaderBaseMaterial
+	diffuse1Map
+	{
+		texture = Models\Rooms\FloorHall.dds
+	}
+}

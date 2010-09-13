@@ -10,3 +10,9 @@ C:\Users\yoda\Desktop\gamedesign\GameCommon\obj\Debug\GameCommon.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.dll
 C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.xml
+C:\Users\Garry\gamedesign\Bin\GameCommon.dll
+C:\Users\Garry\gamedesign\Bin\GameCommon.pdb
+C:\Users\Garry\gamedesign\Bin\GameCommon.xml
+C:\Users\Garry\gamedesign\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Garry\gamedesign\GameCommon\obj\Debug\GameCommon.dll
+C:\Users\Garry\gamedesign\GameCommon\obj\Debug\GameCommon.pdb

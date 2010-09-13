@@ -18,3 +18,13 @@ C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.exe
 C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.xml
+C:\Users\Garry\gamedesign\Bin\DedicatedServer.exe
+C:\Users\Garry\gamedesign\Bin\DedicatedServer.pdb
+C:\Users\Garry\gamedesign\Bin\DedicatedServer.xml
+C:\Users\Garry\gamedesign\DedicatedServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Garry\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.MainForm.resources
+C:\Users\Garry\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.Properties.Resources.resources
+C:\Users\Garry\gamedesign\DedicatedServer\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Garry\gamedesign\DedicatedServer\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Garry\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.exe
+C:\Users\Garry\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.pdb

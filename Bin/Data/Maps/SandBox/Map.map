@@ -3,8 +3,8 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 21.34869 -6.99943 58.84011
-editorCameraDirection = 0.9082994 -1.560796
+editorCameraPosition = 55.19177 6.430205 0.9040804
+editorCameraDirection = 2.865486 -0.06848797
 shadowColor = 1 1 1
 logicSystemManager = 3
 shadowTechnique = ShadowmapMedium
@@ -125,7 +125,7 @@ entity
 	uin = 11
 	classPrompt = PlayerCharacter
 	contusionTimeRemaining = 0
-	torch = 18
+	torch = 19
 	intellectShouldDeleteAfterDetach = False
 	position = 7.888262 16.0738 1.916694
 	name = Human_0
@@ -226,8 +226,16 @@ entity
 }
 entity
 {
-	type = Light
+	type = SubmachineGunItem
 	uin = 18
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 80.09946 -2.70215 0.3491153
+}
+entity
+{
+	type = Light
+	uin = 19
 	classPrompt = Light
 	lightType = Spot
 	diffuseColor = 1 1 1
@@ -246,13 +254,5 @@ entity
 	allowStaticLighting = False
 	allowDynamicLighting = True
 	position = 7.888262 16.0738 1.916694
-	name = Light_2
-}
-entity
-{
-	type = SubmachineGunItem
-	uin = 19
-	classPrompt = WeaponItem
-	respawnTime = 10
-	position = 80.09946 -2.70215 0.3491153
+	name = Light_3
 }

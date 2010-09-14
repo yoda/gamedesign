@@ -11,4 +11,11 @@ Game/obj/*
 GameCommon/obj/*
 GameEntities/obj/*
 DedicatedServer/obj/*
+Bin/DedicatedServer.exe
+Bin/DedicatedServer.xml
+Bin/Game.exe
+Bin/GameCommon.dll
+Bin/GameCommon.xml
+Bin/GameEntities.dll
+Bin/GameEntities.xml
 

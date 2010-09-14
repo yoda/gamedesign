@@ -1,0 +1,8 @@
+highLevelMaterial Types/StaticObjects/Rooms/WallPainted
+{
+	template = ShaderBaseMaterial
+	diffuse1Map
+	{
+		texture = Types\StaticObjects\Rooms\WallPainted.dds
+	}
+}

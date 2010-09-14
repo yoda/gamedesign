@@ -1,0 +1,14 @@
+type Painting_Clown
+{
+	class = MapObject
+	allowEditorCreate = True
+	networkType = Synchronized
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\StaticObjects\Rooms\Plane.010.mesh
+			collision = True
+		}
+	}
+}

@@ -1,0 +1,8 @@
+highLevelMaterial Types/StaticObjects/Rooms/Painting_Clown
+{
+	template = ShaderBaseMaterial
+	diffuse1Map
+	{
+		texture = Types\StaticObjects\Rooms\Painting_Clown.dds
+	}
+}

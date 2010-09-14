@@ -1,0 +1,14 @@
+type Room1
+{
+	class = MapObject
+	allowEditorCreate = True
+	networkType = Synchronized
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\StaticObjects\Rooms\Plane.001.mesh
+			collision = True
+		}
+	}
+}

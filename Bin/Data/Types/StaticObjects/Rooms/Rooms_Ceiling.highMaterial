@@ -1,0 +1,8 @@
+highLevelMaterial Types/StaticObjects/Rooms/Ceiling
+{
+	template = ShaderBaseMaterial
+	diffuse1Map
+	{
+		texture = Types\StaticObjects\Rooms\Ceiling.dds
+	}
+}

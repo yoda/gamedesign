@@ -1,0 +1,8 @@
+highLevelMaterial Types/StaticObjects/Rooms/FloorWood
+{
+	template = ShaderBaseMaterial
+	diffuse1Map
+	{
+		texture = Types\StaticObjects\Rooms\FloorWood.dds
+	}
+}

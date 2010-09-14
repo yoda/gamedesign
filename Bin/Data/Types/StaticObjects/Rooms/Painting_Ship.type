@@ -1,0 +1,22 @@
+type Painting_Ship
+{
+	class = MapObject
+	allowEditorCreate = True
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\StaticObjects\Rooms\Plane.011.mesh
+			collision = True
+		}
+		particle
+		{
+			particleName = SmallSmokeParticle
+		}
+		particle
+		{
+			particleName = BigFireParticle
+			position = -0.1554799 0 0
+		}
+	}
+}

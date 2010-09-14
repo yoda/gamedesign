@@ -3,8 +3,8 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 5.70069 10.21235 3.862209
-editorCameraDirection = 1.137511 -0.1144536
+editorCameraPosition = 61.78313 -54.74434 29.83151
+editorCameraDirection = 1.701423 -0.5631217
 shadowColor = 1 1 1
 logicSystemManager = 3
 shadowTechnique = ShadowmapMedium
@@ -71,31 +71,6 @@ entity
 }
 entity
 {
-	type = Light
-	uin = 7
-	classPrompt = Light
-	lightType = Spot
-	diffuseColor = 1 1 1
-	diffusePower = 1
-	specularColor = 0 0 0
-	specularPower = 1
-	attenuationRangeAutomatic = True
-	attenuationRange = Infinity
-	attenuationConstant = 1
-	attenuationLinear = 0
-	attenuationQuadric = 0
-	spotlightInnerAngle = 30
-	spotlightOuterAngle = 40
-	spotlightFalloff = 1
-	castShadows = True
-	allowStaticLighting = False
-	allowDynamicLighting = True
-	position = -29.83819 199.4587 107.3407
-	rotation = -0.228795 -0.1484123 0.6727221 -0.6878018
-	name = Light_1
-}
-entity
-{
 	type = SpawnPoint
 	uin = 8
 	classPrompt = SpawnPoint
@@ -121,7 +96,7 @@ entity
 }
 entity
 {
-	type = Plane001
+	type = Room1
 	uin = 11
 	classPrompt = MapObject
 	position = 83.41403 0.2219959 0.01
@@ -129,44 +104,69 @@ entity
 }
 entity
 {
-	type = Plane002
+	type = Room1
 	uin = 12
 	classPrompt = MapObject
-	position = 1.872562 0.4564896 0.01
+	position = 3.985544 0.4564896 0.01
 	name = Plane002_0
 }
 entity
 {
-	type = Plane003
+	type = Room1
 	uin = 13
 	classPrompt = MapObject
-	position = -44.61867 6.915591 0.01
+	position = -41.83411 6.915591 0.01
 	name = Plane003_0
 }
 entity
 {
-	type = Plane004
+	type = Room1
 	uin = 14
 	classPrompt = MapObject
-	position = 43.18708 0.5203495 0.01
-	rotation = 0 0 -0.7019681 0.7122083
+	position = 47.34077 6.513356 0.01
+	rotation = 0 0 -1 -4.371139E-08
 	name = Plane004_0
 }
 entity
 {
-	type = Plane005
+	type = Room1
 	uin = 15
 	classPrompt = MapObject
-	position = 1.751673 41.30046 0.01
+	position = 1.751673 51.21446 0.01
 	rotation = 0 0 -0.7009559 -0.7132046
 	name = Plane005_0
 }
 entity
 {
-	type = Light
+	type = SubmachineGunItem
 	uin = 16
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 80.09946 -2.70215 0.3491153
+}
+entity
+{
+	type = Ceiling
+	uin = 17
+	classPrompt = MapObject
+	position = 83.35956 0.1972482 -0.7686718
+	name = Ceiling_0
+}
+entity
+{
+	type = Painting_Clown
+	uin = 18
+	classPrompt = MapObject
+	position = 101.4046 -0.0141829 2.422993
+	scale = 1 2.388417 1.94153
+	name = Painting_Clown_0
+}
+entity
+{
+	type = Light
+	uin = 7
 	classPrompt = Light
-	lightType = Directional
+	lightType = Spot
 	diffuseColor = 1 1 1
 	diffusePower = 1
 	specularColor = 0 0 0
@@ -182,15 +182,7 @@ entity
 	castShadows = True
 	allowStaticLighting = False
 	allowDynamicLighting = True
-	position = -15.70552 57.29614 86.47574
-	rotation = -0.6789373 -0.1320479 0.7012514 0.1727831
-	name = Light_0
-}
-entity
-{
-	type = SubmachineGunItem
-	uin = 17
-	classPrompt = WeaponItem
-	respawnTime = 10
-	position = 80.09946 -2.70215 0.3491153
+	position = -29.83819 199.4587 107.3407
+	rotation = -0.2372244 -0.1345286 0.7124747 -0.646534
+	name = Light_1
 }

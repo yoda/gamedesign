@@ -4,6 +4,7 @@
 *.log
 *.user
 *.suo
+*.pdb
 _ReSharper.*
 *.sln.cache
 Game/obj/*

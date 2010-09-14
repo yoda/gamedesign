@@ -34,8 +34,8 @@ namespace GameEntities
 		string idleAnimationName = "idle";
 
 		[FieldSerialize]
-		[DefaultValue( "Walk" )]
-		string walkAnimationName = "Walk";
+		[DefaultValue( "walk" )]
+		string walkAnimationName = "walk";
 
 		[FieldSerialize]
 		[DefaultValue( 1.0f )]
@@ -71,7 +71,7 @@ namespace GameEntities
 			set { idleAnimationName = value; }
 		}
 
-		[DefaultValue( "Walk" )]
+		[DefaultValue( "walk" )]
 		public string WalkAnimationName
 		{
 			get { return walkAnimationName; }

@@ -19,25 +19,25 @@ item
 	{
 		sourceSubMeshIndex = 0
 		fileName = TileItem00001.mesh
-		bounds = -3.29206 -60.0001 0.0469082 0.0001 -44.9999 0.0471083
+		bounds = -3.29206 -60.0001 0.0469082 0.0001002384 -44.9999 0.0471083
 	}
 	tile
 	{
 		sourceSubMeshIndex = 0
 		fileName = TileItem00002.mesh
-		bounds = -3.29206 -45.0001 0.0469082 0.0001 -41.1399 0.0471083
+		bounds = -3.29206 -45.0001 0.0469082 0.0001002384 -41.1399 0.0471083
 	}
 	tile
 	{
 		sourceSubMeshIndex = 0
 		fileName = TileItem00003.mesh
-		bounds = -10.0199 -12.8476 -0.103681 0.0001 0.0001 6.54682
+		bounds = -10.0199 -12.8476 -0.103681 0.0001002384 0.0001002384 6.54682
 	}
 	tile
 	{
 		sourceSubMeshIndex = 0
 		fileName = TileItem00004.mesh
-		bounds = -12.6307 -0.0001004768 -0.103681 0.0001000596 9.27478 6.54682
+		bounds = -12.6307 -0.0001004768 -0.103681 0.0001002384 9.27478 6.54682
 	}
 	tile
 	{
@@ -49,7 +49,7 @@ item
 	{
 		sourceSubMeshIndex = 0
 		fileName = TileItem00006.mesh
-		bounds = -0.0001 -60.0001 0.0469082 3.00868 -44.9999 0.0471083
+		bounds = -0.0001002384 -60.0001 0.0469082 3.00868 -44.9999 0.0471083
 	}
 	tile
 	{
@@ -61,13 +61,13 @@ item
 	{
 		sourceSubMeshIndex = 0
 		fileName = TileItem00008.mesh
-		bounds = -0.0001002384 -12.8476 -0.103681 10.0199 0.0001 6.54682
+		bounds = -0.0001004768 -12.8476 -0.103681 10.0199 0.0001000009 6.54682
 	}
 	tile
 	{
 		sourceSubMeshIndex = 0
 		fileName = TileItem00009.mesh
-		bounds = -0.0001000006 -0.0001 -0.103681 12.7724 9.02936 6.54682
+		bounds = -0.0001002384 -0.0001004768 -0.103681 12.7724 9.02936 6.54682
 	}
 	tile
 	{
@@ -175,7 +175,7 @@ item
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00027.mesh
-		bounds = -45.0001 -0.0001 -0.035777 -29.9999 15.0001 0.03605749
+		bounds = -45.0001 -0.0001002384 -0.035777 -29.9999 15.0001 0.03605749
 	}
 	tile
 	{
@@ -199,7 +199,7 @@ item
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00031.mesh
-		bounds = -30.0001 -3.408084 -0.035777 -28.03229 0.0001 -0.035577
+		bounds = -30.0001 -3.408084 -0.035777 -28.03229 0.0001001192 -0.035577
 	}
 	tile
 	{
@@ -223,25 +223,25 @@ item
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00035.mesh
-		bounds = -3.29206 -59.289 0.046908 0.0001 -47.969 0.0471083
+		bounds = -3.29206 -59.289 0.046908 0.0001000149 -47.969 0.0471083
 	}
 	tile
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00036.mesh
-		bounds = -3.29206 -41.1401 0.046908 0.0001 -29.9999 0.0471083
+		bounds = -3.29206 -41.1401 0.046908 0.0001002384 -29.9999 0.0471083
 	}
 	tile
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00037.mesh
-		bounds = -3.29206 -30.0001 0.035857 0.0001 -14.9999 0.0471082
+		bounds = -3.29206 -30.0001 0.035857 0.0001000149 -14.9999 0.0471082
 	}
 	tile
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00038.mesh
-		bounds = -10.8924 -15.0001 0.0284977 0.0001 0.0001 0.0360579
+		bounds = -10.8924 -15.0001 0.0284977 0.0001004768 0.0001 0.0360579
 	}
 	tile
 	{
@@ -265,7 +265,7 @@ item
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00042.mesh
-		bounds = -0.0001 -59.289 0.046908 3.00868 -47.969 0.0471083
+		bounds = -0.0001002384 -59.289 0.046908 3.00868 -47.969 0.0471083
 	}
 	tile
 	{
@@ -277,13 +277,13 @@ item
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00044.mesh
-		bounds = -0.0001 -30.0001 0.035857 3.00868 -14.9999 0.0471082
+		bounds = -0.0001002384 -30.0001 0.035857 3.00868 -14.9999 0.0471082
 	}
 	tile
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00045.mesh
-		bounds = -0.0001 -15.0001 0.0284977 10.8924 0.0001 0.0360579
+		bounds = -0.0001002384 -15.0001 0.0284977 10.8924 0.0001 0.0360579
 	}
 	tile
 	{
@@ -331,7 +331,7 @@ item
 	{
 		sourceSubMeshIndex = 1
 		fileName = TileItem00053.mesh
-		bounds = 29.9999 -4.90216 -0.0232667 35.6008 0.0001002384 0.0241219
+		bounds = 29.9999 -4.90216 -0.0232667 35.6008 0.0001004768 0.0241219
 	}
 	tile
 	{
@@ -553,7 +553,7 @@ item
 	{
 		sourceSubMeshIndex = 2
 		fileName = TileItem00090.mesh
-		bounds = -45.0001 -0.0001 -0.0357767 -29.9999 15.0001 3.57493
+		bounds = -45.0001 -0.0001001192 -0.0357767 -29.9999 15.0001 3.57493
 	}
 	tile
 	{
@@ -607,13 +607,13 @@ item
 	{
 		sourceSubMeshIndex = 2
 		fileName = TileItem00099.mesh
-		bounds = -3.67931 -60.0001 0.046908 0.0001 -44.9999 4.4109
+		bounds = -3.67931 -60.0001 0.046908 0.0001002384 -44.9999 4.4109
 	}
 	tile
 	{
 		sourceSubMeshIndex = 2
 		fileName = TileItem00100.mesh
-		bounds = -3.67931 -45.0001 0.046908 0.0001 -29.9999 4.4109
+		bounds = -3.67931 -45.0001 0.046908 0.0001001192 -29.9999 4.4109
 	}
 	tile
 	{
@@ -625,7 +625,7 @@ item
 	{
 		sourceSubMeshIndex = 2
 		fileName = TileItem00102.mesh
-		bounds = -10.8924 -15.0001 -0.103681 0.0001004768 0.0001 6.54682
+		bounds = -10.8924 -15.0001 -0.103681 0.0001004768 0.0001004768 6.54682
 	}
 	tile
 	{
@@ -673,13 +673,13 @@ item
 	{
 		sourceSubMeshIndex = 2
 		fileName = TileItem00110.mesh
-		bounds = -0.0001004768 -15.0001 -0.103681 10.8924 0.0001 6.54682
+		bounds = -0.0001004768 -15.0001 -0.103681 10.8924 0.0001001192 6.54682
 	}
 	tile
 	{
 		sourceSubMeshIndex = 2
 		fileName = TileItem00111.mesh
-		bounds = -0.0001004768 -0.0001 -0.103681 15.0001 12.26188 6.54682
+		bounds = -0.0001004768 -0.0001000596 -0.103681 15.0001 12.26188 6.54682
 	}
 	tile
 	{
@@ -949,7 +949,7 @@ item
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00156.mesh
-		bounds = -45.0001 -0.0001001192 3.20747 -29.9999 15.0001 4.39985
+		bounds = -45.0001 -0.0001004768 3.20747 -29.9999 15.0001 4.39985
 	}
 	tile
 	{
@@ -973,13 +973,13 @@ item
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00160.mesh
-		bounds = -30.0001 -3.408083 3.20747 -28.03229 0.0001000298 4.03009
+		bounds = -30.0001 -3.408083 3.20747 -28.03229 0.0001000002 4.03009
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00161.mesh
-		bounds = -30.0001 -0.0001000002 -0.035777 -14.9999 15.0001 4.39985
+		bounds = -30.0001 -0.0001000298 -0.035777 -14.9999 15.0001 4.39985
 	}
 	tile
 	{
@@ -997,7 +997,7 @@ item
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00164.mesh
-		bounds = -3.14201 -63.00067 -0.000702007 0.0001000596 -59.9999 4.06516
+		bounds = -3.14201 -63.00067 -0.000702007 0.0001 -59.9999 4.06516
 	}
 	tile
 	{
@@ -1009,19 +1009,19 @@ item
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00166.mesh
-		bounds = -3.28303 -45.0001 -0.000702007 0.0001 -29.9999 4.4109
+		bounds = -3.28303 -45.0001 -0.000702007 0.0001001192 -29.9999 4.4109
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00167.mesh
-		bounds = -3.279592 -30.0001 3.57473 0.0001 -14.9999 4.4109
+		bounds = -3.279592 -30.0001 3.57473 0.0001000149 -14.9999 4.4109
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00168.mesh
-		bounds = -3.28303 -15.0001 3.57473 0.0001 -9.43291 4.39985
+		bounds = -3.28303 -15.0001 3.57473 0.0001001192 -9.43291 4.39985
 	}
 	tile
 	{
@@ -1045,31 +1045,31 @@ item
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00172.mesh
-		bounds = -0.0001 -63.0013 -0.000702245 2.49418 -59.9999 4.06516
+		bounds = -0.0001000596 -63.0013 -0.000702245 2.49418 -59.9999 4.06516
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00173.mesh
-		bounds = -0.0001000149 -60.0001 3.58578 2.99965 -44.9999 4.4109
+		bounds = -0.0001001769 -60.0001 3.58578 2.99965 -44.9999 4.4109
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00174.mesh
-		bounds = -0.0001 -45.0001 -0.000702245 2.99964 -29.9999 4.4109
+		bounds = -0.0001002384 -45.0001 -0.000702245 2.99964 -29.9999 4.4109
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00175.mesh
-		bounds = -0.0001 -30.0001 3.57473 2.996212 -14.9999 4.4109
+		bounds = -0.0001000149 -30.0001 3.57473 2.996212 -14.9999 4.4109
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00176.mesh
-		bounds = -0.0001 -15.0001 3.57473 2.99965 -9.43291 4.39985
+		bounds = -0.0001000149 -15.0001 3.57473 2.99965 -9.43291 4.39985
 	}
 	tile
 	{
@@ -1117,13 +1117,13 @@ item
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00184.mesh
-		bounds = 29.9999 -4.90216 -0.0232667 35.6008 0.0001 4.0426
+		bounds = 29.9999 -4.90216 -0.0232667 35.6008 0.0001000596 4.0426
 	}
 	tile
 	{
 		sourceSubMeshIndex = 3
 		fileName = TileItem00185.mesh
-		bounds = 29.9999 -0.0001 3.21998 45.0001 15.0001 4.39985
+		bounds = 29.9999 -0.0001004768 3.21998 45.0001 15.0001 4.39985
 	}
 	tile
 	{
@@ -1357,7 +1357,7 @@ item
 	{
 		sourceSubMeshIndex = 4
 		fileName = TileItem00224.mesh
-		bounds = -1.51459 -44.8516 0.0464863 0.0001 -44.4972 0.255421
+		bounds = -1.51459 -44.8516 0.0464863 0.0001000298 -44.4972 0.255421
 	}
 	tile
 	{
@@ -1375,13 +1375,13 @@ item
 	{
 		sourceSubMeshIndex = 4
 		fileName = TileItem00227.mesh
-		bounds = -0.0001 -63.0013 0.05881331 0.990225 -62.64711 0.255422
+		bounds = -0.0001000596 -63.0013 0.05881331 0.990225 -62.64711 0.255422
 	}
 	tile
 	{
 		sourceSubMeshIndex = 4
 		fileName = TileItem00228.mesh
-		bounds = -0.0001 -44.85138 0.0588135 0.99022 -44.49831 0.255422
+		bounds = -0.0001000596 -44.85138 0.0588135 0.99022 -44.49831 0.255422
 	}
 	tile
 	{

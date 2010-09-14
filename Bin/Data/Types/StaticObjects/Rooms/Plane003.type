@@ -2,6 +2,7 @@ type Plane003
 {
 	class = MapObject
 	allowEditorCreate = True
+	networkType = Synchronized
 	attachedObjects
 	{
 		mesh

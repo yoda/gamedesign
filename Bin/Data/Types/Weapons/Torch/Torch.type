@@ -1,4 +1,4 @@
-type SubmachineGun
+type Torch
 {
 	class = Gun
 	reloadTime = 1

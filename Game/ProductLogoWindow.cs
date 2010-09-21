@@ -80,28 +80,7 @@ namespace Game
 
 		protected override void OnRenderUI( GuiRenderer renderer )
 		{
-			base.OnRenderUI( renderer );
-
-			Vec2 size = new Vec2( 232, 335 );
-			//size *= 1.0f + Time * .015f;
-			size /= new Vec2( 768.0f * renderer.AspectRatio, 768.0f );
-
-			Rect rectangle = new Rect( -size / 2, size / 2 ) + new Vec2( .3f, .5f );
-
-			float alpha = 0;
-
-			if( Time > 1 && Time <= 2 )
-				alpha = Time - 1;
-			else if( Time > 2 && Time <= lifeTime - 2 - 2 )
-				alpha = 1;
-			else if( Time >= lifeTime - 2 - 2 && Time < lifeTime - 1 )
-				alpha = 1 - ( Time - ( lifeTime - 2 - 2 ) ) / 3;
-
-			if( alpha != 0 )
-			{
-				renderer.AddQuad( rectangle, new Rect( 0, 0, 1, 1 ), productTexture,
-					new ColorValue( 1, 1, 1, alpha ) );
-			}
+		
 		}
 
 	}

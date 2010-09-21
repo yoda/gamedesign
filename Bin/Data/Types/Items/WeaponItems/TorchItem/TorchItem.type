@@ -1,7 +1,7 @@
-type SubmachineGunItem
+type TorchItem
 {
 	class = WeaponItem
-	weaponType = SubmachineGun
+	weaponType = Torch
 	bulletType = SubmachineGunBullet
 	bulletCount = 1500
 	bulletType2 = SubmachineGunGrenade

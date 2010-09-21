@@ -45,17 +45,8 @@ namespace Game
 				window.Controls[ "NoShaderModel2" ].Visible = !RenderSystem.Instance.HasShaderModel2();
 
 			//button handlers
-			( (EButton)window.Controls[ "Run" ] ).Click += Run_Click;
 			( (EButton)window.Controls[ "Multiplayer" ] ).Click += Multiplayer_Click;
 
-			//add version info control
-			versionTextBox = new ETextBox();
-			versionTextBox.TextHorizontalAlign = HorizontalAlign.Left;
-			versionTextBox.TextVerticalAlign = VerticalAlign.Bottom;
-			versionTextBox.Text = "Version " + EngineVersionInformation.Version;
-			versionTextBox.ColorMultiplier = new ColorValue( 1, 1, 1, 0 );
-
-			Controls.Add( versionTextBox );
 
 			//play background music
 			GameMusic.MusicPlay( "Sounds\\Music\\MainMenu.ogg", true );
@@ -63,9 +54,6 @@ namespace Game
 			//update sound listener
 			SoundWorld.Instance.SetListener( new Vec3( 1000, 1000, 1000 ),
 				Vec3.Zero, new Vec3( 1, 0, 0 ), new Vec3( 0, 0, 1 ) );
-
-			//create the background world
-			CreateMap();
 
 			ResetTime();
 		}
@@ -125,43 +113,12 @@ namespace Game
 					alpha = 1;
 
 				window.ColorMultiplier = new ColorValue( 1, 1, 1, alpha );
-				versionTextBox.ColorMultiplier = new ColorValue( 1, 1, 1, alpha );
-			}
-
-			//Change pictures
-			{
-				const int imagePageCount = 7;
-				float period = 6 * imagePageCount;
-
-				float t = Time % period;
-
-				for( int n = 1; ; n++ )
-				{
-					EControl control = window.Controls[ "Picture" + n.ToString() ];
-					if( control == null )
-						break;
-
-					float a = 3 + t / 2 - n * 3;
-					MathFunctions.Clamp( ref a, 0, 1 );
-					if( t > period - 2 )
-					{
-						float a2 = ( period - t ) / 2;
-						a = Math.Min( a, a2 );
-
-						if( window.Controls[ "Picture" + ( n + 1 ).ToString() ] != null )
-							a = 0;
-					}
-					control.BackColor = new ColorValue( 1, 1, 1, a );
-				}
 			}
 
 			//update sound listener
 			SoundWorld.Instance.SetListener( new Vec3( 1000, 1000, 1000 ),
 				Vec3.Zero, new Vec3( 1, 0, 0 ), new Vec3( 0, 0, 1 ) );
 
-			//Tick a background world
-			if( EntitySystemWorld.Instance != null )
-				EntitySystemWorld.Instance.Tick();
 		}
 
 		protected override void OnRender()
@@ -199,12 +156,7 @@ namespace Game
 			if( worldType == null )
 				Log.Fatal( "MainMenuWindow: CreateMap: \"SimpleWorld\" type is not exists." );
 
-			if( !GameEngineApp.Instance.ServerOrSingle_MapLoad( "Maps\\MainMenu\\Map.map", worldType, true ) )
-				return;
 
-			mapInstance = Map.Instance;
-
-			EntitySystemWorld.Instance.Simulation = true;
 		}
 
 		/// <summary>

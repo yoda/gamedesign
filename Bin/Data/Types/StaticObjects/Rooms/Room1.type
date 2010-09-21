@@ -2,7 +2,7 @@ type Room1
 {
 	class = MapObject
 	allowEditorCreate = True
-	networkType = Synchronized
+	networkType = ServerOnly
 	attachedObjects
 	{
 		mesh

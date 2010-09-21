@@ -399,14 +399,14 @@ namespace GameEntities
 				}
 			}
 
-            {
+           /* {
                 torch = (Light)Entities.Instance.Create("Light", Map.Instance);
                 torch.LightType = RenderLightType.Spot;
                 torch.SpecularColor = new ColorValue(1, 1, 1);
                 torch.Position = Position;
                 torch.Rotation = Rotation;
                 torch.PostCreate();
-            }
+            }*/
 		}
 
 		/// <summary>Overridden from <see cref="Engine.EntitySystem.Entity.OnRelatedEntityDelete(Entity)"/></summary>
@@ -428,8 +428,8 @@ namespace GameEntities
 			base.OnTick();
 
             // Torch where Character is facing.
-            torch.Position = Position;
-            torch.Rotation = Rotation;
+          //  torch.Position = Position;
+          //  torch.Rotation = Rotation;
 
 			if( Intellect != null )
 			{

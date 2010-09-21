@@ -1,11 +1,8 @@
-type Human
+type Human2
 {
 	class = PlayerCharacter
 	weaponAttachPosition = 0.4 -0.1 -0.1
 	weaponFPSAttachPosition = 0.4 -0.3 -0.5
-	optimalAttackDistanceRange = 0 3
-	height = 2.2
-	radius = 0.2
 	walkMaxVelocity = 7
 	walkForce = 6000
 	flyControlMaxVelocity = 10
@@ -40,13 +37,18 @@ type Human
 		mesh
 		{
 			meshName = Types\Units\Human\Human.mesh
-			castDynamicShadows = True
-			position = -0.2928487 0 -2.382195
-			rotation = 0 0 -0.7071068 -0.7071068
-			boneSlot hand
-			{
-				bone = finger_middle.02.L
-			}
+		}
+	}
+	dieObjects
+	{
+		mapObject
+		{
+			type = RabbitDead
+			copyVelocitiesFromParent = True
+		}
+		sound
+		{
+			soundName = "Types/Units/Rabbit/Die.ogg"
 		}
 	}
 }

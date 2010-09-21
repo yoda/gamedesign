@@ -2,8 +2,8 @@ type = GameMap
 uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
-ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 61.78313 -54.74434 29.83151
+ambientLight = 0.003921569 0.003921569 0.003921569
+editorCameraPosition = 80.06513 -7.783588 10.14799
 editorCameraDirection = 1.701423 -0.5631217
 shadowColor = 1 1 1
 logicSystemManager = 3
@@ -29,7 +29,7 @@ entity
 	classPrompt = SkyBox
 	textureName = Types\Base\SkyBox\DefaultSkyBox.jpg
 	color = 1 1 1
-	power = 1
+	power = 0.1
 }
 entity
 {
@@ -72,7 +72,7 @@ entity
 entity
 {
 	type = SpawnPoint
-	uin = 8
+	uin = 7
 	classPrompt = SpawnPoint
 	defaultPoint = False
 	position = 74.90825 6.696418 0.04474201
@@ -80,91 +80,48 @@ entity
 }
 entity
 {
-	type = StaticBox
-	uin = 9
-	classPrompt = MapObject
-	position = 3.148905 14.93677 0.5029107
-	name = StaticBox_0
-}
-entity
-{
-	type = PipeCorner
-	uin = 10
-	classPrompt = MapObject
-	position = -149.4117 -403.4888 0.4996593
-	name = PipeCorner_0
-}
-entity
-{
-	type = Room1
-	uin = 11
-	classPrompt = MapObject
-	position = 83.41403 0.2219959 0.01
-	name = Plane001_0
-}
-entity
-{
-	type = Room1
-	uin = 12
-	classPrompt = MapObject
-	position = 3.985544 0.4564896 0.01
-	name = Plane002_0
-}
-entity
-{
-	type = Room1
-	uin = 13
-	classPrompt = MapObject
-	position = -41.83411 6.915591 0.01
-	name = Plane003_0
-}
-entity
-{
-	type = Room1
-	uin = 14
-	classPrompt = MapObject
-	position = 47.34077 6.513356 0.01
-	rotation = 0 0 -1 -4.371139E-08
-	name = Plane004_0
-}
-entity
-{
-	type = Room1
-	uin = 15
-	classPrompt = MapObject
-	position = 1.751673 51.21446 0.01
-	rotation = 0 0 -0.7009559 -0.7132046
-	name = Plane005_0
-}
-entity
-{
-	type = SubmachineGunItem
-	uin = 16
+	type = HammerItem
+	uin = 8
 	classPrompt = WeaponItem
 	respawnTime = 10
-	position = 80.09946 -2.70215 0.3491153
+	position = 80.7528 3.00955 0.2817912
 }
 entity
 {
-	type = Ceiling
-	uin = 17
-	classPrompt = MapObject
-	position = 83.35956 0.1972482 -0.7686718
-	name = Ceiling_0
+	type = StaticMesh
+	uin = 9
+	classPrompt = StaticMesh
+	position = 13.2556 11.34823 0.0003440122
+	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
 }
 entity
 {
-	type = Painting_Clown
-	uin = 18
-	classPrompt = MapObject
-	position = 101.4046 -0.0141829 2.422993
-	scale = 1 2.388417 1.94153
-	name = Painting_Clown_0
+	type = StaticMesh
+	uin = 10
+	classPrompt = StaticMesh
+	position = 87.94795 10.46278 -0.0007624626
+	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
+}
+entity
+{
+	type = StaticMesh
+	uin = 11
+	classPrompt = StaticMesh
+	position = 50.58968 -30.60763 0.004953242
+	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
+}
+entity
+{
+	type = StaticMesh
+	uin = 12
+	classPrompt = StaticMesh
+	position = 51.11596 45.52451 0.006848058
+	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
 }
 entity
 {
 	type = Light
-	uin = 7
+	uin = 13
 	classPrompt = Light
 	lightType = Spot
 	diffuseColor = 1 1 1
@@ -182,7 +139,22 @@ entity
 	castShadows = True
 	allowStaticLighting = False
 	allowDynamicLighting = True
-	position = -29.83819 199.4587 107.3407
-	rotation = -0.2372244 -0.1345286 0.7124747 -0.646534
-	name = Light_1
+	position = 70.4192 -0.05068856 0.2553985
+	name = Light_0
+}
+entity
+{
+	type = TorchItem
+	uin = 14
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 72.91759 -0.1655924 0.3347329
+}
+entity
+{
+	type = SubmachineGunItem
+	uin = 15
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 79.92449 -0.1404035 0.3306218
 }

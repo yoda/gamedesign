@@ -1,0 +1,11 @@
+highLevelMaterial Torch
+{
+	template = ShaderBaseMaterial
+	lighting = False
+	receiveShadows = False
+	diffusePower = 0
+	reflectionPower = 0
+	emissionColor = 1 1 1
+	emissionPower = 20
+	specularPower = 0
+}

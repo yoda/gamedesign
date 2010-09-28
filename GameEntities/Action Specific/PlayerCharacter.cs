@@ -87,8 +87,8 @@ namespace GameEntities
 		[FieldSerialize]
 		float contusionTimeRemaining;
 
-        [FieldSerialize]
-        Light torch;
+        /*[FieldSerialize]
+        Light torch;*/
 
 		//for transer vertical direction of weapon to clients
 		Radian server_sentWeaponVerticalAngle;
@@ -422,6 +422,35 @@ namespace GameEntities
 			}
 		}
 
+        // we'll want to rip this out and throw it in a class for statue.. here for testing
+        private int derp;
+        // check if _we're_ frozen and blinded
+        protected Boolean IsBlinded()
+        {
+            derp++;
+            if (derp > 1000) { Die(); derp = 0; }
+            foreach (PlayerCharacter pc in Entities.Instance.EntitiesCollection)
+            {
+                Vec3 delta = new Vec3(pc.Position); //Position - pc.Position;
+                Ray r = new Ray(Position, delta);
+
+
+
+                // if angle in range, throw out ray
+                if (Math.Abs((Rotation - pc.Rotation).Z) < 20)
+                {
+                    RayCastResult res = PhysicsWorld.Instance.RayCast(r, 0);
+                    // ray hits
+                    float x = res.Distance - delta.Length();
+                    if (res.Distance - delta.Length() < 0.5)
+                    {
+                        Die();
+                    }
+                }
+            }
+            return true;
+        }
+
 		/// <summary>Overridden from <see cref="Engine.EntitySystem.Entity.OnTick()"/>.</summary>
 		protected override void OnTick()
 		{
@@ -490,7 +519,7 @@ namespace GameEntities
 
         protected override void OnDie( MapObject prejudicial )
         {
-            torch.SetDeleted();
+            //torch.SetDeleted();
         }
 		/// <summary>Overridden from <see cref="Engine.MapSystem.MapObject.OnRender(Camera)"/>.</summary>
 		protected override void OnRender( Camera camera )
@@ -521,7 +550,7 @@ namespace GameEntities
 					//for guns
 					if( fpsCamera )
 					{
-						Vec3 p = camera.Position + camera.Rotation * Type.WeaponFPSAttachPosition;
+						Vec3 p = camera.Position + camera.Rotation * Type.WeaponFPSAttachPosition * new Vec3(0.5f,0.5f,0.5f);
 						Quat r = camera.Rotation;
 						Vec3 s = new Vec3( 1, 1, 1 );
 						activeWeaponAttachedObject.MapObject.SetTransform( p, r, s );
@@ -579,14 +608,14 @@ namespace GameEntities
 			}
 
 			//only weapon visible in the FPS mode
-			foreach( MapObjectAttachedObject attachedObject in AttachedObjects )
-				attachedObject.Visible = !fpsCamera || attachedObject == activeWeaponAttachedObject;
+			/*foreach( MapObjectAttachedObject attachedObject in AttachedObjects )
+				attachedObject.Visible = !fpsCamera || attachedObject == activeWeaponAttachedObject;*/
 
 			//no cast shadows in the FPS mode
 			if( camera.IsForShadowMapGeneration() && playerIntellectFPSCamera )
 			{
 				foreach( MapObjectAttachedObject attachedObject in AttachedObjects )
-					attachedObject.Visible = false;
+					attachedObject.Visible = true;
 			}
 		}
 

@@ -30,5 +30,6 @@ control Gui\Controls\DefaultWindow.gui
 		text = In a galaxy far, far away....
 		position = Texture 98 116
 		size = Texture 530 240
+		enable = False
 	}
 }

@@ -4,6 +4,7 @@ type Human
 	weaponAttachPosition = 0.4 -0.1 -0.1
 	weaponFPSAttachPosition = 0.4 -0.3 -0.5
 	optimalAttackDistanceRange = 0 3
+	walkAnimationVelocityMultiplier = 0.85
 	height = 2.2
 	radius = 0.2
 	walkMaxVelocity = 7
@@ -14,7 +15,6 @@ type Human
 	allowPlayerControl = True
 	initialAI = DefaultGameCharacterAI
 	viewRadius = 70
-	fpsCameraOffset = 0 0 0.5
 	lifeMax = 200
 	targetPriority = 1
 	substance = Flesh
@@ -47,6 +47,58 @@ type Human
 			{
 				bone = finger_middle.02.L
 			}
+			boneSlot head
+			{
+				bone = head
+				position = 0 0.235 -0.15
+			}
+			boneSlot torch
+			{
+				bone = hand.R.001
+				position = 0.17 0.08 0.05
+				rotation = 0.007596123 -0.08682408 -0.08682408 0.9924039
+			}
+			boneSlot modesty
+			{
+				bone = pelvis
+				position = 0 0.3 0.15
+			}
+		}
+		light
+		{
+			lightType = Spot
+			attenuationConstant = 0
+			attenuationLinear = 0.0005
+			attenuationQuadric = 0.001
+			spotlightOuterAngle = 50
+			alias = torchlight
+			boneSlot = torch
+		}
+		billboard
+		{
+			materialName = Torch
+			size = 0.13 0.13
+			cameraVisibleCheck = True
+			billboardType = PerpendicularCommon
+			commonDirection = 1 0 0
+			alias = torchbil
+			boneSlot = torch
+			rotation = -0.2164397 0 0 -0.976296
+		}
+		billboard
+		{
+			color = 0 0 0
+			materialName = Black
+			size = 0.2 0.2
+			billboardType = PerpendicularCommon
+			commonDirection = 0 0.5 1
+			boneSlot = modesty
+		}
+		helper
+		{
+			alias = FPShead
+			boneSlot = head
+			scale = 0.05 0.05 0.05
 		}
 	}
 }

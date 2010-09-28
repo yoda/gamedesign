@@ -1264,8 +1264,38 @@ namespace Game
 					else
 					{
 						//Characters, etc
-						position = unit.GetInterpolatedPosition();
-						position += unit.Type.FPSCameraOffset * unit.GetInterpolatedRotation();
+                        Vec3 pos = Vec3.Zero;
+                        Quat rot = Quat.Identity;
+                        Vec3 scl = Vec3.Zero;
+                        bool hasHead = false;
+
+                        foreach (MapObjectAttachedObject obj in unit.AttachedObjects)
+                        {
+                            if (obj as MapObjectAttachedHelper == null)
+                                continue;
+
+                            if (obj.Alias == "FPShead")
+                            {
+                                obj.GetGlobalInterpolatedTransform(out pos, out rot, out scl);
+                                hasHead = true;
+                                break;
+                            }
+                        }
+
+                        if (hasHead)
+                        {
+                            position = pos;
+                            position += unit.Type.FPSCameraOffset * rot;
+                        }
+                        else
+                        {
+                            position = unit.GetInterpolatedPosition();
+                            position += unit.Type.FPSCameraOffset * unit.GetInterpolatedRotation();
+                        }
+
+                        // OLD - replaced as per http://www.neoaxisgroup.com/phpBB2/viewtopic.php?t=2873
+						/*position = unit.GetInterpolatedPosition();
+						position += unit.Type.FPSCameraOffset * unit.GetInterpolatedRotation();*/
 					}
 					forward = cameraLookDir;
 				}

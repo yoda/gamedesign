@@ -49,12 +49,4 @@ type SubmachineGun
 		fireTimes = 
 		fireAnimationName = fire
 	}
-	attachedObjects
-	{
-		light
-		{
-			lightType = Spot
-			position = 0.9944434 0 0
-		}
-	}
 }

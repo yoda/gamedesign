@@ -3,8 +3,8 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.003921569 0.003921569 0.003921569
-editorCameraPosition = 94.14926 18.0409 21.76032
-editorCameraDirection = 3.081026 -0.9173835
+editorCameraPosition = 96.4717 -9.582512 21.16063
+editorCameraDirection = 3.212318 -0.5490162
 shadowColor = 1 1 1
 logicSystemManager = 3
 shadowTechnique = ShadowmapMedium
@@ -91,7 +91,7 @@ entity
 	type = StaticMesh
 	uin = 9
 	classPrompt = StaticMesh
-	position = 13.2556 11.34823 0
+	position = 13.2556 11.34823 0.1
 	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
 }
 entity
@@ -99,7 +99,7 @@ entity
 	type = StaticMesh
 	uin = 10
 	classPrompt = StaticMesh
-	position = 87.94795 10.46278 0
+	position = 87.94795 10.46278 0.1
 	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
 }
 entity
@@ -107,7 +107,7 @@ entity
 	type = StaticMesh
 	uin = 11
 	classPrompt = StaticMesh
-	position = 50.58968 -30.60763 0
+	position = 50.58968 -30.60763 0.1
 	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
 }
 entity
@@ -115,7 +115,7 @@ entity
 	type = StaticMesh
 	uin = 12
 	classPrompt = StaticMesh
-	position = 51.11596 45.52451 0
+	position = 51.11596 45.52451 0.1
 	rotation = 0 0 -0.7071068 -0.7071068
 	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
 }

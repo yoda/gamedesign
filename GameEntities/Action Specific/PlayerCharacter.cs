@@ -423,32 +423,28 @@ namespace GameEntities
 		}
 
         // we'll want to rip this out and throw it in a class for statue.. here for testing
-        private int derp;
+        
         // check if _we're_ frozen and blinded
+        // check if local PChar instance is frozen, instead of peers, to cut redundant checks and networking
         protected Boolean IsBlinded()
         {
-            derp++;
-            if (derp > 1000) { Die(); derp = 0; }
-            foreach (PlayerCharacter pc in Entities.Instance.EntitiesCollection)
+            foreach (Entity o in Entities.Instance.EntitiesCollection)
             {
-                Vec3 delta = new Vec3(pc.Position); //Position - pc.Position;
-                Ray r = new Ray(Position, delta);
+                PlayerCharacter pc = o as PlayerCharacter;
+                if (pc == null || ReferenceEquals(this,pc)) continue;
+                Vec3 delta = new Vec3(Position - pc.Position);
 
-
-
-                // if angle in range, throw out ray
-                if (Math.Abs((Rotation - pc.Rotation).Z) < 20)
+                // if valid angle, throw out ray (bearing in mind hit location is anywhere on mesh)
+                Radian angle = MathUtils.GetVectorsAngle(delta, pc.Rotation.GetForward());
+                if (Math.Abs(angle) < MathFunctions.DegToRad(15))
                 {
-                    RayCastResult res = PhysicsWorld.Instance.RayCast(r, 0);
-                    // ray hits
-                    float x = res.Distance - delta.Length();
-                    if (res.Distance - delta.Length() < 0.5)
-                    {
-                        Die();
-                    }
+                    float hit = PhysicsWorld.Instance.RayCast(new Ray(Position,delta), (int)ContactGroup.CastAll).Distance;
+                    return delta.LengthFast() < 25 && hit <= delta.LengthFast(); //Math.Abs(hit - delta.Length()) < 20f;
                 }
             }
-            return true;
+            return false;
+            //float dist = PhysicsWorld.Instance.RayCast(new Ray(Position,Rotation.GetForward()), (int)ContactGroup.CastAll).Distance;
+            //return dist > 1 && dist < 10;
         }
 
 		/// <summary>Overridden from <see cref="Engine.EntitySystem.Entity.OnTick()"/>.</summary>
@@ -459,6 +455,11 @@ namespace GameEntities
             // Torch where Character is facing.
           //  torch.Position = Position;
           //  torch.Rotation = Rotation;
+
+            if (IsBlinded())
+            {
+                TryJump();
+            }
 
 			if( Intellect != null )
 			{

@@ -4,9 +4,9 @@ type Human
 	weaponAttachPosition = 0.4 -0.1 -0.1
 	weaponFPSAttachPosition = 0.4 -0.3 -0.5
 	optimalAttackDistanceRange = 0 3
-	walkAnimationVelocityMultiplier = 0.85
-	height = 2.2
-	radius = 0.2
+	walkAnimationVelocityMultiplier = 0.2
+	height = 3.4
+	radius = 0.25
 	walkMaxVelocity = 7
 	walkForce = 6000
 	flyControlMaxVelocity = 10

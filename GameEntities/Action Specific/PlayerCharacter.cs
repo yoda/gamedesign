@@ -20,6 +20,14 @@ namespace GameEntities
 	/// <summary>
 	/// Defines the <see cref="PlayerCharacter"/> entity type.
 	/// </summary>
+    enum PlayerTeam
+    {
+        SpectatorPlayer,
+        StatuePlayer,
+        HumanPlayer
+        
+    }
+
 	public class PlayerCharacterType : GameCharacterType
 	{
 		[FieldSerialize]
@@ -87,6 +95,9 @@ namespace GameEntities
 		[FieldSerialize]
 		float contusionTimeRemaining;
 
+        [FieldSerialize]
+        PlayerTeam playerTeam;
+
         /*[FieldSerialize]
         Light torch;*/
 
@@ -153,12 +164,13 @@ namespace GameEntities
 
 		///////////////////////////////////////////
 
-		enum NetworkMessages
-		{
-			ActiveWeaponToClient,
-			WeaponVerticalAngleToClient,
-			ContusionTimeRemainingToClient,
-		}
+        enum NetworkMessages
+        {
+            ActiveWeaponToClient,
+            WeaponVerticalAngleToClient,
+            ContusionTimeRemainingToClient,
+            PlayerTeamToClient,
+        }
 
 		///////////////////////////////////////////
 
@@ -477,8 +489,11 @@ namespace GameEntities
 
 			if( activeWeapon != null )
 			{
-				if( EntitySystemWorld.Instance.IsServer() )
-					Server_TickSendWeaponVerticalAngleToClients();
+                if (EntitySystemWorld.Instance.IsServer())
+                {
+                    Server_TickSendWeaponVerticalAngleToClients();
+                    Server_TickSendPlayerTeamToClients(); // Update all clients with other clients faction
+                }
 			}
 		}
 
@@ -856,6 +871,29 @@ namespace GameEntities
 				return;
 			ContusionTimeRemaining = value;
 		}
+
+        void Server_TickSendPlayerTeamToClients()
+        {
+            Server_SendPlayerTeamToClients(EntitySystemWorld.Instance.RemoteEntityWorlds, playerTeam);
+        }
+
+        // Faction selection propogation
+        void Server_SendPlayerTeamToClients(IList<RemoteEntityWorld> remoteEntityWorlds, PlayerTeam team)
+        {
+            SendDataWriter writer = BeginNetworkMessage(remoteEntityWorlds, typeof(PlayerCharacter),
+                (ushort)NetworkMessages.PlayerTeamToClient);
+            writer.Write((int)team);
+            EndNetworkMessage();
+        }
+
+        [NetworkReceive(NetworkDirections.ToClient, (ushort)NetworkMessages.PlayerTeamToClient)]
+        void Client_ReceivePlayerTeam(RemoteEntityWorld sender, ReceiveDataReader reader)
+        {
+            PlayerTeam value = (PlayerTeam)reader.ReadInt32();
+            if (!reader.Complete())
+                return;
+            playerTeam = value;
+        }
 
 	}
 }

@@ -33,6 +33,10 @@ namespace GameEntities
 		[FieldSerialize]
 		SphereDir lookDirection;
 
+        // PlayerTeam for faction selection.
+        [FieldSerialize]
+        PlayerTeam team;
+
 		bool fpsCamera;//for hiding player unit for the fps camera
 		float tpsCameraCenterOffset;
 

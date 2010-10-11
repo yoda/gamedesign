@@ -4,10 +4,10 @@ type Human
 	weaponAttachPosition = 0.4 -0.1 -0.1
 	weaponFPSAttachPosition = 0.4 -0.3 -0.5
 	optimalAttackDistanceRange = 0 3
-	walkAnimationVelocityMultiplier = 0.2
+	walkAnimationVelocityMultiplier = 0.6
 	height = 3.4
 	radius = 0.25
-	walkMaxVelocity = 7
+	walkMaxVelocity = 5
 	walkForce = 6000
 	flyControlMaxVelocity = 10
 	flyControlForce = 700
@@ -41,8 +41,9 @@ type Human
 		{
 			meshName = Types\Units\Human\Human.mesh
 			castDynamicShadows = True
+			castStaticShadows = True
+			receiveStaticShadows = True
 			position = -0.2928487 0 -2.382195
-			rotation = 0 0 -0.7071068 -0.7071068
 			boneSlot hand
 			{
 				bone = finger_middle.02.L

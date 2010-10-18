@@ -1,0 +1,5 @@
+highLevelMaterial NewMaterial
+{
+	template = SimpleExampleMaterial
+	diffuseMap = Types\Units\Human\BobTexture.jpg
+}

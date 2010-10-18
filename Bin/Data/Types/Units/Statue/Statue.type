@@ -1,0 +1,24 @@
+type Statue
+{
+	class = PlayerCharacter
+	walkAnimationVelocityMultiplier = 0.3
+	jumpAnimationName = idle
+	height = 1.4
+	radius = 0.2
+	walkForce = 6000
+	initialAI = DefaultGameCharacterAI
+	fpsCameraOffset = 0.35 0 0.3
+	allowEditorCreate = True
+	networkType = Synchronized
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\Units\Statue\Statue.mesh
+			castDynamicShadows = True
+			forceMaterial = NewMaterial2
+			receiveStaticShadows = True
+			position = 0 0 -0.2561025
+		}
+	}
+}

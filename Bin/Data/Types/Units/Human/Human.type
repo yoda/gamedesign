@@ -41,6 +41,7 @@ type Human
 		{
 			meshName = Types\Units\Human\Human.mesh
 			castDynamicShadows = True
+			forceMaterial = NewMaterial
 			castStaticShadows = True
 			receiveStaticShadows = True
 			position = -0.2928487 0 -2.382195
@@ -85,15 +86,6 @@ type Human
 			alias = torchbil
 			boneSlot = torch
 			rotation = -0.2164397 0 0 -0.976296
-		}
-		billboard
-		{
-			color = 0 0 0
-			materialName = Black
-			size = 0.2 0.2
-			billboardType = PerpendicularCommon
-			commonDirection = 0 0.5 1
-			boneSlot = modesty
 		}
 		helper
 		{

@@ -1,0 +1,50 @@
+type Statue
+{
+	class = PlayerCharacter
+	weaponAttachPosition = 0.4 -0.1 -0.1
+	weaponFPSAttachPosition = 0.4 -0.3 -0.5
+	optimalAttackDistanceRange = 0 3
+	walkAnimationVelocityMultiplier = 0.6
+	height = 3.4
+	radius = 0.25
+	walkMaxVelocity = 5
+	walkForce = 6000
+	flyControlMaxVelocity = 10
+	flyControlForce = 700
+	soundJump = "Types/Units/Rabbit/Jump.ogg"
+	allowPlayerControl = True
+	initialAI = DefaultGameCharacterAI
+	viewRadius = 70
+	lifeMax = 200
+	targetPriority = 1
+	substance = Flesh
+	allowEditorCreate = True
+	networkType = Synchronized
+	weapons
+	{
+		item
+		{
+			weaponType = SubmachineGun
+		}
+		item
+		{
+			weaponType = Shotgun
+		}
+		item
+		{
+			weaponType = Hammer
+		}
+	}
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\Units\Statue\Statue.mesh
+			castDynamicShadows = True
+			forceMaterial = NewMaterial
+			castStaticShadows = True
+			receiveStaticShadows = True
+			position = -0.2928487 0 -2.382195
+		}
+	}
+}

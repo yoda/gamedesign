@@ -3,7 +3,7 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.003921569 0.003921569 0.003921569
-editorCameraPosition = 96.4717 -9.582512 21.16063
+editorCameraPosition = 72.78738 66.50099 48.38805
 editorCameraDirection = 2.729527 -0.8149417
 shadowColor = 1 1 1
 logicSystemManager = 3
@@ -88,41 +88,8 @@ entity
 }
 entity
 {
-	type = StaticMesh
-	uin = 9
-	classPrompt = StaticMesh
-	position = 13.2556 11.34823 0.1
-	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
-}
-entity
-{
-	type = StaticMesh
-	uin = 10
-	classPrompt = StaticMesh
-	position = 87.94795 10.46278 0.1
-	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
-}
-entity
-{
-	type = StaticMesh
-	uin = 11
-	classPrompt = StaticMesh
-	position = 50.58968 -30.60763 0.1
-	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
-}
-entity
-{
-	type = StaticMesh
-	uin = 12
-	classPrompt = StaticMesh
-	position = 51.11596 45.52451 0.1
-	rotation = 0 0 -0.7071068 -0.7071068
-	meshName = Types\StaticObjects\Rooms\Plane.001.mesh
-}
-entity
-{
 	type = Light
-	uin = 13
+	uin = 9
 	classPrompt = Light
 	lightType = Point
 	diffuseColor = 1 1 1
@@ -146,7 +113,7 @@ entity
 entity
 {
 	type = TorchItem
-	uin = 14
+	uin = 10
 	classPrompt = WeaponItem
 	respawnTime = 10
 	position = 72.91759 -0.1655924 0.3347329
@@ -154,8 +121,51 @@ entity
 entity
 {
 	type = SubmachineGunItem
-	uin = 15
+	uin = 11
 	classPrompt = WeaponItem
 	respawnTime = 10
 	position = 79.92449 -0.1404035 0.3306218
+}
+entity
+{
+	type = Plane001
+	uin = 12
+	classPrompt = MapObject
+	position = 8.053138 103.568 -0.0007591248
+	name = Plane001_0
+}
+entity
+{
+	type = Plane002
+	uin = 13
+	classPrompt = MapObject
+	position = 52.70298 109.4366 0.003276483
+	rotation = 0 0 -1 -4.371139E-08
+	name = Plane002_0
+}
+entity
+{
+	type = Plane003
+	uin = 14
+	classPrompt = MapObject
+	position = 51.36026 45.36821 0.00821948
+	rotation = 0 0 -0.7071068 0.7071068
+	name = Plane003_0
+}
+entity
+{
+	type = Plane004
+	uin = 15
+	classPrompt = MapObject
+	position = -40.81598 69.94365 0.00116622
+	name = Plane004_0
+}
+entity
+{
+	type = Plane005
+	uin = 16
+	classPrompt = MapObject
+	position = 50.92078 5.309656 0.001585951
+	rotation = 0 0 -0.7071068 0.7071068
+	name = Plane005_0
 }

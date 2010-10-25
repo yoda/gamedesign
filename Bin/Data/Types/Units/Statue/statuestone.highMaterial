@@ -1,0 +1,5 @@
+highLevelMaterial statuestone
+{
+	template = SimpleExampleMaterial
+	diffuseMap = Types\Units\Statue\Texture.jpg
+}

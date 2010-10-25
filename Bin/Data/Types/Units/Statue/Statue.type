@@ -16,7 +16,7 @@ type Statue
 		{
 			meshName = Types\Units\Statue\Statue.mesh
 			castDynamicShadows = True
-			forceMaterial = NewMaterial2
+			forceMaterial = statuestone
 			receiveStaticShadows = True
 			position = 0 0 -0.2561025
 		}

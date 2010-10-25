@@ -1,0 +1,13 @@
+type Mansion
+{
+	class = MapObject
+	allowEditorCreate = True
+	networkType = Synchronized
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\StaticObjects\Rooms\Mansion.mesh
+		}
+	}
+}

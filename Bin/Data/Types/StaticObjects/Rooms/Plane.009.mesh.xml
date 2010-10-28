@@ -1,0 +1,78 @@
+<mesh>
+	<submeshes>
+		<submesh material="Material.005/TEXFACE/wall_texture_9271304.JPG" usesharedvertices="false">
+			<faces count="6">
+				<face v1="0" v2="1" v3="3"/>
+				<face v1="1" v2="2" v3="3"/>
+				<face v1="4" v2="5" v3="7"/>
+				<face v1="5" v2="6" v3="7"/>
+				<face v1="8" v2="9" v3="11"/>
+				<face v1="9" v2="10" v3="11"/>
+			</faces>
+			<geometry vertexcount="12">
+				<vertexbuffer positions="true" normals="true" texture_coords="1">
+					<vertex>
+						<position x="1.011678" y="-0.333333" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="1.000000" v="0.000000"/>
+					</vertex>
+					<vertex>
+						<position x="1.011678" y="-1.000000" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="1.000000" v="0.333333"/>
+					</vertex>
+					<vertex>
+						<position x="-1.000000" y="-1.000000" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.666667" v="0.333333"/>
+					</vertex>
+					<vertex>
+						<position x="-1.000000" y="-0.333333" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.666667" v="0.000000"/>
+					</vertex>
+					<vertex>
+						<position x="-1.000000" y="0.267366" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.000000" v="0.333333"/>
+					</vertex>
+					<vertex>
+						<position x="-1.000000" y="1.000000" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.000000" v="0.000000"/>
+					</vertex>
+					<vertex>
+						<position x="1.011679" y="1.000000" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.333333" v="0.000000"/>
+					</vertex>
+					<vertex>
+						<position x="1.011679" y="0.267366" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.333333" v="0.333333"/>
+					</vertex>
+					<vertex>
+						<position x="-1.000000" y="-0.333333" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.333333" v="0.333333"/>
+					</vertex>
+					<vertex>
+						<position x="-1.000000" y="0.267366" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.333333" v="0.000000"/>
+					</vertex>
+					<vertex>
+						<position x="1.011679" y="0.267366" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.666667" v="0.000000"/>
+					</vertex>
+					<vertex>
+						<position x="1.011678" y="-0.333333" z="0.300000"/>
+						<normal x="0.000000" y="0.000000" z="-1.000000"/>
+						<texcoord u="0.666667" v="0.333333"/>
+					</vertex>
+				</vertexbuffer>
+			</geometry>
+		</submesh>
+	</submeshes>
+</mesh>

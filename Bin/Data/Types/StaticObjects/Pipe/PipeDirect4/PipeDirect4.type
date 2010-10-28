@@ -1,4 +1,4 @@
-type PipeDirect4
+type PipeDirect42
 {
 	class = MapObject
 	allowEditorCreate = True

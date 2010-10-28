@@ -1,4 +1,4 @@
-highLevelMaterial BooleanSwitchOff
+highLevelMaterial BooleanSwitchOff2
 {
 	template = ShaderBaseMaterial
 	diffuseScale = 0 0 0

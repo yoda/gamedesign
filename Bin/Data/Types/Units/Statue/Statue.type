@@ -7,9 +7,16 @@ type Statue
 	radius = 0.2
 	walkForce = 6000
 	initialAI = DefaultGameCharacterAI
-	fpsCameraOffset = 0.35 0 0.3
+	fpsCameraOffset = 0.15 0 0.38
 	allowEditorCreate = True
 	networkType = Synchronized
+	weapons
+	{
+		item
+		{
+			weaponType = Hand
+		}
+	}
 	attachedObjects
 	{
 		mesh

@@ -1,4 +1,4 @@
-type GrassGreen
+type GrassGreen2
 {
 	class = DecorativeObject
 	batchSize = 25

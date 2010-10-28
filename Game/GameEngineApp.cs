@@ -332,7 +332,7 @@ namespace Game
 
 			//Camera
 			Camera camera = RendererWorld.Instance.DefaultCamera;
-			camera.NearClipDistance = .1f;
+			camera.NearClipDistance = 0.1f;
 			camera.FarClipDistance = 1000.0f;
 			camera.FixedUp = Vec3.ZAxis;
 			camera.Fov = 90;

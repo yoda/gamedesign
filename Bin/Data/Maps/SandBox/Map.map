@@ -3,7 +3,7 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.003921569 0.003921569 0.003921569
-editorCameraPosition = 72.78738 66.50099 48.38805
+editorCameraPosition = 109.1538 29.63422 77.67684
 editorCameraDirection = 2.729527 -0.8149417
 shadowColor = 1 1 1
 logicSystemManager = 3
@@ -168,4 +168,45 @@ entity
 	position = 50.92078 5.309656 0.001585951
 	rotation = 0 0 -0.7071068 0.7071068
 	name = Plane005_0
+}
+entity
+{
+	type = Light
+	uin = 17
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 0 0 0
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = 31.63041 13.04481 0.2531147
+	name = Light_1
+}
+entity
+{
+	type = HammerItem2
+	uin = 18
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 82.47531 12.40902 0.2398027
+}
+entity
+{
+	type = Girl2
+	uin = 19
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 78.90398 16.27458 1.384689
+	name = Girl2_0
 }

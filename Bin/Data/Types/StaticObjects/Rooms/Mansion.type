@@ -8,6 +8,7 @@ type Mansion
 		mesh
 		{
 			meshName = Types\StaticObjects\Rooms\Mansion.mesh
+			collision = True
 		}
 	}
 }

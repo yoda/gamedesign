@@ -25,6 +25,7 @@ namespace GameCommon
 			uint identifier;
 			string name;
 			NetworkNode.ConnectedNode connectedNode;
+            string faction;
 
 			//
 
@@ -39,6 +40,12 @@ namespace GameCommon
 			{
 				get { return identifier; }
 			}
+
+            public string Faction
+            {
+                get { return faction; }
+                set { faction = value; }
+            }
 
 			public string Name
 			{
@@ -240,7 +247,7 @@ namespace GameCommon
 		{
 			uint identifier;
 			string name;
-
+            string faction;
 			//
 
 			internal UserInfo( uint identifier, string name )
@@ -258,6 +265,12 @@ namespace GameCommon
 			{
 				get { return name; }
 			}
+
+            public string Faction
+            {
+                get { return faction; }
+                set { faction = value; }
+            }
 
 			public override string ToString()
 			{

@@ -162,6 +162,13 @@ namespace Game
 				return true;
 			}
 
+            if (e.Key == EKeys.M)
+            {
+                PlayerManager.ServerOrSingle_Player player = PlayerManager.Instance.
+                            ServerOrSingle_GetPlayer(PlayerIntellect.Instance.Name);
+                player.Team = 1;
+            }
+
 			//GameControlsManager
 			if( EntitySystemWorld.Instance.Simulation )
 			{
@@ -1005,8 +1012,8 @@ namespace Game
 				foreach( PlayerManager.ServerOrSingle_Player player in
 					PlayerManager.Instance.ServerOrSingle_Players )
 				{
-					string text = string.Format( "{0},   Frags: {1},   Ping: {2} ms", player.Name,
-						player.Frags, (int)( player.Ping * 1000 ) );
+                    string text = string.Format("{0},   Frags: {1},  Faction: {3},  Ping: {2} ms", player.Name,
+						player.Frags, (int)( player.Ping * 1000 ), player.Intellect.Faction );
 					renderer.AddText( text, new Vec2( .2f, posy ), HorizontalAlign.Left,
 						VerticalAlign.Center );
 
@@ -1020,11 +1027,11 @@ namespace Game
 
 				foreach( PlayerManager.Client_Player player in PlayerManager.Instance.Client_Players )
 				{
-					string text = string.Format( "{0},   Frags: {1},   Ping: {2} ms", player.Name,
-						player.Frags, (int)( player.Ping * 1000 ) );
+                    string text = string.Format("{0},   Frags: {1},  Faction: {3}, Ping: {2} ms", player.Name,
+						player.Frags, (int)( player.Ping * 1000 ),  player.Team );
 					renderer.AddText( text, new Vec2( .2f, posy ), HorizontalAlign.Left,
 						VerticalAlign.Center );
-
+                    
 					posy += .025f;
 				}
 			}

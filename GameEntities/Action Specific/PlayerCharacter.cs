@@ -410,7 +410,13 @@ namespace GameEntities
 						CreateActiveWeaponAttachedObject();
 				}
 			}
-
+            foreach (Entity o in Entities.Instance.EntitiesCollection)
+            {
+                PlayerCharacter pc = o as PlayerCharacter;
+                if (pc == null || ReferenceEquals(this, pc)) continue;
+              
+            }
+            
            /* {
                 torch = (Light)Entities.Instance.Create("Light", Map.Instance);
                 torch.LightType = RenderLightType.Spot;
@@ -535,6 +541,7 @@ namespace GameEntities
 
         protected override void OnDie( MapObject prejudicial )
         {
+            this.Intellect.Faction = (FactionType)EntityTypes.Instance.GetByName("StatueFaction");
             //torch.SetDeleted();
         }
 		/// <summary>Overridden from <see cref="Engine.MapSystem.MapObject.OnRender(Camera)"/>.</summary>

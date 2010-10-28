@@ -3,6 +3,6 @@ highLevelMaterial Rooms/ConcreteWall2
 	template = ShaderBaseMaterial
 	diffuse1Map
 	{
-		texture = Models\Rooms\ConcreteWall.dds
+		texture = Types\StaticObjects\Rooms\WallPainted.dds
 	}
 }

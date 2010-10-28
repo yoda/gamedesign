@@ -393,6 +393,8 @@ namespace GameEntities
 		protected override void OnPostCreate( bool loaded )
 		{
 			base.OnPostCreate( loaded );
+            // TODO   Sam's superceeds, I think
+            //if (EntitySystemWorld.Instance.IsServer()) playerTeam = StatuePlayer;
 
 			if( !loaded )
 			{
@@ -448,6 +450,7 @@ namespace GameEntities
         // check if local PChar instance is frozen, instead of peers, to cut redundant checks and networking
         protected Boolean IsBlinded()
         {
+            //foreach (RayCastResult rc in PhysicsWorld.Instance.RayCast(ray,(int)ContactGroup.CastAll).Distance)
             foreach (Entity o in Entities.Instance.EntitiesCollection)
             {
                 PlayerCharacter pc = o as PlayerCharacter;
@@ -458,8 +461,10 @@ namespace GameEntities
                 Radian angle = MathUtils.GetVectorsAngle(delta, pc.Rotation.GetForward());
                 if (Math.Abs(angle) < MathFunctions.DegToRad(15))
                 {
-                    float hit = PhysicsWorld.Instance.RayCast(new Ray(Position,delta), (int)ContactGroup.CastAll).Distance;
-                    return delta.LengthFast() < 25 && hit <= delta.LengthFast(); //Math.Abs(hit - delta.Length()) < 20f;
+                    RayCastResult rc = PhysicsWorld.Instance.RayCast(new Ray(Position,delta), (int)ContactGroup.CastAll);
+                    PlayerCharacter rcpl = rc.Shape.Body.UserData as PlayerCharacter;
+                    if (rcpl == this) return true;
+                    //return delta.LengthFast() < 25 && hit <= delta.LengthFast(); //Math.Abs(hit - delta.Length()) < 20f;
                 }
             }
             return false;
@@ -470,7 +475,7 @@ namespace GameEntities
 		/// <summary>Overridden from <see cref="Engine.EntitySystem.Entity.OnTick()"/>.</summary>
 		protected override void OnTick()
 		{
-			base.OnTick();
+            if (!IsBlinded()) base.OnTick();
 
             // Torch where Character is facing.
           //  torch.Position = Position;
@@ -549,7 +554,7 @@ namespace GameEntities
 
         protected override void OnDie( MapObject prejudicial )
         {
-            this.Intellect.Faction = (FactionType)EntityTypes.Instance.GetByName("StatueFaction");
+            //this.Intellect.Faction = (FactionType)EntityTypes.Instance.GetByName("StatueFaction");
             //torch.SetDeleted();
         }
 		/// <summary>Overridden from <see cref="Engine.MapSystem.MapObject.OnRender(Camera)"/>.</summary>

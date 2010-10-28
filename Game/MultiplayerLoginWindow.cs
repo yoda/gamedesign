@@ -135,6 +135,7 @@ namespace Game
 
 			//create user for server
 			server.UserManagementService.CreateServerUser( userName );
+            // TODO set faction id
 
 			//close all windows
 			foreach( EControl control in GameEngineApp.Instance.ControlManager.Controls )

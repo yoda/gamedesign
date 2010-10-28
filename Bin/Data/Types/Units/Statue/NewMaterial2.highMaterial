@@ -1,0 +1,5 @@
+highLevelMaterial NewMaterial2
+{
+	template = SimpleExampleMaterial
+	diffuseMap = Types\Units\Statue\Texture.jpg
+}

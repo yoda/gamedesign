@@ -4,10 +4,10 @@ type Statue
 	walkAnimationVelocityMultiplier = 0.3
 	jumpAnimationName = idle
 	height = 1.4
-	radius = 0.2
+	radius = 0.45
 	walkForce = 6000
 	initialAI = DefaultGameCharacterAI
-	fpsCameraOffset = 0.15 0 0.38
+	fpsCameraOffset = 0.31 0 0.38
 	allowEditorCreate = True
 	networkType = Synchronized
 	weapons

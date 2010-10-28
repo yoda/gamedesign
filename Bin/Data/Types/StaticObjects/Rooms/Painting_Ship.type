@@ -8,6 +8,7 @@ type Painting_Ship
 		{
 			meshName = Types\StaticObjects\Rooms\Plane.011.mesh
 			collision = True
+			alias = shipDoor
 		}
 		particle
 		{

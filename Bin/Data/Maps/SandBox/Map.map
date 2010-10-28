@@ -210,3 +210,84 @@ entity
 	position = 78.90398 16.27458 1.384689
 	name = Girl2_0
 }
+entity
+{
+	type = Girl2
+	uin = 20
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 135.1109 86.07018 1.379582
+	name = Girl2_1
+}
+entity
+{
+	type = Girl2
+	uin = 21
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 66.88306 44.28572 1.388398
+	name = Girl2_2
+}
+entity
+{
+	type = Girl2
+	uin = 22
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 65.54389 31.63125 1.38824
+	name = Girl2_3
+}
+entity
+{
+	type = Girl2
+	uin = 23
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 104.3188 84.31219 1.379214
+	name = Girl2_4
+}
+entity
+{
+	type = Girl2
+	uin = 24
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 72.49979 25.68441 1.376849
+	name = Girl2_5
+}
+entity
+{
+	type = Girl2
+	uin = 25
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 87.54589 68.91891 1.378697
+	name = Girl2_6
+}
+entity
+{
+	type = Girl2
+	uin = 26
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 108.5784 169.2626 1.380215
+	name = Girl2_7
+}
+entity
+{
+	type = Girl2
+	uin = 27
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 84.30207 70.26242 1.381955
+	name = Girl2_8
+}
+entity
+{
+	type = Girl2
+	uin = 28
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 93.02174 60.89685 1.379574
+	name = Girl2_9
+}

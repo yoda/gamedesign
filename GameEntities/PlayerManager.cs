@@ -52,6 +52,9 @@ namespace GameEntities
 			[FieldSerialize]
 			int frags;
 
+            [FieldSerialize]
+            int team;
+
 			float ping;
 
 			[FieldSerialize]
@@ -104,6 +107,16 @@ namespace GameEntities
 				}
 			}
 
+            public int Team
+            {
+                get { return team; }
+                set
+                {
+                    team = value;
+                    PlayerManager.Instance.server_shouldUpdateDataToClients = true;
+                }
+            }
+
 			public float Ping
 			{
 				get { return ping; }
@@ -139,6 +152,7 @@ namespace GameEntities
 			UserManagementClientNetworkService.UserInfo user;
 
 			int frags;
+            int team;
 			float ping;
 
 			public Client_Player( uint identifier, string name, bool bot,
@@ -148,6 +162,7 @@ namespace GameEntities
 				this.name = name;
 				this.bot = bot;
 				this.user = user;
+                this.team = 0; // Team default = 0 (spectator)
 			}
 
 			public uint Identifier
@@ -175,6 +190,12 @@ namespace GameEntities
 				get { return frags; }
 				set { frags = value; }
 			}
+
+            public int Team
+            {
+                get { return team; }
+                set { team = value; }
+            }
 
 			public float Ping
 			{
@@ -392,6 +413,7 @@ namespace GameEntities
 			writer.WriteVariableUInt32( player.Identifier );
 			writer.Write( player.Name );
 			writer.Write( player.Bot );
+            writer.WriteVariableInt32(player.Team); // Send the data for player to everyone
 			writer.WriteVariableUInt32( player.User != null ? player.User.Identifier : (uint)0 );
 			EndNetworkMessage();
 		}
@@ -440,6 +462,7 @@ namespace GameEntities
 			{
 				writer.WriteVariableUInt32( player.Identifier );
 				writer.WriteVariableInt32( player.Frags );
+                writer.WriteVariableInt32(player.Team);
 				writer.Write( player.Ping );
 			}
 
@@ -495,7 +518,9 @@ namespace GameEntities
 			uint identifier = reader.ReadVariableUInt32();
 			string name = reader.ReadString();
 			bool bot = reader.ReadBoolean();
+            int team = reader.ReadVariableInt32();
 			uint userIdentifier = reader.ReadVariableUInt32();
+            
 
 			if( !reader.Complete() )
 				return;
@@ -541,6 +566,7 @@ namespace GameEntities
 			{
 				uint identifier = reader.ReadVariableUInt32();
 				int frags = reader.ReadVariableInt32();
+                int team = reader.ReadVariableInt32();
 				float ping = reader.ReadSingle();
 
 				Client_Player player = Client_GetPlayer( identifier );
@@ -549,6 +575,7 @@ namespace GameEntities
 				{
 					player.Frags = frags;
 					player.Ping = ping;
+                    player.Team = team;
 				}
 			}
 		}

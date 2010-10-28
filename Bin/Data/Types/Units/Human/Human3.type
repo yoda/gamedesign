@@ -1,4 +1,0 @@
-type Human3
-{
-	class = PlayerCharacter
-}

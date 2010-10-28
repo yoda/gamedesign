@@ -2,11 +2,15 @@ type = GameMap
 uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
+ambientLight = 0.7098039 0.7098039 0.7098039
 ambientLight = 0.003921569 0.003921569 0.003921569
-editorCameraPosition = 109.1538 29.63422 77.67684
+editorCameraPosition = 72.78738 66.50099 48.38805
 editorCameraDirection = 2.729527 -0.8149417
 shadowColor = 1 1 1
+shadowFarDistance = 10000
+shadowCubicTextureCount = 3
 logicSystemManager = 3
+sceneGraphType = Octree
 shadowTechnique = ShadowmapMedium
 rootEditorLayer
 {
@@ -113,6 +117,7 @@ entity
 entity
 {
 	type = TorchItem
+	uin = 9
 	uin = 10
 	classPrompt = WeaponItem
 	respawnTime = 10
@@ -121,6 +126,7 @@ entity
 entity
 {
 	type = SubmachineGunItem
+	uin = 10
 	uin = 11
 	classPrompt = WeaponItem
 	respawnTime = 10
@@ -128,9 +134,13 @@ entity
 }
 entity
 {
+	type = Mansion
+	uin = 11
 	type = Plane001
 	uin = 12
 	classPrompt = MapObject
+	position = 15.30251 88.03046 0.06286203
+	name = Mansion_0
 	position = 8.053138 103.568 -0.0007591248
 	name = Plane001_0
 }

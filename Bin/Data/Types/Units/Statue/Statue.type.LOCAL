@@ -8,7 +8,6 @@ type Statue
 	walkForce = 6000
 	initialAI = DefaultGameCharacterAI
 	fpsCameraOffset = 0.31 0 0.38
-	fpsCameraOffset = 0.35 0 0.3
 	allowEditorCreate = True
 	networkType = Synchronized
 	weapons
@@ -24,7 +23,6 @@ type Statue
 		{
 			meshName = Types\Units\Statue\Statue.mesh
 			castDynamicShadows = True
-			forceMaterial = statuestone
 			forceMaterial = NewMaterial2
 			receiveStaticShadows = True
 			position = 0 0 -0.2561025

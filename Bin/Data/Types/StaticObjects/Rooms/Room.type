@@ -1,0 +1,13 @@
+type Room2
+{
+	class = MapObject
+	allowEditorCreate = True
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\StaticObjects\Map\Room.mesh
+			collision = True
+		}
+	}
+}

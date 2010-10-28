@@ -1,0 +1,12 @@
+type Room
+{
+	class = MapObject
+	allowEditorCreate = True
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\StaticObjects\Map\Room.mesh
+		}
+	}
+}

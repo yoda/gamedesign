@@ -2,7 +2,6 @@ type Ceiling
 {
 	class = MapObject
 	allowEditorCreate = True
-	networkType = Synchronized
 	attachedObjects
 	{
 		mesh

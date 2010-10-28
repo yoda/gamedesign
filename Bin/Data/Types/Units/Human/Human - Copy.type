@@ -1,4 +1,4 @@
-type Human2
+type Human22
 {
 	class = PlayerCharacter
 	weaponAttachPosition = 0.4 -0.1 -0.1

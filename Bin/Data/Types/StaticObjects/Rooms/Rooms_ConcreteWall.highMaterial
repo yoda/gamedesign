@@ -1,4 +1,4 @@
-highLevelMaterial Rooms/ConcreteWall2
+highLevelMaterial Rooms/ConcreteWall22
 {
 	template = ShaderBaseMaterial
 	diffuse1Map

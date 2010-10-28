@@ -2,13 +2,15 @@ type Plane003
 {
 	class = MapObject
 	allowEditorCreate = True
-	networkType = Synchronized
 	attachedObjects
 	{
 		mesh
 		{
 			meshName = Types\StaticObjects\Rooms\Plane.003.mesh
+			castDynamicShadows = True
+			forceMaterial = "Rooms/ConcreteWall2"
 			collision = True
+			receiveStaticShadows = True
 			scale = 20 20 20
 		}
 	}

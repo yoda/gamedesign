@@ -26,12 +26,17 @@ namespace GameEntities
 	{
 		static GameWorld instance;
 
+        string[] names = new string[2] { "Statue", "Human" };
+        Random Rand;
+       
 		//for moving player character between maps
 		string shouldChangeMapName;
 		string shouldChangeMapSpawnPointName;
 		PlayerCharacter.ChangeMapInformation shouldChangeMapPlayerCharacterInformation;
 
 		bool needWorldDestroy;
+        string factionstring;
+
 
 		//
 
@@ -40,6 +45,9 @@ namespace GameEntities
 		public GameWorld()
 		{
 			instance = this;
+            Rand = new Random(DateTime.Now.Second);
+
+           
 		}
 
 		public static new GameWorld Instance
@@ -285,8 +293,9 @@ namespace GameEntities
 			SpawnPoint spawnPoint )
 		{
 			string unitTypeName;
+            this.factionstring = this.names[this.Rand.Next(0, this.names.Length)];
 			if( !player.Bot )
-				unitTypeName = "Statue";
+				unitTypeName = factionstring;
 			else
 				unitTypeName = player.Name;
 

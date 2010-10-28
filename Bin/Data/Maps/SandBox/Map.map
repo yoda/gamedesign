@@ -3,7 +3,6 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.7098039 0.7098039 0.7098039
-editorCameraPosition = 58.5482 55.01644 110.524
 editorCameraDirection = 2.729527 -0.8149417
 shadowColor = 1 1 1
 shadowFarDistance = 10000
@@ -107,9 +106,6 @@ entity
 }
 entity
 {
-	type = Mansion
 	uin = 11
 	classPrompt = MapObject
-	position = 15.30251 88.03046 0.06286203
-	name = Mansion_0
 }

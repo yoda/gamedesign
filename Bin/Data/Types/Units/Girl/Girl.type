@@ -1,4 +1,4 @@
-type Girl
+type Girl2
 {
 	class = GameCharacter
 	optimalAttackDistanceRange = 0 1

@@ -1,0 +1,23 @@
+type Hand
+{
+	class = MeleeWeapon
+	boneSlot = hand
+	substance = Flesh
+	networkType = Synchronized
+	normalMode
+	{
+		damage = 20
+		impulse = 500
+		kickCheckRadius = 1
+		betweenFireTime = 1.5
+		useDistanceRange = 0 2
+		fireTimes = 0.4
+		fireAnimationName = fire
+		fireUnitAnimationName = blow
+	}
+	alternativeMode
+	{
+		fireTimes = 
+		fireAnimationName = fire
+	}
+}

@@ -61,6 +61,8 @@ namespace GameEntities
 			RestoreMainControlledUnitToServer,
 		}
 
+        
+       
 		///////////////////////////////////////////
 
 		PlayerIntellectType _type = null; public new PlayerIntellectType Type { get { return _type; } }
@@ -106,6 +108,8 @@ namespace GameEntities
 		{
 			base.OnPostCreate( loaded );
 
+            
+           
 			Faction = (FactionType)EntityTypes.Instance.GetByName( "HumanFaction" );
 
            

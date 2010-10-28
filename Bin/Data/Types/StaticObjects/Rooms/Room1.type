@@ -2,13 +2,14 @@ type Room1
 {
 	class = MapObject
 	allowEditorCreate = True
-	networkType = ServerOnly
 	attachedObjects
 	{
 		mesh
 		{
 			meshName = Types\StaticObjects\Rooms\Plane.001.mesh
 			collision = True
+			collisionMaterialName = Wood
+			scale = 1 1 2.295173
 		}
 	}
 }

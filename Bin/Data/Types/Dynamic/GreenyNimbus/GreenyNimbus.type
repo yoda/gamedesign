@@ -1,4 +1,4 @@
-type GreenyNimbus
+type GreenyNimbus2
 {
 	class = MapObject
 	allowEditorCreate = True

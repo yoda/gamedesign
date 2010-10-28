@@ -21,7 +21,7 @@ fragment_program Compositor/HeatVision/Blur_fp unified
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-material Compositor/HeatVision/Blur
+material Compositor/HeatVision/Blur2
 {
 	technique
 	{

@@ -1,0 +1,69 @@
+type = GameMap
+uin = 2
+classPrompt = GameMap
+gameMusic = Sounds\Music\Game.ogg
+ambientLight = 0.2 0.2 0.2
+editorCameraPosition = 10 0 10
+editorCameraDirection = 1.570796 -0.7853982
+shadowColor = 1 1 1
+logicSystemManager = 3
+shadowTechnique = ShadowmapMedium
+rootEditorLayer
+{
+}
+entity
+{
+	type = LogicSystemManager
+	uin = 3
+	mapClassManager = 4
+	entity
+	{
+		type = LogicClassManager
+		uin = 4
+	}
+}
+entity
+{
+	type = Room2
+	uin = 5
+	classPrompt = MapObject
+	position = 10.87708 12.85249 -0.06155375
+	scale = 10 10 10
+	editorAlignmentMethod = ByBounds
+	name = Room2_0
+}
+entity
+{
+	type = SpawnPoint
+	uin = 6
+	classPrompt = SpawnPoint
+	defaultPoint = True
+	position = 17.61322 7.37712 -0.06886717
+	editorAlignmentMethod = ByBounds
+	name = SpawnPoint_0
+}
+entity
+{
+	type = Light
+	uin = 7
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 0 0 0
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = 7.400884 13.35485 -0.05945163
+	editorAlignmentMethod = ByBounds
+	name = Light_0
+}

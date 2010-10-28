@@ -35,7 +35,7 @@ namespace Game
 		[Config( "Camera", "cameraType" )]
 		static CameraType cameraType;
 
-		[Config( "Camera", "tpsCameraDistance" )]
+		[Config( "Camera", "tpsCamera`Distance" )]
 		static float tpsCameraDistance = 4;
 		[Config( "Camera", "tpsCameraCenterOffset" )]
 		static float tpsCameraCenterOffset = 1.6f;

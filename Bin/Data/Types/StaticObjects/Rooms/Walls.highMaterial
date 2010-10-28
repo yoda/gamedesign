@@ -1,0 +1,5 @@
+highLevelMaterial Walls
+{
+	template = SimpleExampleMaterial
+	diffuseMap = Types\StaticObjects\Rooms\PassageWall.dds
+}

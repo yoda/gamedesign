@@ -11,6 +11,8 @@ using Engine.Utils;
 using GameCommon;
 using GameEntities;
 
+
+
 namespace Game
 {
 	/// <summary>
@@ -62,6 +64,8 @@ namespace Game
 			EngineConsole.Init();
 
 			EngineApp.Instance.Config.RegisterClassParameters( typeof( GameEngineApp ) );
+
+            //global List< Pair<Object,int> > globplayersregistry;
 
 			if( EngineApp.Instance.Create() )
 				EngineApp.Instance.Run();

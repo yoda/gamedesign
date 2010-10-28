@@ -24,7 +24,9 @@ namespace Game
 		EComboBox comboBoxMaps;
 		ECheckBox checkBoxAllowToConnectDuringGame;
 		EButton buttonStart;
-		EListBox listBoxUsers;
+        EListBox listBoxUsersHAT;
+		EListBox listBoxUsersStatue;
+        EButton teamSwitch;
 		EEditBox editBoxChatMessage;
 
 		///////////////////////////////////////////
@@ -55,6 +57,9 @@ namespace Game
 		{
 			base.OnAttach();
 
+            // TODO
+            //GameNetworkServer.Instance.UserManagementService.Users;
+
 			//register config fields
 			EngineApp.Instance.Config.RegisterClassParameters( GetType() );
 
@@ -71,7 +76,9 @@ namespace Game
 			if( GameNetworkClient.Instance != null )
 				buttonStart.Enable = false;
 
-			listBoxUsers = (EListBox)window.Controls[ "Users" ];
+			listBoxUsersHAT = (EListBox)window.Controls["UsersHAT"];
+            listBoxUsersStatue = (EListBox)window.Controls["UsersStatue"];
+            teamSwitch = (EButton)window.Controls["TeamSwitch"];
 
 			editBoxChatMessage = (EEditBox)window.Controls[ "ChatMessage" ];
 			editBoxChatMessage.PreKeyDown += editBoxChatMessage_PreKeyDown;
@@ -147,6 +154,7 @@ namespace Game
 				server.ChatService.ReceiveText += Server_ChatService_ReceiveText;
 			}
 
+
 			//client specific
 			GameNetworkClient client = GameNetworkClient.Instance;
 			if( client != null )
@@ -214,21 +222,28 @@ namespace Game
 		void UpdateUserList()
 		{
 			//server
-			GameNetworkServer server = GameNetworkServer.Instance;
+            GameNetworkServer server = GameNetworkServer.Instance;
+            // TODO   Sam's superceeds I think
+            //foreach (UserManagementClientNetworkService.UserInfo user in server.UserManagementService.Users)
+            //    user.Faction = "Statue";
 			if( server != null )
 			{
 				UserManagementServerNetworkService userService = server.UserManagementService;
 
 				bool shouldUpdate = false;
-				if( userService.Users.Count == listBoxUsers.Items.Count )
+				if( userService.Users.Count == listBoxUsersHAT.Items.Count + listBoxUsersStatue.Items.Count )
 				{
-					int index = 0;
+					int indexStat = 0;
+                    int indexHAT = 0;
 
 					foreach( UserManagementServerNetworkService.UserInfo user in userService.Users )
 					{
-						if( user != listBoxUsers.Items[ index ] )
+						if( user == listBoxUsersStatue.Items[indexStat] )
+                            indexStat++;
+                        else if (user == listBoxUsersHAT.Items[indexHAT])
+                            indexHAT++;
+                        else
 							shouldUpdate = true;
-						index++;
 					}
 				}
 				else
@@ -237,9 +252,13 @@ namespace Game
 				if( shouldUpdate )
 				{
 					//update list box
-					listBoxUsers.Items.Clear();
+					listBoxUsersStatue.Items.Clear();
+                    listBoxUsersHAT.Items.Clear();
 					foreach( UserManagementServerNetworkService.UserInfo user in userService.Users )
-						listBoxUsers.Items.Add( user );
+                        if (user.Faction.Equals("Statue"))
+                            listBoxUsersStatue.Items.Add( user );
+                        else 
+                            listBoxUsersHAT.Items.Add(user);
 				}
 			}
 
@@ -250,15 +269,19 @@ namespace Game
 				UserManagementClientNetworkService userService = client.UserManagementService;
 
 				bool shouldUpdate = false;
-				if( userService.Users.Count == listBoxUsers.Items.Count )
+				if( userService.Users.Count == listBoxUsersStatue.Items.Count + listBoxUsersHAT.Items.Count )
 				{
-					int index = 0;
+					int indexStat = 0;
+                    int indexHAT = 0;
 
 					foreach( UserManagementClientNetworkService.UserInfo user in userService.Users )
 					{
-						if( user != listBoxUsers.Items[ index ] )
-							shouldUpdate = true;
-						index++;
+                        if (user == listBoxUsersStatue.Items[indexStat])
+                            indexStat++;
+                        else if (user == listBoxUsersHAT.Items[indexHAT])
+                            indexHAT++;
+                        else
+                            shouldUpdate = true;
 					}
 				}
 				else
@@ -267,9 +290,13 @@ namespace Game
 				if( shouldUpdate )
 				{
 					//update list box
-					listBoxUsers.Items.Clear();
+					listBoxUsersStatue.Items.Clear();
+                    listBoxUsersHAT.Items.Clear();
 					foreach( UserManagementClientNetworkService.UserInfo user in userService.Users )
-						listBoxUsers.Items.Add( user );
+                        if (user.Faction.Equals("Statue"))
+                            listBoxUsersStatue.Items.Add(user);
+                        else
+                            listBoxUsersHAT.Items.Add(user);
 				}
 			}
 		}
@@ -293,6 +320,11 @@ namespace Game
 			server.CustomMessagesService.SendToClient( user.ConnectedNode,
 				"Lobby_AllowToConnectDuringGame", checkBoxAllowToConnectDuringGame.Checked.ToString() );
 		}
+
+        void Server_Teams_ReceiveStatus(CustomMessagesServerNetworkService sender, string message, string data)
+        {
+
+        }
 
 		void Server_ChatService_ReceiveText( ChatServerNetworkService sender,
 			UserManagementServerNetworkService.UserInfo fromUser, string text,

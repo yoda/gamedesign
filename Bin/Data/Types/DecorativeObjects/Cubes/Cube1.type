@@ -1,0 +1,4 @@
+type Cube1
+{
+	class = DecorativeObject
+}

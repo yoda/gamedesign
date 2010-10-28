@@ -19,6 +19,5 @@ Bin/GameCommon.xml
 Bin/GameEntities.dll
 Bin/GameEntities.xml
 *.exe
-*.config
 *.xml
 

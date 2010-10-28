@@ -3,7 +3,7 @@ uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 10 0 10
+editorCameraPosition = 17.53543 0.9618464 20.66873
 editorCameraDirection = 1.570796 -0.7853982
 shadowColor = 1 1 1
 logicSystemManager = 3
@@ -44,26 +44,99 @@ entity
 }
 entity
 {
-	type = Light
+	type = HammerItem2
 	uin = 7
-	classPrompt = Light
-	lightType = Spot
-	diffuseColor = 1 1 1
-	diffusePower = 1
-	specularColor = 0 0 0
-	specularPower = 1
-	attenuationRangeAutomatic = True
-	attenuationRange = Infinity
-	attenuationConstant = 1
-	attenuationLinear = 0
-	attenuationQuadric = 0
-	spotlightInnerAngle = 30
-	spotlightOuterAngle = 40
-	spotlightFalloff = 1
-	castShadows = True
-	allowStaticLighting = False
-	allowDynamicLighting = True
-	position = 7.400884 13.35485 -0.05945163
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 16.30253 7.624363 -0.0710618
 	editorAlignmentMethod = ByBounds
-	name = Light_0
+}
+entity
+{
+	type = HammerItem
+	uin = 8
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 14.80735 6.963153 1.348864
+	editorAlignmentMethod = ByBounds
+}
+entity
+{
+	type = TorchItem
+	uin = 9
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 14.26931 -13.50846 -0.08979677
+	editorAlignmentMethod = ByBounds
+}
+entity
+{
+	type = HammerItem2
+	uin = 10
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 14.77156 6.865334 -0.09540913
+	editorAlignmentMethod = ByBounds
+}
+entity
+{
+	type = Human
+	uin = 11
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	intellectShouldDeleteAfterDetach = False
+	position = 13.64448 5.959613 1.786757
+	editorAlignmentMethod = ByBounds
+	name = Human_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Statue
+	uin = 12
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	intellectShouldDeleteAfterDetach = False
+	position = 12.097 7.8066 1.512203
+	editorAlignmentMethod = ByBounds
+	name = Statue_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
 }

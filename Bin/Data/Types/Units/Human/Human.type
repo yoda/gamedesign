@@ -5,8 +5,9 @@ type Human
 	weaponFPSAttachPosition = 0.4 -0.3 -0.5
 	optimalAttackDistanceRange = 0 3
 	walkAnimationVelocityMultiplier = 0.6
-	height = 3.4
-	radius = 0.25
+	height = 1.7
+	radius = 0.35
+	bottomRadius = 0.2
 	walkMaxVelocity = 5
 	walkForce = 6000
 	flyControlMaxVelocity = 10
@@ -15,7 +16,7 @@ type Human
 	allowPlayerControl = True
 	initialAI = DefaultGameCharacterAI
 	viewRadius = 70
-	lifeMax = 200
+	lifeMax = 15
 	targetPriority = 1
 	substance = Flesh
 	allowEditorCreate = True
@@ -44,7 +45,7 @@ type Human
 			forceMaterial = NewMaterial
 			castStaticShadows = True
 			receiveStaticShadows = True
-			position = -0.2928487 0 -2.382195
+			position = -0.2928487 0 -1.02195
 			boneSlot hand
 			{
 				bone = finger_middle.02.L

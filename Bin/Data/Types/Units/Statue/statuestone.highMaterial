@@ -1,5 +1,19 @@
 highLevelMaterial statuestone
 {
-	template = SimpleExampleMaterial
-	diffuseMap = Types\Units\Statue\Texture.jpg
+	template = ShaderBaseMaterial
+	diffuseColor = 0.3921569 0.3921569 0.3921569
+	reflectionColor = 0.003921569 0.003921569 0.003921569
+	emissionColor = 0.5882353 0.5882353 0.5882353
+	diffuse1Map
+	{
+		texture = Types\Units\Statue\Texture.jpg
+	}
+	reflectionMap
+	{
+		texture = Types\Units\Statue\Texture.jpg
+	}
+	emissionMap
+	{
+		texture = Types\Units\Statue\Texture.jpg
+	}
 }

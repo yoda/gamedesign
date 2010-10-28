@@ -107,9 +107,33 @@ entity
 }
 entity
 {
-	type = Mansion
+	type = Light
 	uin = 11
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 0 0 0
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = -3.642705 -2.766079 0.2789865
+	name = Light_0
+}
+entity
+{
+	type = Plane003
+	uin = 12
 	classPrompt = MapObject
-	position = 15.30251 88.03046 0.06286203
-	name = Mansion_0
+	position = -19.58134 126.1234 0.02814148
+	name = Plane003_0
 }

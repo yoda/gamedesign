@@ -434,6 +434,8 @@ namespace GameEntities
 			SetIntellect( i, shouldDeleteAfterDetach );
 		}
 
-	}
+
+        
+    }
 
 }

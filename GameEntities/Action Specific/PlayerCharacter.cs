@@ -20,7 +20,7 @@ namespace GameEntities
 	/// <summary>
 	/// Defines the <see cref="PlayerCharacter"/> entity type.
 	/// </summary>
-    enum PlayerTeam
+    public enum PlayerTeam
     {
         SpectatorPlayer,
         StatuePlayer,
@@ -96,7 +96,9 @@ namespace GameEntities
 		float contusionTimeRemaining;
 
         [FieldSerialize]
-        PlayerTeam playerTeam;
+        public PlayerTeam playerTeam;
+
+        PlayerTeam oldPlayerTeam;
 
         /*[FieldSerialize]
         Light torch;*/
@@ -169,7 +171,7 @@ namespace GameEntities
             ActiveWeaponToClient,
             WeaponVerticalAngleToClient,
             ContusionTimeRemainingToClient,
-            PlayerTeamToClient,
+            PlayerTeamToServer,
         }
 
 		///////////////////////////////////////////
@@ -498,8 +500,14 @@ namespace GameEntities
                 if (EntitySystemWorld.Instance.IsServer())
                 {
                     Server_TickSendWeaponVerticalAngleToClients();
-                    Server_TickSendPlayerTeamToClients(); // Update all clients with other clients faction
                 }
+               
+                    if (this.oldPlayerTeam != this.playerTeam)
+                    {
+                        Client_TickSendPlayerTeamToServer(); // Update all clients with other clients faction
+                        oldPlayerTeam = this.playerTeam;
+                    }
+      
 			}
 		}
 
@@ -879,28 +887,53 @@ namespace GameEntities
 			ContusionTimeRemaining = value;
 		}
 
-        void Server_TickSendPlayerTeamToClients()
+        void Client_TickSendPlayerTeamToServer()
         {
-            Server_SendPlayerTeamToClients(EntitySystemWorld.Instance.RemoteEntityWorlds, playerTeam);
+            Client_SendPlayerTeamToServer(playerTeam, this.NetworkUIN);
         }
 
         // Faction selection propogation
-        void Server_SendPlayerTeamToClients(IList<RemoteEntityWorld> remoteEntityWorlds, PlayerTeam team)
+        public void Client_SendPlayerTeamToServer(PlayerTeam team, uint id)
         {
-            SendDataWriter writer = BeginNetworkMessage(remoteEntityWorlds, typeof(PlayerCharacter),
-                (ushort)NetworkMessages.PlayerTeamToClient);
+            SendDataWriter writer = BeginNetworkMessage(typeof(PlayerCharacter),
+                (ushort)NetworkMessages.PlayerTeamToServer);
+
+            writer.Write(id);
             writer.Write((int)team);
             EndNetworkMessage();
         }
 
-        [NetworkReceive(NetworkDirections.ToClient, (ushort)NetworkMessages.PlayerTeamToClient)]
-        void Client_ReceivePlayerTeam(RemoteEntityWorld sender, ReceiveDataReader reader)
+     
+
+        [NetworkReceive(NetworkDirections.ToServer, (ushort)NetworkMessages.PlayerTeamToServer)]
+        void Server_ReceivePlayerTeam(RemoteEntityWorld sender, ReceiveDataReader reader)
         {
+            uint uni = reader.ReadUInt32();
             PlayerTeam value = (PlayerTeam)reader.ReadInt32();
             if (!reader.Complete())
                 return;
-            playerTeam = value;
+            this.playerTeam = value;
+            
+            
+           UserManagementServerNetworkService.UserInfo uinfo = GameNetworkServer.Instance.UserManagementService.GetUser(uni);
+
+          
+           PlayerManager.ServerOrSingle_Player player = PlayerManager.Instance.ServerOrSingle_GetPlayer(uinfo.Name);
+           player.Team = playerTeam;
+            
+        //   foreach( PlayerManager.ServerOrSingle_Player player in
+		//			PlayerManager.Instance.ServerOrSingle_Players ) {
+         //       if (player.Identifier == uni )
+          //      {
+           //         player.Team = value;
+         //       }
+          //  }
+           
+          
+            
         }
+
+
 
 	}
 }

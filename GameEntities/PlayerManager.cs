@@ -53,7 +53,7 @@ namespace GameEntities
 			int frags;
 
             [FieldSerialize]
-            int team;
+            PlayerTeam team;
 
 			float ping;
 
@@ -107,7 +107,7 @@ namespace GameEntities
 				}
 			}
 
-            public int Team
+            public PlayerTeam Team
             {
                 get { return team; }
                 set
@@ -152,7 +152,7 @@ namespace GameEntities
 			UserManagementClientNetworkService.UserInfo user;
 
 			int frags;
-            int team;
+            PlayerTeam team;
 			float ping;
 
 			public Client_Player( uint identifier, string name, bool bot,
@@ -162,7 +162,7 @@ namespace GameEntities
 				this.name = name;
 				this.bot = bot;
 				this.user = user;
-                this.team = 0; // Team default = 0 (spectator)
+                this.team = PlayerTeam.SpectatorPlayer; // Team default = 0 (spectator)
 			}
 
 			public uint Identifier
@@ -191,7 +191,7 @@ namespace GameEntities
 				set { frags = value; }
 			}
 
-            public int Team
+            public PlayerTeam Team
             {
                 get { return team; }
                 set { team = value; }
@@ -413,7 +413,7 @@ namespace GameEntities
 			writer.WriteVariableUInt32( player.Identifier );
 			writer.Write( player.Name );
 			writer.Write( player.Bot );
-            writer.WriteVariableInt32(player.Team); // Send the data for player to everyone
+            writer.WriteVariableInt32((int)player.Team); // Send the data for player to everyone
 			writer.WriteVariableUInt32( player.User != null ? player.User.Identifier : (uint)0 );
 			EndNetworkMessage();
 		}
@@ -462,7 +462,7 @@ namespace GameEntities
 			{
 				writer.WriteVariableUInt32( player.Identifier );
 				writer.WriteVariableInt32( player.Frags );
-                writer.WriteVariableInt32(player.Team);
+                writer.WriteVariableInt32((int)player.Team);
 				writer.Write( player.Ping );
 			}
 
@@ -566,7 +566,7 @@ namespace GameEntities
 			{
 				uint identifier = reader.ReadVariableUInt32();
 				int frags = reader.ReadVariableInt32();
-                int team = reader.ReadVariableInt32();
+                PlayerTeam team = (PlayerTeam)reader.ReadVariableInt32();
 				float ping = reader.ReadSingle();
 
 				Client_Player player = Client_GetPlayer( identifier );

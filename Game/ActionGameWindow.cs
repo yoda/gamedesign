@@ -164,10 +164,13 @@ namespace Game
 
             if (e.Key == EKeys.M)
             {
-                PlayerManager.ServerOrSingle_Player player = PlayerManager.Instance.
-                            ServerOrSingle_GetPlayer(PlayerIntellect.Instance.Name);
-                player.Team = 1;
-            }
+                Unit playerUnit = GetPlayerUnit();
+                PlayerCharacter playerCharacter = playerUnit as PlayerCharacter;
+                playerCharacter.playerTeam = PlayerTeam.HumanPlayer;
+                playerCharacter.Client_SendPlayerTeamToServer(PlayerTeam.HumanPlayer, playerUnit.NetworkUIN);
+                
+                
+            } 
 
 			//GameControlsManager
 			if( EntitySystemWorld.Instance.Simulation )
@@ -1027,8 +1030,8 @@ namespace Game
 
 				foreach( PlayerManager.Client_Player player in PlayerManager.Instance.Client_Players )
 				{
-                    string text = string.Format("{0},   Frags: {1},  Faction: {3}, Ping: {2} ms", player.Name,
-						player.Frags, (int)( player.Ping * 1000 ),  player.Team );
+                    string text = string.Format("{0},   Frags: {1},  Faction: {3}, ID: {4}, Ping: {2} ms", player.Name,
+						player.Frags, (int)( player.Ping * 1000 ),  player.Team, player.Identifier );
 					renderer.AddText( text, new Vec2( .2f, posy ), HorizontalAlign.Left,
 						VerticalAlign.Center );
                     

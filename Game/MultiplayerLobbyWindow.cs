@@ -51,6 +51,10 @@ namespace Game
 			}
 		}
 
+        //Boolean IamStatue;
+        String StatueTeam = "Statue";
+        String TorchTeam = "Torch";
+
 		///////////////////////////////////////////
 
 		protected override void OnAttach()
@@ -170,7 +174,36 @@ namespace Game
 				foreach( string serviceName in client.ServerConnectedNode.RemoteServices )
 					AddMessage( string.Format( "Server service: \"{0}\"", serviceName ) );
 			}
+            Random r = new Random();
+            bool statues = false;
+            bool torches = false;
 
+            GameNetworkServer s = GameNetworkServer.Instance;
+            if (s != null)
+            {
+                
+                /*foreach (UserManagementServerNetworkService.UserInfo uinf in GameNetworkServer.Instance.UserManagementService.Users)
+                {
+                    //if (uinf.Equals(GameNetworkServer.Instance.UserManagementService.
+                    if (uinf.Faction.Equals(StatueTeam)) statues = true;
+                    if (uinf.Faction.Equals(TorchTeam)) torches = true;
+                }*/
+            }
+            else
+            {
+                foreach (UserManagementClientNetworkService.UserInfo uinf in GameNetworkClient.Instance.UserManagementService.Users)
+                {
+                    if (uinf.Equals(GameNetworkClient.Instance.UserManagementService.ThisUser)) continue;
+                    if (uinf.Faction.Equals(StatueTeam)) statues = true;
+                    if (uinf.Faction.Equals(TorchTeam)) torches = true;
+                }
+            }
+            if (!statues && torches)
+                GameNetworkClient.Instance.UserManagementService.ThisUser.Faction = StatueTeam;
+            else if (!torches && statues)
+                GameNetworkClient.Instance.UserManagementService.ThisUser.Faction = TorchTeam;
+            else
+                GameNetworkClient.Instance.UserManagementService.ThisUser.Faction = (r.Next() % 2 == 0) ? StatueTeam : TorchTeam;
 			UpdateControls();
 		}
 
@@ -238,12 +271,17 @@ namespace Game
 
 					foreach( UserManagementServerNetworkService.UserInfo user in userService.Users )
 					{
-						if( user == listBoxUsersStatue.Items[indexStat] )
+						if( user == listBoxUsersStatue.Items[indexStat] ) {
+                            if (user.Faction != "Statue") shouldUpdate = true;
                             indexStat++;
+                        }
                         else if (user == listBoxUsersHAT.Items[indexHAT])
+                        {
+                            if (user.Faction != "Torch") shouldUpdate = true;
                             indexHAT++;
-                        else
-							shouldUpdate = true;
+                        } else
+                            shouldUpdate = true;
+                        if (shouldUpdate) break;
 					}
 				}
 				else
@@ -324,6 +362,7 @@ namespace Game
         void Server_Teams_ReceiveStatus(CustomMessagesServerNetworkService sender, string message, string data)
         {
 
+            //GameNetworkClient.Instance.UserManagementService.Users
         }
 
 		void Server_ChatService_ReceiveText( ChatServerNetworkService sender,
@@ -432,6 +471,9 @@ namespace Game
 				return;
 
 			GameNetworkServer server = GameNetworkServer.Instance;
+            
+            //server.UserManagementService.
+            //GameEngineApp.Instance.
 
 			//AllowToConnectDuringGame
 			server.AllowToConnectNewClients = checkBoxAllowToConnectDuringGame.Checked;

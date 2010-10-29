@@ -26,7 +26,7 @@ namespace GameEntities
 	{
 		static GameWorld instance;
 
-        string[] names = new string[2] { "Statue", "Human" };
+        public string[] names = new string[2] { "Statue", "Human" };
         Random Rand;
        
 		//for moving player character between maps

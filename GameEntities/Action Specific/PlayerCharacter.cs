@@ -107,6 +107,8 @@ namespace GameEntities
 		Radian server_sentWeaponVerticalAngle;
 		Radian client_weaponVerticalAngle;
 
+        GameWorld world;
+
 		///////////////////////////////////////////
 
 		public class WeaponItem
@@ -393,6 +395,7 @@ namespace GameEntities
 		protected override void OnPostCreate( bool loaded )
 		{
 			base.OnPostCreate( loaded );
+            //Entities.Instance.EntitiesCollection
             // TODO   Sam's superceeds, I think
             //if (EntitySystemWorld.Instance.IsServer()) playerTeam = StatuePlayer;
 
@@ -450,8 +453,8 @@ namespace GameEntities
         // check if local PChar instance is frozen, instead of peers, to cut redundant checks and networking
         protected Boolean IsBlinded()
         {
-            //foreach (RayCastResult rc in PhysicsWorld.Instance.RayCast(ray,(int)ContactGroup.CastAll).Distance)
-            foreach (Entity o in Entities.Instance.EntitiesCollection)
+            //if (!base.IsBlindable()) return false;
+            foreach(Entity o in Entities.Instance.EntitiesCollection)
             {
                 PlayerCharacter pc = o as PlayerCharacter;
                 if (pc == null || ReferenceEquals(this,pc)) continue;
@@ -481,10 +484,11 @@ namespace GameEntities
           //  torch.Position = Position;
           //  torch.Rotation = Rotation;
 
-            if (IsBlinded())
+            // TEST
+            /*if (IsBlinded())
             {
                 TryJump();
-            }
+            }*/
 
 			if( Intellect != null )
 			{

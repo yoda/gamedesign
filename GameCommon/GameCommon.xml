@@ -4,19 +4,14 @@
         <name>GameCommon</name>
     </assembly>
     <members>
-        <member name="T:GameCommon.LDRBloomCompositorInstance">
+        <member name="T:GameCommon.FPSWeaponMaterial">
             <summary>
-            Bloom for low dynamic range scene post processing compositor instance.
+            Material for correct rendering of weapons in a FPS mode.
             </summary>
         </member>
-        <member name="T:GameCommon.MotionBlurCompositorInstance">
+        <member name="T:GameCommon.ShaderBaseMaterial">
             <summary>
-            Represents work with the MotionBlur post effect.
-            </summary>
-        </member>
-        <member name="T:GameCommon.HDRCompositorInstance">
-            <summary>
-            HDR scene post processing compositor instance.
+            Base template for shader materials.
             </summary>
         </member>
         <member name="T:GameCommon.GameEngineInitialization">
@@ -27,37 +22,34 @@
             It is class works in simulation application and editors (Resource Editor, Map Editor).
             </remarks>
         </member>
-        <member name="T:GameCommon.GameMusic">
+        <member name="T:GameCommon.LDRBloomCompositorInstance">
             <summary>
-            Class for management of music in game.
+            Bloom for low dynamic range scene post processing compositor instance.
             </summary>
         </member>
-        <member name="M:GameCommon.GameMusic.MusicPlay(System.String,System.Boolean)">
+        <member name="T:GameCommon.MotionBlurCompositorInstance">
             <summary>
-            Play music.
-            </summary>
-            <param name="fileName">The file name.</param>
-            <param name="loop">Looping flag.</param>
-        </member>
-        <member name="M:GameCommon.GameMusic.MusicStop">
-            <summary>
-            Stop music.
+            Represents work with the MotionBlur post effect.
             </summary>
         </member>
-        <member name="P:GameCommon.GameMusic.MusicChannelGroup">
+        <member name="T:GameCommon.VegetationMaterial">
             <summary>
-            Gets the music channel group.
+            Material for grass and trees. Adds wave in the vertex shader.
             </summary>
         </member>
-        <member name="T:GameCommon.FPSWeaponMaterial">
+        <member name="P:GameCommon.VegetationMaterial.ReceiveObjectsPositionsFromVertices">
             <summary>
-            Material for correct rendering of weapons in a FPS mode.
+            Gets or sets a value which indicates it is necessary to reveice objects 
+            positions from the vertices.
             </summary>
-        </member>
-        <member name="T:GameCommon.ShaderBaseMaterial">
-            <summary>
-            Base template for shader materials.
-            </summary>
+            <remarks>
+            <para>
+            Usually it is necessary for batched geometry (for waving).
+            </para>
+            <para>
+            Positions will be taken from Type: TextureCoordinates, Index: 4.
+            </para>
+            </remarks>
         </member>
         <member name="T:GameCommon.GameControlsManager">
             <summary>
@@ -129,33 +121,41 @@
             <b>Don't modify</b>.
             </summary>
         </member>
-        <member name="T:GameCommon.HeatVisionCompositorInstance">
-            <summary>
-            Represents work with the HeatVision post effect.
-            </summary>
-        </member>
-        <member name="T:GameCommon.VegetationMaterial">
-            <summary>
-            Material for grass and trees. Adds wave in the vertex shader.
-            </summary>
-        </member>
-        <member name="P:GameCommon.VegetationMaterial.ReceiveObjectsPositionsFromVertices">
-            <summary>
-            Gets or sets a value which indicates it is necessary to reveice objects 
-            positions from the vertices.
-            </summary>
-            <remarks>
-            <para>
-            Usually it is necessary for batched geometry (for waving).
-            </para>
-            <para>
-            Positions will be taken from Type: TextureCoordinates, Index: 4.
-            </para>
-            </remarks>
-        </member>
         <member name="T:GameCommon.SimpleExampleMaterial">
             <summary>
             Simple example of high level material.
+            </summary>
+        </member>
+        <member name="T:GameCommon.GameMusic">
+            <summary>
+            Class for management of music in game.
+            </summary>
+        </member>
+        <member name="M:GameCommon.GameMusic.MusicPlay(System.String,System.Boolean)">
+            <summary>
+            Play music.
+            </summary>
+            <param name="fileName">The file name.</param>
+            <param name="loop">Looping flag.</param>
+        </member>
+        <member name="M:GameCommon.GameMusic.MusicStop">
+            <summary>
+            Stop music.
+            </summary>
+        </member>
+        <member name="P:GameCommon.GameMusic.MusicChannelGroup">
+            <summary>
+            Gets the music channel group.
+            </summary>
+        </member>
+        <member name="T:GameCommon.HDRCompositorInstance">
+            <summary>
+            HDR scene post processing compositor instance.
+            </summary>
+        </member>
+        <member name="T:GameCommon.HeatVisionCompositorInstance">
+            <summary>
+            Represents work with the HeatVision post effect.
             </summary>
         </member>
         <member name="T:GameCommon.BlurCompositorInstance">

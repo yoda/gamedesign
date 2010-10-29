@@ -4,9 +4,19 @@
         <name>GameEntities</name>
     </assembly>
     <members>
-        <member name="T:GameEntities.UnitType">
+        <member name="T:GameEntities.SpawnPointType">
             <summary>
-            Defines the <see cref="T:GameEntities.Unit"/> entity type.
+            Defines the <see cref="T:GameEntities.SpawnPoint"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.InfluenceItemType">
+            <summary>
+            Defines the <see cref="T:GameEntities.InfluenceItem"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.ItemType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Item"/> entity type.
             </summary>
         </member>
         <member name="T:GameEntities.DynamicType">
@@ -14,30 +24,9 @@
             Defines the <see cref="T:GameEntities.Dynamic"/> entity type.
             </summary>
         </member>
-        <member name="P:GameEntities.UnitType.AllowPlayerControl">
+        <member name="T:GameEntities.Item">
             <summary>
-            Gets or sets a value which indicates, whether the unit can be controlled by the player.
-            </summary>
-        </member>
-        <member name="P:GameEntities.UnitType.InitialAI">
-            <summary>
-            Gets or sets a artificial intellect which will be appointed to a unit at its creation.
-            </summary>
-        </member>
-        <member name="P:GameEntities.UnitType.ViewRadius">
-            <summary>
-            Gets or sets the radius of visibility of a unit.
-            </summary>
-        </member>
-        <member name="P:GameEntities.UnitType.FPSCameraOffset">
-            <summary>
-            Gets or sets the camera offset which will be considered at a FPS mode.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Unit">
-            <summary>
-            Units differ from <see cref="T:GameEntities.Dynamic"/> objects that that can be controlled by 
-            intellect (<see cref="T:GameEntities.Intellect"/>).
+            Items which can be picked up by units. Med-kits, weapons, ammunition.
             </summary>
         </member>
         <member name="T:GameEntities.Dynamic">
@@ -70,294 +59,11 @@
         <member name="M:GameEntities.Dynamic.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
-        <member name="M:GameEntities.Unit.OnLoad(Engine.Utils.TextBlock)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnLoad(Engine.Utils.TextBlock)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Unit.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Unit.OnRender(Engine.Renderer.Camera)">
-            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Unit.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Unit.OnRemoveChild(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRemoveChild(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.Unit.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.Unit.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="P:GameEntities.Unit.InitialAI">
-            <summary>
-            Gets or sets a artificial intelligence which will be appointed to a unit at its creation.
-            </summary>
-        </member>
-        <member name="T:GameEntities.WeaponItemType">
-            <summary>
-            Defines the <see cref="T:GameEntities.WeaponItem"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.BulletItemType">
-            <summary>
-            Defines the <see cref="T:GameEntities.BulletItem"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.ItemType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Item"/> entity type.
-            </summary>
-        </member>
-        <member name="P:GameEntities.BulletItemType.BulletType">
-            <summary>
-            Gets or sets the bullets type.
-            </summary>
-        </member>
-        <member name="P:GameEntities.BulletItemType.BulletCount">
-            <summary>
-            Gets or sets the bullets count.
-            </summary>
-        </member>
-        <member name="P:GameEntities.BulletItemType.BulletType2">
-            <summary>
-            Gets or sets the bullets type.
-            </summary>
-        </member>
-        <member name="P:GameEntities.BulletItemType.BulletCount2">
-            <summary>
-            Gets or sets the bullets count.
-            </summary>
-        </member>
-        <member name="P:GameEntities.WeaponItemType.WeaponType">
-            <summary>
-            Gets or sets the item weapon type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.WeaponItem">
-            <summary>
-            Represents a item of the weapon. When the player take this item it 
-            takes a specified weapon.
-            </summary>
-        </member>
-        <member name="T:GameEntities.BulletItem">
-            <summary>
-            Represents a item of the weapon bullets. When the player take this item it 
-            takes a specified bullets.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Item">
-            <summary>
-            Items which can be picked up by units. Med-kits, weapons, ammunition.
-            </summary>
-        </member>
         <member name="M:GameEntities.Item.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
         <member name="M:GameEntities.Item.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.BulletType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Bullet"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Bullet">
-            <summary>
-            Defines the bullets.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Bullet.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Bullet.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.Bullet.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.RTSFactionManagerType">
-            <summary>
-            Defines the <see cref="T:GameEntities.RTSFactionManager"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.RTSFactionManager.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.RTSFactionManager.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="P:GameEntities.RTSFactionManager.Factions">
-            <summary>
-            Don't modify
-            </summary>
-        </member>
-        <member name="T:GameEntities.ExplosionType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Explosion"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Explosion">
-            <summary>
-            An invisible blast wave which damages and increases the impulse of 
-            physical models within a radius.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Explosion.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.Explosion.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Explosion.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.DecalCreatorType">
-            <summary>
-            Defines the <see cref="T:GameEntities.DecalCreator"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.DecalType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Decal"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.TurretAIType">
-            <summary>
-            Defines the <see cref="T:GameEntities.TurretAI"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.AIType">
-            <summary>
-            Defines the <see cref="T:GameEntities.AI"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.IntellectType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Intellect"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Intellect">
-            <summary>
-            This takes the form of either AI (Artificial Intelligence) or player control over a unit .
-            </summary>
-            <remarks>
-            <para>
-            There is inherit AI base base for an computer-controlled intellect. 
-            For example, there is the <see cref="T:GameEntities.GameCharacterAI"/> class which is designed for the 
-            management of a game character.
-            </para>
-            <para>
-            Control by a live player (<see cref="T:GameEntities.PlayerIntellect"/>) is achieved through the commands 
-            of pressed keys or the mouse for control of the unit or turret.
-            </para>
-            </remarks>
-        </member>
-        <member name="M:GameEntities.Intellect.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.TurretAI.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.TurretAI.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.TurretAI.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.JumpPadType">
-            <summary>
-            Defines the <see cref="T:GameEntities.JumpPad"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.JumpPad">
-            <summary>
-            Gives an opportunity of creation a jump pads.
-            </summary>
-        </member>
-        <member name="M:GameEntities.JumpPad.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.JumpPad.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="T:GameEntities.ItemCreatorType">
-            <summary>
-            Defines the <see cref="T:GameEntities.ItemCreator"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.ItemCreator.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.ItemCreator.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="M:GameEntities.ItemCreator.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="T:GameEntities.CharacterType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Character"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Character">
-            <summary>
-            Defines the physical characters.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Character.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Character.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Character.Client_OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.Client_OnTick"/>.</summary>
-        </member>
-        <member name="P:GameEntities.ExampleMagicObjectType.BlinkMaterialName">
-            <summary>
-            Gets or sets the name of a replacing material.
-            </summary>
-        </member>
-        <member name="M:GameEntities.ExampleMagicObject.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="T:GameEntities.WeaponType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Weapon"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Weapon">
-            <summary>
-            Defines the weapons. Both hand-held by characters or guns established on turret are weapons.
-            </summary>
-        </member>
-        <member name="T:GameEntities.SwitchType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Switch"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Switch">
-            <summary>
-            Base class for defines the user switches. (Booleans and quantitatives).
-            </summary>
-        </member>
-        <member name="M:GameEntities.Switch.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="T:GameEntities.Substance">
-            <summary>
-            Defines possible substances of <see cref="T:GameEntities.Dynamic"/> objects.
-            Substances are necessary for work of influences (<see cref="T:GameEntities.Influence"/>). 
-            The certain influences operate only on the set substances.
-            </summary>
-        </member>
-        <member name="T:GameEntities.GameFilterGroups">
-            <summary>
-            User defined Map filter groups.
-            </summary>
         </member>
         <member name="T:GameEntities.GameWorldType">
             <summary>
@@ -373,16 +79,53 @@
         <member name="M:GameEntities.GameWorld.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
-        <member name="T:GameEntities.GameGuiObjectType">
-            <summary>
-            Defines the <see cref="T:GameEntities.GameGuiObject"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.GameGuiObject.OnPostCreate(System.Boolean)">
+        <member name="M:GameEntities.WaterPlane.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="M:GameEntities.GameGuiObject.OnDestroy">
+        <member name="M:GameEntities.WaterPlane.OnDestroy">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="T:GameEntities.GunType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Gun"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.WeaponType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Weapon"/> entity type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.GunType.GunMode.FireObjects">
+            <summary>
+            Gets the fire objects collection.
+            </summary>
+            <remarks>
+            <para>
+            These objects will be created after fire.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:GameEntities.Weapon">
+            <summary>
+            Defines the weapons. Both hand-held by characters or guns established on turret are weapons.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Gun.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Gun.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.FactionType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Faction"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Faction">
+            <summary>
+            Concept of the command. Opponents with an artificial intelligences attack 
+            units of another's fraction.
+            </summary>
         </member>
         <member name="T:GameEntities.MapChangeRegionType">
             <summary>
@@ -411,39 +154,96 @@
             Gets or set the name of a spawn point in the destination map.
             </summary>
         </member>
-        <member name="T:GameEntities.FireworkType">
+        <member name="T:GameEntities.UnitType">
             <summary>
-            Defines the <see cref="T:GameEntities.Firework"/> entity type.
+            Defines the <see cref="T:GameEntities.Unit"/> entity type.
             </summary>
         </member>
-        <member name="M:GameEntities.Firework.OnPostCreate(System.Boolean)">
+        <member name="P:GameEntities.UnitType.AllowPlayerControl">
+            <summary>
+            Gets or sets a value which indicates, whether the unit can be controlled by the player.
+            </summary>
+        </member>
+        <member name="P:GameEntities.UnitType.InitialAI">
+            <summary>
+            Gets or sets a artificial intellect which will be appointed to a unit at its creation.
+            </summary>
+        </member>
+        <member name="P:GameEntities.UnitType.ViewRadius">
+            <summary>
+            Gets or sets the radius of visibility of a unit.
+            </summary>
+        </member>
+        <member name="P:GameEntities.UnitType.FPSCameraOffset">
+            <summary>
+            Gets or sets the camera offset which will be considered at a FPS mode.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Unit">
+            <summary>
+            Units differ from <see cref="T:GameEntities.Dynamic"/> objects that that can be controlled by 
+            intellect (<see cref="T:GameEntities.Intellect"/>).
+            </summary>
+        </member>
+        <member name="M:GameEntities.Unit.OnLoad(Engine.Utils.TextBlock)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnLoad(Engine.Utils.TextBlock)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Unit.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="M:GameEntities.Firework.OnTick">
+        <member name="M:GameEntities.Unit.OnRender(Engine.Renderer.Camera)">
+            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Unit.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
-        <member name="T:GameEntities.BooleanSwitchType">
-            <summary>
-            Defines the <see cref="T:GameEntities.BooleanSwitch"/> entity type.
-            </summary>
+        <member name="M:GameEntities.Unit.OnRemoveChild(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRemoveChild(Engine.EntitySystem.Entity)"/></summary>
         </member>
-        <member name="T:GameEntities.BooleanSwitch">
-            <summary>
-            Defines the user boolean switches.
-            </summary>
+        <member name="M:GameEntities.Unit.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
         </member>
-        <member name="M:GameEntities.BooleanSwitch.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        <member name="M:GameEntities.Unit.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="P:GameEntities.Unit.InitialAI">
+            <summary>
+            Gets or sets a artificial intelligence which will be appointed to a unit at its creation.
+            </summary>
         </member>
         <member name="T:GameEntities.PlayerIntellectType">
             <summary>
             Defines the <see cref="T:GameEntities.PlayerIntellect"/> entity type.
             </summary>
         </member>
+        <member name="T:GameEntities.IntellectType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Intellect"/> entity type.
+            </summary>
+        </member>
         <member name="T:GameEntities.PlayerIntellect">
             <summary>
             Represents intellect of the player.
             </summary>
+        </member>
+        <member name="T:GameEntities.Intellect">
+            <summary>
+            This takes the form of either AI (Artificial Intelligence) or player control over a unit .
+            </summary>
+            <remarks>
+            <para>
+            There is inherit AI base base for an computer-controlled intellect. 
+            For example, there is the <see cref="T:GameEntities.GameCharacterAI"/> class which is designed for the 
+            management of a game character.
+            </para>
+            <para>
+            Control by a live player (<see cref="T:GameEntities.PlayerIntellect"/>) is achieved through the commands 
+            of pressed keys or the mouse for control of the unit or turret.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:GameEntities.Intellect.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
         </member>
         <member name="M:GameEntities.PlayerIntellect.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
@@ -462,33 +262,237 @@
             In networking mode each client will have different instance. Reference to the his intellect.
             </summary>
         </member>
-        <member name="T:GameEntities.CorpseType">
+        <member name="T:GameEntities.GameMapType">
             <summary>
-            Defines the <see cref="T:GameEntities.Corpse"/> entity type.
+            Defines the <see cref="T:GameEntities.GameMap"/> entity type.
             </summary>
         </member>
-        <member name="P:GameEntities.CorpseType.DeathAnimationName">
+        <member name="M:GameEntities.GameMap.OnPostCreate2(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate2(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.GameMap.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="T:GameEntities.MeleeWeaponType">
             <summary>
-            Gets or sets the name of animation when the object died. 
-            The given animation is play after <see cref="P:GameEntities.CorpseType.DeadAnimationName"/>.
+            Defines the <see cref="T:GameEntities.MeleeWeapon"/> entity type.
             </summary>
         </member>
-        <member name="P:GameEntities.CorpseType.DeadAnimationName">
-            <summary>
-            Gets or sets the name of animation when the object dies.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Corpse">
-            <summary>
-            Gives an opportunity to create corpses. A difference of a corpse from usual 
-            object that he changes the orientation depending on a surface. 
-            Also the class operates animations.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Corpse.OnPostCreate(System.Boolean)">
+        <member name="M:GameEntities.MeleeWeapon.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="M:GameEntities.Corpse.OnTick">
+        <member name="M:GameEntities.MeleeWeapon.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.RTSGridPathFindSystemType">
+            <summary>
+            Defines the <see cref="T:GameEntities.RTSGridPathFindSystem"/> entity type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.RTSGridPathFindSystem.Type">
+            <summary>
+            Gets the entity type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.ExampleMagicObjectType.BlinkMaterialName">
+            <summary>
+            Gets or sets the name of a replacing material.
+            </summary>
+        </member>
+        <member name="M:GameEntities.ExampleMagicObject.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="T:GameEntities.TerminalType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Terminal"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.GameGuiObjectType">
+            <summary>
+            Defines the <see cref="T:GameEntities.GameGuiObject"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.GameGuiObject.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.GameGuiObject.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="T:GameEntities.PlayerTeam">
+            <summary>
+            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.GameCharacterType">
+            <summary>
+            Defines the <see cref="T:GameEntities.GameCharacter"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.CharacterType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Character"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Character">
+            <summary>
+            Defines the physical characters.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Character.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Character.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Character.Client_OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.Client_OnTick"/>.</summary>
+        </member>
+        <member name="M:GameEntities.GameCharacter.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.PlayerCharacter.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.PlayerCharacter.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
+        </member>
+        <member name="M:GameEntities.PlayerCharacter.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="M:GameEntities.PlayerCharacter.OnRender(Engine.Renderer.Camera)">
+            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
+        </member>
+        <member name="T:GameEntities.BulletItemType">
+            <summary>
+            Defines the <see cref="T:GameEntities.BulletItem"/> entity type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.BulletItemType.BulletType">
+            <summary>
+            Gets or sets the bullets type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.BulletItemType.BulletCount">
+            <summary>
+            Gets or sets the bullets count.
+            </summary>
+        </member>
+        <member name="P:GameEntities.BulletItemType.BulletType2">
+            <summary>
+            Gets or sets the bullets type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.BulletItemType.BulletCount2">
+            <summary>
+            Gets or sets the bullets count.
+            </summary>
+        </member>
+        <member name="T:GameEntities.BulletItem">
+            <summary>
+            Represents a item of the weapon bullets. When the player take this item it 
+            takes a specified bullets.
+            </summary>
+        </member>
+        <member name="T:GameEntities.RTSFactionManagerType">
+            <summary>
+            Defines the <see cref="T:GameEntities.RTSFactionManager"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.RTSFactionManager.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.RTSFactionManager.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="P:GameEntities.RTSFactionManager.Factions">
+            <summary>
+            Don't modify
+            </summary>
+        </member>
+        <member name="T:GameEntities.TankGameUnitAIType">
+            <summary>
+            Defines the <see cref="T:GameEntities.TankGameUnitAI"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.AIType">
+            <summary>
+            Defines the <see cref="T:GameEntities.AI"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.TankGameUnitAI.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="T:GameEntities.DecalCreatorType">
+            <summary>
+            Defines the <see cref="T:GameEntities.DecalCreator"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.SimpleMapType">
+            <summary>
+            Defines the <see cref="T:GameEntities.SimpleMap"/> entity type. 
+            Used for preview types in the Resource Editor.
+            </summary>
+        </member>
+        <member name="T:GameEntities.WeaponItemType">
+            <summary>
+            Defines the <see cref="T:GameEntities.WeaponItem"/> entity type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.WeaponItemType.WeaponType">
+            <summary>
+            Gets or sets the item weapon type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.WeaponItem">
+            <summary>
+            Represents a item of the weapon. When the player take this item it 
+            takes a specified weapon.
+            </summary>
+        </member>
+        <member name="T:GameEntities.GameCharacterAIType">
+            <summary>
+            Defines the <see cref="T:GameEntities.GameCharacterAI"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.GameCharacterAI.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.GameCharacterAI.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
+        </member>
+        <member name="M:GameEntities.GameCharacterAI.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.BlinkGridType">
+            <summary>
+            Defines the <see cref="T:GameEntities.BlinkGrid"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.BlinkGrid">
+            <summary>
+            Example of dynamic geometry.
+            </summary>
+        </member>
+        <member name="T:GameEntities.RTSBuildingAIType">
+            <summary>
+            Defines the <see cref="T:GameEntities.RTSBuildingAI"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.RTSUnitAIType">
+            <summary>
+            Defines the <see cref="T:GameEntities.RTSUnitAI"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.RTSUnitAI.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.RTSUnitAI.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="M:GameEntities.RTSUnitAI.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
+        </member>
+        <member name="M:GameEntities.RTSUnitAI.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
         <member name="T:GameEntities.ObserveCameraAreaType">
@@ -502,19 +506,322 @@
         <member name="M:GameEntities.ObserveCameraArea.OnRender(Engine.Renderer.Camera)">
             <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
         </member>
-        <member name="T:GameEntities.TankGameUnitAIType">
+        <member name="T:GameEntities.TurnFloatSwitchType">
             <summary>
-            Defines the <see cref="T:GameEntities.TankGameUnitAI"/> entity type.
+            Defines the <see cref="T:GameEntities.TurnFloatSwitch"/> entity type.
             </summary>
         </member>
-        <member name="M:GameEntities.TankGameUnitAI.OnPostCreate(System.Boolean)">
+        <member name="T:GameEntities.FloatSwitchType">
+            <summary>
+            Defines the <see cref="T:GameEntities.FloatSwitch"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.SwitchType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Switch"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.TurnFloatSwitch">
+            <summary>
+            Defines the parametrical switch which turns the <see cref="P:GameEntities.Switch.UseAttachedMesh"/>.
+            </summary>
+        </member>
+        <member name="T:GameEntities.FloatSwitch">
+            <summary>
+            Defines the user quantitative switches.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Switch">
+            <summary>
+            Base class for defines the user switches. (Booleans and quantitatives).
+            </summary>
+        </member>
+        <member name="M:GameEntities.Switch.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="T:GameEntities.SimpleMapType">
+        <member name="M:GameEntities.FloatSwitch.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.FloatSwitch.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.ItemCreatorType">
             <summary>
-            Defines the <see cref="T:GameEntities.SimpleMap"/> entity type. 
-            Used for preview types in the Resource Editor.
+            Defines the <see cref="T:GameEntities.ItemCreator"/> entity type.
             </summary>
+        </member>
+        <member name="M:GameEntities.ItemCreator.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.ItemCreator.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="M:GameEntities.ItemCreator.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
+        </member>
+        <member name="T:GameEntities.StatueCharacterType">
+            <summary>
+            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.JigsawPuzzlePieceType">
+            <summary>
+            Defines the <see cref="T:GameEntities.JigsawPuzzlePiece"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.JigsawPuzzlePiece">
+            <summary>
+            The piece for puzzle game example.
+            </summary>
+        </member>
+        <member name="T:GameEntities.RTSUnitType">
+            <summary>
+            Defines the <see cref="T:GameEntities.RTSUnit"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.RTSUnit.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="T:GameEntities.InfluenceType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Influence"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Influence">
+            <summary>
+            Influences are effects on objects. For example, the ability to burn a monster, 
+            is implemented through the use of influences.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Influence.OnPostCreate2(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Influence.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Influence.OnTick">
+            <summary>Overridden from <see cref="T:Engine.EntitySystem.Entity"/>.</summary>
+        </member>
+        <member name="T:GameEntities.DynamicCollisionType">
+            <summary>
+            Defines the <see cref="T:GameEntities.DynamicCollision"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.DynamicCollision">
+            <summary>
+            Represents creation of dynamic obstacles. 
+            By means of this class it is possible to set limiting area of movings for map objects.
+            </summary>
+        </member>
+        <member name="M:GameEntities.DynamicCollision.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.DynamicCollision.OnSetTransform(Engine.MathEx.Vec3@,Engine.MathEx.Quat@,Engine.MathEx.Vec3@)">
+            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnSetTransform(Engine.MathEx.Vec3@,Engine.MathEx.Quat@,Engine.MathEx.Vec3@)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.DynamicCollision.OnRender(Engine.Renderer.Camera)">
+            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
+        </member>
+        <member name="T:GameEntities.BooleanSwitchType">
+            <summary>
+            Defines the <see cref="T:GameEntities.BooleanSwitch"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.BooleanSwitch">
+            <summary>
+            Defines the user boolean switches.
+            </summary>
+        </member>
+        <member name="M:GameEntities.BooleanSwitch.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="T:GameEntities.TurretType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Turret"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Turret">
+            <summary>
+            Gives an opportunity of creation of the turrets.
+            A turret can be rotated. Guns are attached on the tower and player can 
+            control the aiming and shooting of the turret.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Turret.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Turret.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.JumpBlowMeleeWeaponType">
+            <summary>
+            Defines the <see cref="T:GameEntities.JumpBlowMeleeWeapon"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.JumpBlowMeleeWeapon.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.JumpBlowMeleeWeapon.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.BulletType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Bullet"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Bullet">
+            <summary>
+            Defines the bullets.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Bullet.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Bullet.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
+        </member>
+        <member name="M:GameEntities.Bullet.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.CutSceneManagerType">
+            <summary>
+            Defines the <see cref="T:GameEntities.CutSceneManager"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.CutSceneManager">
+            <summary>
+            The manager of cut scenes. 
+            That there was an opportunity to create a cut scenes on a map, 
+            it is necessary to create in the Map Editor object "CutSceneManager".
+            </summary>
+        </member>
+        <member name="M:GameEntities.CutSceneManager.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.CutSceneManager.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="M:GameEntities.CutSceneManager.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.JigsawPuzzleManagerType">
+            <summary>
+            Defines the <see cref="T:GameEntities.JigsawPuzzleManager"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.JigsawPuzzleManager">
+            <summary>
+            The pieces manager for puzzle game example.
+            </summary>
+        </member>
+        <member name="M:GameEntities.JigsawPuzzleManager.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.JigsawPuzzleManager.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="T:GameEntities.PlayerManagerType">
+            <summary>
+            Defines the <see cref="T:GameEntities.PlayerManager"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.PlayerManager.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="M:GameEntities.PlayerManager.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="P:GameEntities.PlayerManager.ServerOrSingle_Player.Identifier">
+            <summary>
+            used only for network synchronization
+            </summary>
+        </member>
+        <member name="T:GameEntities.RTSMineType">
+            <summary>
+            Defines the <see cref="T:GameEntities.RTSMine"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.RTSBuildingType">
+            <summary>
+            Defines the <see cref="T:GameEntities.RTSBuilding"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.RTSBuilding.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.RTSBuilding.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="M:GameEntities.RTSMine.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.RTSMine.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.MinefieldType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Minefield"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Minefield.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Minefield.OnDestroy">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Minefield.OnCalculateMapBounds(Engine.MathEx.Bounds@)">
+            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnCalculateMapBounds(Engine.MathEx.Bounds@)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Minefield.OnRender(Engine.Renderer.Camera)">
+            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
+        </member>
+        <member name="T:GameEntities.Substance">
+            <summary>
+            Defines possible substances of <see cref="T:GameEntities.Dynamic"/> objects.
+            Substances are necessary for work of influences (<see cref="T:GameEntities.Influence"/>). 
+            The certain influences operate only on the set substances.
+            </summary>
+        </member>
+        <member name="T:GameEntities.GameFilterGroups">
+            <summary>
+            User defined Map filter groups.
+            </summary>
+        </member>
+        <member name="T:GameEntities.FireworkType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Firework"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Firework.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Firework.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.InfluenceRegionType">
+            <summary>
+            Defines the <see cref="T:GameEntities.InfluenceRegion"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.InfluenceRegion.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.InfluenceRegion.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.TankType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Tank"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Tank.OnPreCreate">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPreCreate"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Tank.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Tank.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
         <member name="T:GameEntities.TeleporterType">
             <summary>
@@ -548,148 +855,29 @@
             Gets or sets the destination teleporter.
             </summary>
         </member>
-        <member name="T:GameEntities.PlayerManagerType">
+        <member name="T:GameEntities.CraneType">
             <summary>
-            Defines the <see cref="T:GameEntities.PlayerManager"/> entity type.
+            Defines the <see cref="T:GameEntities.Crane"/> entity type.
             </summary>
         </member>
-        <member name="M:GameEntities.PlayerManager.OnDestroy">
+        <member name="T:GameEntities.Crane">
+            <summary>
+            Gives an opportunity of creation of the crane and his control via <see cref="T:GameEntities.Intellect"/>.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Crane.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Crane.OnPostCreate2(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate2(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Crane.OnDestroy">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
         </member>
-        <member name="M:GameEntities.PlayerManager.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="P:GameEntities.PlayerManager.ServerOrSingle_Player.Identifier">
-            <summary>
-            used only for network synchronization
-            </summary>
-        </member>
-        <member name="T:GameEntities.PlayerTeam">
-            <summary>
-            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.GameCharacterType">
-            <summary>
-            Defines the <see cref="T:GameEntities.GameCharacter"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.GameCharacter.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.PlayerCharacter.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.PlayerCharacter.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+        <member name="M:GameEntities.Crane.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
         </member>
-        <member name="M:GameEntities.PlayerCharacter.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="M:GameEntities.PlayerCharacter.OnRender(Engine.Renderer.Camera)">
-            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
-        </member>
-        <member name="T:GameEntities.StatueCharacterType">
-            <summary>
-            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.GameCharacterAIType">
-            <summary>
-            Defines the <see cref="T:GameEntities.GameCharacterAI"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.GameCharacterAI.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.GameCharacterAI.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.GameCharacterAI.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.RTSGridPathFindSystemType">
-            <summary>
-            Defines the <see cref="T:GameEntities.RTSGridPathFindSystem"/> entity type.
-            </summary>
-        </member>
-        <member name="P:GameEntities.RTSGridPathFindSystem.Type">
-            <summary>
-            Gets the entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.BlinkGridType">
-            <summary>
-            Defines the <see cref="T:GameEntities.BlinkGrid"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.BlinkGrid">
-            <summary>
-            Example of dynamic geometry.
-            </summary>
-        </member>
-        <member name="T:GameEntities.RTSUnitType">
-            <summary>
-            Defines the <see cref="T:GameEntities.RTSUnit"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.RTSUnit.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="T:GameEntities.FloatSwitchType">
-            <summary>
-            Defines the <see cref="T:GameEntities.FloatSwitch"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.FloatSwitch">
-            <summary>
-            Defines the user quantitative switches.
-            </summary>
-        </member>
-        <member name="M:GameEntities.FloatSwitch.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.FloatSwitch.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.RTSCharacterType">
-            <summary>
-            Defines the <see cref="T:GameEntities.RTSCharacter"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.RTSCharacter.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.RTSCharacter.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="M:GameEntities.RTSCharacter.OnRender(Engine.Renderer.Camera)">
-            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
-        </member>
-        <member name="T:GameEntities.InfluenceType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Influence"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Influence">
-            <summary>
-            Influences are effects on objects. For example, the ability to burn a monster, 
-            is implemented through the use of influences.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Influence.OnPostCreate2(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Influence.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Influence.OnTick">
-            <summary>Overridden from <see cref="T:Engine.EntitySystem.Entity"/>.</summary>
-        </member>
-        <member name="M:GameEntities.FireInfluence.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.FireInfluence.OnTick">
+        <member name="M:GameEntities.Crane.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
         <member name="T:GameEntities.PhysicalStreamType">
@@ -714,41 +902,169 @@
         <member name="M:GameEntities.PhysicalStream.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
-        <member name="T:GameEntities.DynamicCollisionType">
+        <member name="T:GameEntities.AutomaticOpenDoorType">
             <summary>
-            Defines the <see cref="T:GameEntities.DynamicCollision"/> entity type.
+            Defines the <see cref="T:GameEntities.AutomaticOpenDoor"/> entity type.
             </summary>
         </member>
-        <member name="T:GameEntities.DynamicCollision">
+        <member name="T:GameEntities.DoorType">
             <summary>
-            Represents creation of dynamic obstacles. 
-            By means of this class it is possible to set limiting area of movings for map objects.
+            Defines the <see cref="T:GameEntities.Door"/> entity type.
             </summary>
         </member>
-        <member name="M:GameEntities.DynamicCollision.OnPostCreate(System.Boolean)">
+        <member name="P:GameEntities.DoorType.OpenDoorBodyOffset">
+            <summary>
+            Gets or sets the displacement a position of a body "door" when the door is open.
+            </summary>
+        </member>
+        <member name="P:GameEntities.DoorType.OpenTime">
+            <summary>
+            Gets or set the time of opening/closing of a door.
+            </summary>
+        </member>
+        <member name="P:GameEntities.DoorType.SoundOpen">
+            <summary>
+            Gets or sets the sound at opening a door.
+            </summary>
+        </member>
+        <member name="P:GameEntities.DoorType.SoundClose">
+            <summary>
+            Gets or sets the sound at closing a door.
+            </summary>
+        </member>
+        <member name="T:GameEntities.AutomaticOpenDoor">
+            <summary>
+            Defines automatically opening doors.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Door">
+            <summary>
+            Defines the doors. That doors worked, it is necessary that the physical 
+            model had a body with a name "door". This body will move at change of a status of a door.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Door.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="M:GameEntities.DynamicCollision.OnSetTransform(Engine.MathEx.Vec3@,Engine.MathEx.Quat@,Engine.MathEx.Vec3@)">
+        <member name="M:GameEntities.Door.OnSetTransform(Engine.MathEx.Vec3@,Engine.MathEx.Quat@,Engine.MathEx.Vec3@)">
             <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnSetTransform(Engine.MathEx.Vec3@,Engine.MathEx.Quat@,Engine.MathEx.Vec3@)"/>.</summary>
         </member>
-        <member name="M:GameEntities.DynamicCollision.OnRender(Engine.Renderer.Camera)">
-            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
+        <member name="M:GameEntities.Door.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
-        <member name="T:GameEntities.JigsawPuzzleManagerType">
+        <member name="P:GameEntities.Door.Opened">
             <summary>
-            Defines the <see cref="T:GameEntities.JigsawPuzzleManager"/> entity type.
+            Gets or sets a value indicating whether the door is currently open.
             </summary>
         </member>
-        <member name="T:GameEntities.JigsawPuzzleManager">
-            <summary>
-            The pieces manager for puzzle game example.
-            </summary>
-        </member>
-        <member name="M:GameEntities.JigsawPuzzleManager.OnPostCreate(System.Boolean)">
+        <member name="M:GameEntities.AutomaticOpenDoor.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="M:GameEntities.JigsawPuzzleManager.OnDestroy">
+        <member name="M:GameEntities.AutomaticOpenDoor.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="M:GameEntities.FireInfluence.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.FireInfluence.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.HumanPlayerCharacterType">
+            <summary>
+            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.DecalType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Decal"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.JumpPadType">
+            <summary>
+            Defines the <see cref="T:GameEntities.JumpPad"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.JumpPad">
+            <summary>
+            Gives an opportunity of creation a jump pads.
+            </summary>
+        </member>
+        <member name="M:GameEntities.JumpPad.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.JumpPad.OnDestroy">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
+        </member>
+        <member name="T:GameEntities.HealthItemType">
+            <summary>
+            Defines the <see cref="T:GameEntities.HealthItem"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.HealthItem">
+            <summary>
+            Represents a item of the healths. When the player take this item his 
+            <see cref="P:GameEntities.Dynamic.Life"/> increase.
+            </summary>
+        </member>
+        <member name="T:GameEntities.ExplosionType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Explosion"/> entity type.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Explosion">
+            <summary>
+            An invisible blast wave which damages and increases the impulse of 
+            physical models within a radius.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Explosion.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
+        </member>
+        <member name="M:GameEntities.Explosion.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Explosion.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.CorpseType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Corpse"/> entity type.
+            </summary>
+        </member>
+        <member name="P:GameEntities.CorpseType.DeathAnimationName">
+            <summary>
+            Gets or sets the name of animation when the object died. 
+            The given animation is play after <see cref="P:GameEntities.CorpseType.DeadAnimationName"/>.
+            </summary>
+        </member>
+        <member name="P:GameEntities.CorpseType.DeadAnimationName">
+            <summary>
+            Gets or sets the name of animation when the object dies.
+            </summary>
+        </member>
+        <member name="T:GameEntities.Corpse">
+            <summary>
+            Gives an opportunity to create corpses. A difference of a corpse from usual 
+            object that he changes the orientation depending on a surface. 
+            Also the class operates animations.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Corpse.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Corpse.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        </member>
+        <member name="T:GameEntities.AircraftType">
+            <summary>
+            Defines the <see cref="T:GameEntities.Aircraft"/> entity type.
+            </summary>
+        </member>
+        <member name="M:GameEntities.Aircraft.OnPostCreate(System.Boolean)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
+        </member>
+        <member name="M:GameEntities.Aircraft.OnTick">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
         <member name="T:GameEntities.FanType">
             <summary>
@@ -786,348 +1102,32 @@
             Gets or sets the current power.
             </summary>
         </member>
-        <member name="T:GameEntities.RTSMineType">
+        <member name="T:GameEntities.RTSCharacterType">
             <summary>
-            Defines the <see cref="T:GameEntities.RTSMine"/> entity type.
+            Defines the <see cref="T:GameEntities.RTSCharacter"/> entity type.
             </summary>
         </member>
-        <member name="T:GameEntities.RTSBuildingType">
-            <summary>
-            Defines the <see cref="T:GameEntities.RTSBuilding"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.RTSBuilding.OnPostCreate(System.Boolean)">
+        <member name="M:GameEntities.RTSCharacter.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="M:GameEntities.RTSBuilding.OnTick">
+        <member name="M:GameEntities.RTSCharacter.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
-        <member name="M:GameEntities.RTSMine.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.RTSMine.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.RTSBuildingAIType">
-            <summary>
-            Defines the <see cref="T:GameEntities.RTSBuildingAI"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.RTSUnitAIType">
-            <summary>
-            Defines the <see cref="T:GameEntities.RTSUnitAI"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.RTSUnitAI.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.RTSUnitAI.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="M:GameEntities.RTSUnitAI.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.RTSUnitAI.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.AircraftType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Aircraft"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Aircraft.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Aircraft.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.TurnFloatSwitchType">
-            <summary>
-            Defines the <see cref="T:GameEntities.TurnFloatSwitch"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.TurnFloatSwitch">
-            <summary>
-            Defines the parametrical switch which turns the <see cref="P:GameEntities.Switch.UseAttachedMesh"/>.
-            </summary>
-        </member>
-        <member name="T:GameEntities.HealthItemType">
-            <summary>
-            Defines the <see cref="T:GameEntities.HealthItem"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.HealthItem">
-            <summary>
-            Represents a item of the healths. When the player take this item his 
-            <see cref="P:GameEntities.Dynamic.Life"/> increase.
-            </summary>
-        </member>
-        <member name="T:GameEntities.JigsawPuzzlePieceType">
-            <summary>
-            Defines the <see cref="T:GameEntities.JigsawPuzzlePiece"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.JigsawPuzzlePiece">
-            <summary>
-            The piece for puzzle game example.
-            </summary>
-        </member>
-        <member name="T:GameEntities.TankType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Tank"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Tank.OnPreCreate">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPreCreate"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Tank.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Tank.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.TurretType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Turret"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Turret">
-            <summary>
-            Gives an opportunity of creation of the turrets.
-            A turret can be rotated. Guns are attached on the tower and player can 
-            control the aiming and shooting of the turret.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Turret.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Turret.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.GunType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Gun"/> entity type.
-            </summary>
-        </member>
-        <member name="P:GameEntities.GunType.GunMode.FireObjects">
-            <summary>
-            Gets the fire objects collection.
-            </summary>
-            <remarks>
-            <para>
-            These objects will be created after fire.
-            </para>
-            </remarks>
-        </member>
-        <member name="M:GameEntities.Gun.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Gun.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.FactionType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Faction"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Faction">
-            <summary>
-            Concept of the command. Opponents with an artificial intelligences attack 
-            units of another's fraction.
-            </summary>
-        </member>
-        <member name="T:GameEntities.DoorType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Door"/> entity type.
-            </summary>
-        </member>
-        <member name="P:GameEntities.DoorType.OpenDoorBodyOffset">
-            <summary>
-            Gets or sets the displacement a position of a body "door" when the door is open.
-            </summary>
-        </member>
-        <member name="P:GameEntities.DoorType.OpenTime">
-            <summary>
-            Gets or set the time of opening/closing of a door.
-            </summary>
-        </member>
-        <member name="P:GameEntities.DoorType.SoundOpen">
-            <summary>
-            Gets or sets the sound at opening a door.
-            </summary>
-        </member>
-        <member name="P:GameEntities.DoorType.SoundClose">
-            <summary>
-            Gets or sets the sound at closing a door.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Door">
-            <summary>
-            Defines the doors. That doors worked, it is necessary that the physical 
-            model had a body with a name "door". This body will move at change of a status of a door.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Door.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Door.OnSetTransform(Engine.MathEx.Vec3@,Engine.MathEx.Quat@,Engine.MathEx.Vec3@)">
-            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnSetTransform(Engine.MathEx.Vec3@,Engine.MathEx.Quat@,Engine.MathEx.Vec3@)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Door.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="P:GameEntities.Door.Opened">
-            <summary>
-            Gets or sets a value indicating whether the door is currently open.
-            </summary>
-        </member>
-        <member name="T:GameEntities.SpawnPointType">
-            <summary>
-            Defines the <see cref="T:GameEntities.SpawnPoint"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.GameMapType">
-            <summary>
-            Defines the <see cref="T:GameEntities.GameMap"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.GameMap.OnPostCreate2(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate2(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.GameMap.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="T:GameEntities.AutomaticOpenDoorType">
-            <summary>
-            Defines the <see cref="T:GameEntities.AutomaticOpenDoor"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.AutomaticOpenDoor">
-            <summary>
-            Defines automatically opening doors.
-            </summary>
-        </member>
-        <member name="M:GameEntities.AutomaticOpenDoor.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.AutomaticOpenDoor.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.CraneType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Crane"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.Crane">
-            <summary>
-            Gives an opportunity of creation of the crane and his control via <see cref="T:GameEntities.Intellect"/>.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Crane.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Crane.OnPostCreate2(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate2(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Crane.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Crane.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
-        </member>
-        <member name="M:GameEntities.Crane.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="M:GameEntities.WaterPlane.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.WaterPlane.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="T:GameEntities.CutSceneManagerType">
-            <summary>
-            Defines the <see cref="T:GameEntities.CutSceneManager"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.CutSceneManager">
-            <summary>
-            The manager of cut scenes. 
-            That there was an opportunity to create a cut scenes on a map, 
-            it is necessary to create in the Map Editor object "CutSceneManager".
-            </summary>
-        </member>
-        <member name="M:GameEntities.CutSceneManager.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.CutSceneManager.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="M:GameEntities.CutSceneManager.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.MinefieldType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Minefield"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.Minefield.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Minefield.OnDestroy">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnDestroy"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Minefield.OnCalculateMapBounds(Engine.MathEx.Bounds@)">
-            <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnCalculateMapBounds(Engine.MathEx.Bounds@)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.Minefield.OnRender(Engine.Renderer.Camera)">
+        <member name="M:GameEntities.RTSCharacter.OnRender(Engine.Renderer.Camera)">
             <summary>Overridden from <see cref="M:Engine.MapSystem.MapObject.OnRender(Engine.Renderer.Camera)"/>.</summary>
         </member>
-        <member name="T:GameEntities.InfluenceItemType">
+        <member name="T:GameEntities.TurretAIType">
             <summary>
-            Defines the <see cref="T:GameEntities.InfluenceItem"/> entity type.
+            Defines the <see cref="T:GameEntities.TurretAI"/> entity type.
             </summary>
         </member>
-        <member name="T:GameEntities.MeleeWeaponType">
-            <summary>
-            Defines the <see cref="T:GameEntities.MeleeWeapon"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.MeleeWeapon.OnPostCreate(System.Boolean)">
+        <member name="M:GameEntities.TurretAI.OnPostCreate(System.Boolean)">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
         </member>
-        <member name="M:GameEntities.MeleeWeapon.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
+        <member name="M:GameEntities.TurretAI.OnRelatedEntityDelete(Engine.EntitySystem.Entity)">
+            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnRelatedEntityDelete(Engine.EntitySystem.Entity)"/></summary>
         </member>
-        <member name="T:GameEntities.InfluenceRegionType">
-            <summary>
-            Defines the <see cref="T:GameEntities.InfluenceRegion"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.InfluenceRegion.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.InfluenceRegion.OnTick">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
-        </member>
-        <member name="T:GameEntities.TerminalType">
-            <summary>
-            Defines the <see cref="T:GameEntities.Terminal"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.HumanPlayerCharacterType">
-            <summary>
-            Defines the <see cref="T:GameEntities.PlayerCharacter"/> entity type.
-            </summary>
-        </member>
-        <member name="T:GameEntities.JumpBlowMeleeWeaponType">
-            <summary>
-            Defines the <see cref="T:GameEntities.JumpBlowMeleeWeapon"/> entity type.
-            </summary>
-        </member>
-        <member name="M:GameEntities.JumpBlowMeleeWeapon.OnPostCreate(System.Boolean)">
-            <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnPostCreate(System.Boolean)"/>.</summary>
-        </member>
-        <member name="M:GameEntities.JumpBlowMeleeWeapon.OnTick">
+        <member name="M:GameEntities.TurretAI.OnTick">
             <summary>Overridden from <see cref="M:Engine.EntitySystem.Entity.OnTick"/>.</summary>
         </member>
     </members>

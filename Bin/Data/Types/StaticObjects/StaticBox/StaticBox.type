@@ -8,7 +8,9 @@ type StaticBox
 		{
 			meshName = Models\DefaultBox\DefaultBox.mesh
 			forceMaterial = StaticBox
-			toCollision = True
+			collision = True
+			position = 0 0 1.051515
+			scale = 0.9286137 1.376661 3.027301
 		}
 	}
 }

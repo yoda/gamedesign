@@ -4,39 +4,14 @@
         <name>Game</name>
     </assembly>
     <members>
-        <member name="T:Game.AboutWindow">
+        <member name="T:Game.ActionGameWindow">
             <summary>
-            Defines a about us window.
-            </summary>
-        </member>
-        <member name="T:Game.GameEngineApp">
-            <summary>
-            Defines a game application.
-            </summary>
-        </member>
-        <member name="T:Game.Program">
-            <summary>
-            Defines an input point in the application.
-            </summary>
-        </member>
-        <member name="M:Game.Program.Main">
-            <summary>
-            The main entry point for the application.
+            Defines a game window for FPS and TPS games.
             </summary>
         </member>
         <member name="T:Game.GameWindow">
             <summary>
             Defines a base window of game.
-            </summary>
-        </member>
-        <member name="T:Game.TurretDemoGameWindow">
-            <summary>
-            Defines a game window for TurretDemo
-            </summary>
-        </member>
-        <member name="T:Game.ActionGameWindow">
-            <summary>
-            Defines a game window for FPS and TPS games.
             </summary>
         </member>
         <member name="M:Game.ActionGameWindow.UpdateCurrentPlayerUseObjects">
@@ -86,60 +61,24 @@
             <param name="cameraFov">The camera FOV.</param>
             <returns><b>true</b>if the player is in any area; otherwise <b>false</b>.</returns>
         </member>
-        <member name="T:Game.JigsawPuzzleGameWindow">
+        <member name="T:Game.Program">
             <summary>
-            Defines a game window for Jigsaw Puzzle Game Example
+            Defines an input point in the application.
             </summary>
         </member>
-        <member name="T:Game.MapsWindow">
+        <member name="M:Game.Program.Main">
             <summary>
-            Defines a window of map choice.
+            The main entry point for the application.
             </summary>
         </member>
-        <member name="T:Game.PostEffectsWindow">
+        <member name="T:Game.MenuWindow">
             <summary>
-            Defines a "PostEffects" window.
+            Defines a system game menu.
             </summary>
         </member>
-        <member name="T:Game.EngineLogoWindow">
+        <member name="T:Game.GameEngineApp">
             <summary>
-            Defines a NeoAxis Engine Logo window.
-            </summary>
-        </member>
-        <member name="T:Game.Properties.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:Game.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:Game.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="T:Game.DebugDrawOptionsWindow">
-            <summary>
-            Defines a "Debug Draw Options" window.
-            </summary>
-        </member>
-        <member name="T:Game.ProductLogoWindow">
-            <summary>
-            Defines a your project logo window.
-            </summary>
-        </member>
-        <member name="T:Game.OptionsWindow">
-            <summary>
-            Defines a window of options.
-            </summary>
-        </member>
-        <member name="T:Game.MessageBoxWindow">
-            <summary>
-            Defines a "MessageBox" window.
+            Defines a game application.
             </summary>
         </member>
         <member name="T:Game.MainMenuWindow">
@@ -167,9 +106,70 @@
             Destroys the background world.
             </summary>
         </member>
-        <member name="T:Game.MenuWindow">
+        <member name="T:Game.PostEffectsWindow">
             <summary>
-            Defines a system game menu.
+            Defines a "PostEffects" window.
+            </summary>
+        </member>
+        <member name="T:Game.ProductLogoWindow">
+            <summary>
+            Defines a your project logo window.
+            </summary>
+        </member>
+        <member name="T:Game.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Game.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Game.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Game.OptionsWindow">
+            <summary>
+            Defines a window of options.
+            </summary>
+        </member>
+        <member name="T:Game.AboutWindow">
+            <summary>
+            Defines a about us window.
+            </summary>
+        </member>
+        <member name="T:Game.TurretDemoGameWindow">
+            <summary>
+            Defines a game window for TurretDemo
+            </summary>
+        </member>
+        <member name="T:Game.JigsawPuzzleGameWindow">
+            <summary>
+            Defines a game window for Jigsaw Puzzle Game Example
+            </summary>
+        </member>
+        <member name="T:Game.DebugDrawOptionsWindow">
+            <summary>
+            Defines a "Debug Draw Options" window.
+            </summary>
+        </member>
+        <member name="T:Game.MapsWindow">
+            <summary>
+            Defines a window of map choice.
+            </summary>
+        </member>
+        <member name="T:Game.EngineLogoWindow">
+            <summary>
+            Defines a NeoAxis Engine Logo window.
+            </summary>
+        </member>
+        <member name="T:Game.MessageBoxWindow">
+            <summary>
+            Defines a "MessageBox" window.
             </summary>
         </member>
     </members>

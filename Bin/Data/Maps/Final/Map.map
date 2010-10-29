@@ -2,9 +2,9 @@ type = GameMap
 uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
-ambientLight = 0.03921569 0.03921569 0.03921569
-editorCameraPosition = 13.08576 -0.1446766 0.773656
-editorCameraDirection = 6.154917 0.1570413
+ambientLight = 0.3921569 0.3921569 0.3921569
+editorCameraPosition = -15.66837 36.61306 20.86925
+editorCameraDirection = 5.276717 -0.1762474
 shadowColor = 1 1 1
 logicSystemManager = 3
 shadowTechnique = ShadowmapMedium
@@ -82,4 +82,116 @@ entity
 	classPrompt = MapObject
 	position = 21.1421 -2.068755 2.225154
 	name = Painting_Ship_0
+}
+entity
+{
+	type = Palette
+	uin = 12
+	classPrompt = MapObject
+	position = -9.734687 -5.384303 -0.02847025
+	name = Palette_0
+}
+entity
+{
+	type = StaticBox
+	uin = 13
+	classPrompt = MapObject
+	position = -8.60018 -1.980619 -0.03701894
+	name = StaticBox_0
+}
+entity
+{
+	type = StaticBox
+	uin = 14
+	classPrompt = MapObject
+	position = -3.587877 -1.092969 -0.03094783
+	name = StaticBox_1
+}
+entity
+{
+	type = StaticBox
+	uin = 15
+	classPrompt = MapObject
+	position = -5.462774 4.850316 -0.04968568
+	name = StaticBox_2
+}
+entity
+{
+	type = StaticBox
+	uin = 16
+	classPrompt = MapObject
+	position = -9.554844 2.397019 -0.0618999
+	name = StaticBox_3
+}
+entity
+{
+	type = StaticBox
+	uin = 17
+	classPrompt = MapObject
+	position = 16.42052 12.2913 -0.03328044
+	name = StaticBox_4
+}
+entity
+{
+	type = StaticBox
+	uin = 18
+	classPrompt = MapObject
+	position = 2.976379 11.48027 -0.04601288
+	name = StaticBox_5
+}
+entity
+{
+	type = StaticBox
+	uin = 19
+	classPrompt = MapObject
+	position = 2.291528 14.24275 -0.06147302
+	name = StaticBox_6
+}
+entity
+{
+	type = StaticBox
+	uin = 20
+	classPrompt = MapObject
+	position = 5.838756 -5.163368 -0.05380693
+	name = StaticBox_7
+}
+entity
+{
+	type = StaticBox
+	uin = 21
+	classPrompt = MapObject
+	position = 4.060154 -2.980583 -0.05780878
+	name = StaticBox_8
+}
+entity
+{
+	type = StaticBox
+	uin = 22
+	classPrompt = MapObject
+	position = 10.70995 -13.98747 -0.0685135
+	name = StaticBox_9
+}
+entity
+{
+	type = StaticBox
+	uin = 23
+	classPrompt = MapObject
+	position = 13.95669 -5.84313 -0.06630509
+	name = StaticBox_10
+}
+entity
+{
+	type = StaticBox
+	uin = 24
+	classPrompt = MapObject
+	position = 17.35343 0.1567544 -0.06234211
+	name = StaticBox_11
+}
+entity
+{
+	type = StaticBox
+	uin = 25
+	classPrompt = MapObject
+	position = 18.72702 -13.56983 -0.06403583
+	name = StaticBox_12
 }

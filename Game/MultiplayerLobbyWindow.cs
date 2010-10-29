@@ -254,11 +254,11 @@ namespace Game
 					//update list box
 					listBoxUsersStatue.Items.Clear();
                     listBoxUsersHAT.Items.Clear();
-					foreach( UserManagementServerNetworkService.UserInfo user in userService.Users )
-                        if (user.Faction.Equals("Statue"))
-                            listBoxUsersStatue.Items.Add( user );
-                        else 
-                            listBoxUsersHAT.Items.Add(user);
+			//		foreach( UserManagementServerNetworkService.UserInfo user in userService.Users )
+             //           if (user.Faction.Equals("Statue"))
+              //              listBoxUsersStatue.Items.Add( user );
+               //         else 
+                //            listBoxUsersHAT.Items.Add(user);
 				}
 			}
 

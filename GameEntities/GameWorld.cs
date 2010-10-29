@@ -87,6 +87,8 @@ namespace GameEntities
 		{
 			base.OnTick();
 
+//            GameNetworkClient.Instance.UserManagementService.ThisUser.
+
 			//single mode. recreate player units if need
 			if( EntitySystemWorld.Instance.IsSingle() )
 			{

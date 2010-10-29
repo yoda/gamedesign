@@ -8,11 +8,11 @@ type Hammer
 		damage = 20
 		impulse = 500
 		kickCheckRadius = 1
-		soundKick = Types\Units\Zombie\Kick.ogg
+		soundKick = Types\Weapons\Hammer\SubmachineGunGrenadeHit.ogg
 		betweenFireTime = 1.5
-		soundFire = Types\Units\Zombie\Blow.ogg
+		soundFire = Types\Weapons\Hammer\Blow.ogg
 		useDistanceRange = 0 2
-		fireTimes = 0.4
+		fireTimes = 0.9
 		fireAnimationName = fire
 		fireUnitAnimationName = blow
 	}

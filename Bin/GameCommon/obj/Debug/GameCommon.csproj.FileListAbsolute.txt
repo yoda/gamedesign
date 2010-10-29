@@ -1,0 +1,24 @@
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameCommon.dll
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameCommon.pdb
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameCommon.xml
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameCommon\obj\Debug\GameCommon.dll
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameCommon\obj\Debug\GameCommon.pdb
+C:\Users\yoda\Desktop\gamedesign\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\gamedesign\GameCommon\obj\Debug\GameCommon.dll
+C:\Users\yoda\Desktop\gamedesign\GameCommon\obj\Debug\GameCommon.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.dll
+C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\GameCommon.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\GameCommon.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\GameCommon.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\GameCommon\obj\Debug\GameCommon.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\GameCommon\obj\Debug\GameCommon.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\GameCommon.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\GameCommon.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\GameCommon.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameCommon\obj\Debug\GameCommon.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameCommon\obj\Debug\GameCommon.pdb

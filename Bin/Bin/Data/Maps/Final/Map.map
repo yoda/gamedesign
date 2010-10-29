@@ -1,0 +1,155 @@
+type = GameMap
+uin = 2
+classPrompt = GameMap
+gameMusic = Sounds\Music\Game.ogg
+ambientLight = 0.03921569 0.03921569 0.03921569
+editorCameraPosition = 7.925568 5.737952 7.953552
+editorCameraDirection = 4.031151 -0.5402524
+shadowColor = 1 1 1
+logicSystemManager = 3
+shadowTechnique = ShadowmapMedium
+rootEditorLayer
+{
+}
+entity
+{
+	type = LogicSystemManager
+	uin = 3
+	mapClassManager = 4
+	entity
+	{
+		type = LogicClassManager
+		uin = 4
+	}
+}
+entity
+{
+	type = Room2
+	uin = 5
+	classPrompt = MapObject
+	position = 10.87708 12.85249 -0.06155375
+	scale = 10 10 10
+	editorAlignmentMethod = ByBounds
+	name = Room2_0
+}
+entity
+{
+	type = SpawnPoint
+	uin = 6
+	classPrompt = SpawnPoint
+	defaultPoint = True
+	position = 17.61322 7.37712 -0.06886717
+	editorAlignmentMethod = ByBounds
+	name = SpawnPoint_0
+}
+entity
+{
+	type = HammerItem
+	uin = 7
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 12.46661 6.483877 -0.09274538
+}
+entity
+{
+	type = Girl2
+	uin = 8
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 5.186575 -3.750763 1.183344
+	name = Girl2_0
+}
+entity
+{
+	type = Statue
+	uin = 9
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	intellectShouldDeleteAfterDetach = False
+	position = 3.300573 -0.4158171 1.153412
+	name = Statue_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = SubmachineGunItem
+	uin = 10
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 5.139655 -0.1228337 -0.07778331
+}
+entity
+{
+	type = Girl2
+	uin = 11
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 7.018313 -2.437034 1.175368
+	name = Girl2_1
+}
+entity
+{
+	type = Girl2
+	uin = 12
+	classPrompt = GameCharacter
+	intellectShouldDeleteAfterDetach = False
+	position = 5.202936 -1.572844 1.146796
+	name = Girl2_2
+}
+entity
+{
+	type = Human
+	uin = 13
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	intellectShouldDeleteAfterDetach = False
+	position = 3.924261 0.9160669 1.34553
+	name = Human_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}

@@ -1011,12 +1011,29 @@ namespace Game
 			if( EntitySystemWorld.Instance.IsServer() || EntitySystemWorld.Instance.IsSingle() )
 			{
 				float posy = .3f;
-
+                ICollection<Entity> icol = Entities.Instance.EntitiesCollection;
+                String fact = "";
 				foreach( PlayerManager.ServerOrSingle_Player player in
 					PlayerManager.Instance.ServerOrSingle_Players )
 				{
+                    foreach (Entity ent in icol)
+                    {
+                        Console.WriteLine(ent.UIN + " : "+ent.NetworkUIN+" : "+ent.Name);
+                        Console.WriteLine(player.Identifier + " : " + " : " + player.User.Identifier + " : " + player.Name);
+          
+                        if (ent.Name.ToString().Contains("Human"))
+                        {
+                            fact = "Human";
+                        }
+                        if (ent.Name.ToString().Contains("Statue") && ent.NetworkUIN.Equals(player.User.Identifier))
+                        {
+                            fact = "Statue";
+                        }
+
+                    }
+
                     string text = string.Format("{0},   Frags: {1},  Faction: {3},  Ping: {2} ms", player.Name,
-						player.Frags, (int)( player.Ping * 1000 ), player.Intellect.Faction );
+						player.Frags, (int)( player.Ping * 1000 ), fact );
 					renderer.AddText( text, new Vec2( .2f, posy ), HorizontalAlign.Left,
 						VerticalAlign.Center );
 
@@ -1027,11 +1044,25 @@ namespace Game
 			if( EntitySystemWorld.Instance.IsClientOnly() )
 			{
 				float posy = .3f;
-
+                ICollection<Entity> icol = Entities.Instance.EntitiesCollection;
+                String fact = "";
 				foreach( PlayerManager.Client_Player player in PlayerManager.Instance.Client_Players )
 				{
+                    foreach (Entity ent in icol)
+                    {
+                        if (ent.Name.ToString().Contains("Human") && ent.UIN.Equals(player.User.Identifier))
+                        {
+                            fact = "Human";
+                        }
+                        if (ent.Name.ToString().Contains("Statue") && ent.UIN.Equals(player.User.Identifier))
+                        {
+                            fact = "Statue";
+                        }
+                    }
+                    
+
                     string text = string.Format("{0},   Frags: {1},  Faction: {3}, ID: {4}, Ping: {2} ms", player.Name,
-						player.Frags, (int)( player.Ping * 1000 ),  player.Team, player.Identifier );
+						player.Frags, (int)( player.Ping * 1000 ),  fact, player.Identifier );
 					renderer.AddText( text, new Vec2( .2f, posy ), HorizontalAlign.Left,
 						VerticalAlign.Center );
                     

@@ -101,6 +101,7 @@ namespace GameEntities
 			get { return normalMode; }
 		}
 
+
 		public MeleeWeaponMode AlternativeMode
 		{
 			get { return alternativeMode; }
@@ -328,8 +329,9 @@ namespace GameEntities
 					//not kick allies
 					Unit objUnit = dynamic.GetParentUnitHavingIntellect();
 					if( objUnit != null && objUnit.Intellect != null && unit.Intellect != null &&
-						objUnit.Intellect.Faction == unit.Intellect.Faction )
-						continue;
+						//objUnit.Intellect.Faction == unit.Intellect.Faction )
+						objUnit.Type == unit.Type)
+                        continue;
 
 					//impulse
 					float impulse = currentFireTypeMode.Impulse;
@@ -348,8 +350,24 @@ namespace GameEntities
 
 					//damage
 					float damage = currentFireTypeMode.Damage;
-					if( damage != 0 )
-						dynamic.DoDamage( unit, Position, null, damage, false );
+                    if (damage != 0)
+                    {
+                        dynamic.DoDamage(unit, Position, null, damage, false);
+                        //new stuff
+                        
+                        PlayerManager.ServerOrSingle_Player player = PlayerManager.Instance.
+                                        ServerOrSingle_GetPlayer(unit.Intellect);
+                        if (player != null)
+                            player.Frags++;
+
+                        if (player.Frags >= 10) { 
+                            //end game
+                            
+                        } 
+                             
+                        
+                        //end new stuff
+                    }
 				}
 
 				playSound = true;

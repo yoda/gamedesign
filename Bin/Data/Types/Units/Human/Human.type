@@ -10,13 +10,13 @@ type Human
 	bottomRadius = 0.2
 	walkMaxVelocity = 5
 	walkForce = 6000
-	flyControlMaxVelocity = 10
+	flyControlMaxVelocity = 0
 	flyControlForce = 700
 	soundJump = "Types/Units/Rabbit/Jump.ogg"
 	allowPlayerControl = True
 	initialAI = DefaultGameCharacterAI
 	viewRadius = 70
-	lifeMax = 15
+	lifeMax = 1
 	targetPriority = 1
 	substance = Flesh
 	allowEditorCreate = True
@@ -73,7 +73,8 @@ type Human
 			attenuationConstant = 0
 			attenuationLinear = 0.0005
 			attenuationQuadric = 0.001
-			spotlightOuterAngle = 50
+			spotlightInnerAngle = 20
+			spotlightOuterAngle = 25
 			alias = torchlight
 			boneSlot = torch
 		}

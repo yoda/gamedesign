@@ -6,10 +6,12 @@ type Statue
 	height = 1.5
 	radius = 0.45
 	bottomRadius = 0.2
+	walkMaxVelocity = 10
 	walkForce = 6000
+	flyControlMaxVelocity = 0
 	initialAI = DefaultGameCharacterAI
 	fpsCameraOffset = 0.35 0 0.3
-	lifeMax = 40
+	lifeMax = 1
 	allowEditorCreate = True
 	networkType = Synchronized
 	weapons
@@ -28,6 +30,19 @@ type Statue
 			forceMaterial = statuestone
 			receiveStaticShadows = True
 			position = 0 0 -0.2561025
+		}
+	}
+	dieObjects
+	{
+		particle
+		{
+			particleName = GreenyNimbusParticle
+			renderingDistance = 10
+			lifeTime = 2
+		}
+		sound
+		{
+			soundName = Types\Weapons\Hammer\Kick.ogg
 		}
 	}
 }

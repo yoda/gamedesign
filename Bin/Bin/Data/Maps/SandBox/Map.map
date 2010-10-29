@@ -1,0 +1,111 @@
+type = GameMap
+uin = 2
+classPrompt = GameMap
+gameMusic = Sounds\Music\Game.ogg
+ambientLight = 0.7098039 0.7098039 0.7098039
+editorCameraDirection = 2.729527 -0.8149417
+shadowColor = 1 1 1
+shadowFarDistance = 10000
+shadowCubicTextureCount = 3
+logicSystemManager = 3
+sceneGraphType = Octree
+shadowTechnique = ShadowmapMedium
+rootEditorLayer
+{
+}
+entity
+{
+	type = LogicSystemManager
+	uin = 3
+	mapClassManager = 4
+	entity
+	{
+		type = LogicClassManager
+		uin = 4
+	}
+}
+entity
+{
+	type = SkyBox
+	uin = 5
+	classPrompt = SkyBox
+	textureName = Types\Base\SkyBox\DefaultSkyBox.jpg
+	color = 1 1 1
+	power = 0.1
+}
+entity
+{
+	type = HeightmapTerrain
+	uin = 6
+	classPrompt = HeightmapTerrain
+	position = 0 0 -50
+	horizontalSize = 1000
+	verticalSize = 100
+	dataDirectory = HeightmapTerrain
+	masksSize = 1024
+	detailMapsDistance = 50
+	renderQueueGroup = WorldGeometry1
+	collisionMaterialName = Default
+	bottomClipHeight = -10000
+	castDynamicShadows = False
+	receiveStaticShadows = True
+	simpleRendering = False
+	tileSize = 16
+	layers
+	{
+		item
+		{
+			name = base
+			baseMap = Types\Base\HeightmapTerrain\DefaultLayer0Base.jpg
+			baseScale = 10
+			detailMap = Types\Base\HeightmapTerrain\DefaultLayer0Detail.jpg
+			detailScale = 2
+		}
+		item
+		{
+			name = second
+			baseMap = Types\Base\HeightmapTerrain\DefaultLayer1Base.jpg
+			baseScale = 10
+			detailMap = Types\Base\HeightmapTerrain\DefaultLayer1Detail.jpg
+			detailScale = 2
+		}
+	}
+}
+entity
+{
+	type = SpawnPoint
+	uin = 7
+	classPrompt = SpawnPoint
+	defaultPoint = False
+	position = 74.90825 6.696418 0.04474201
+	name = SpawnPoint_0
+}
+entity
+{
+	type = HammerItem
+	uin = 8
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 80.7528 3.00955 0.2817912
+}
+entity
+{
+	type = TorchItem
+	uin = 9
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 72.91759 -0.1655924 0.3347329
+}
+entity
+{
+	type = SubmachineGunItem
+	uin = 10
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 79.92449 -0.1404035 0.3306218
+}
+entity
+{
+	uin = 11
+	classPrompt = MapObject
+}

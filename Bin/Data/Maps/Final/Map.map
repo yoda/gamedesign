@@ -2,9 +2,9 @@ type = GameMap
 uin = 2
 classPrompt = GameMap
 gameMusic = Sounds\Music\Game.ogg
-ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 17.53543 0.9618464 20.66873
-editorCameraDirection = 1.570796 -0.7853982
+ambientLight = 0.03921569 0.03921569 0.03921569
+editorCameraPosition = 13.08576 -0.1446766 0.773656
+editorCameraDirection = 6.154917 0.1570413
 shadowColor = 1 1 1
 logicSystemManager = 3
 shadowTechnique = ShadowmapMedium
@@ -38,105 +38,48 @@ entity
 	uin = 6
 	classPrompt = SpawnPoint
 	defaultPoint = True
-	position = 17.61322 7.37712 -0.06886717
+	position = 17.61322 -2.100268 -0.06886717
 	editorAlignmentMethod = ByBounds
-	name = SpawnPoint_0
-}
-entity
-{
-	type = HammerItem2
-	uin = 7
-	classPrompt = WeaponItem
-	respawnTime = 10
-	position = 16.30253 7.624363 -0.0710618
-	editorAlignmentMethod = ByBounds
+	name = human_spawn
 }
 entity
 {
 	type = HammerItem
-	uin = 8
+	uin = 7
 	classPrompt = WeaponItem
 	respawnTime = 10
-	position = 14.80735 6.963153 1.348864
-	editorAlignmentMethod = ByBounds
+	position = 17.69576 -2.093225 -0.09274538
 }
 entity
 {
-	type = TorchItem
-	uin = 9
-	classPrompt = WeaponItem
-	respawnTime = 10
-	position = 14.26931 -13.50846 -0.08979677
-	editorAlignmentMethod = ByBounds
+	type = SpawnPoint
+	uin = 8
+	classPrompt = SpawnPoint
+	defaultPoint = False
+	position = -7.339319 2.333831 -0.06657017
+	name = statue_spawn
 }
 entity
 {
 	type = HammerItem2
-	uin = 10
+	uin = 9
 	classPrompt = WeaponItem
 	respawnTime = 10
-	position = 14.77156 6.865334 -0.09540913
-	editorAlignmentMethod = ByBounds
+	position = -7.254657 2.426136 -0.06433824
 }
 entity
 {
-	type = Human
+	type = Painting_Clown
+	uin = 10
+	classPrompt = MapObject
+	position = -1.355793 4.22998 1.659285
+	name = Painting_Clown_0
+}
+entity
+{
+	type = Painting_Ship
 	uin = 11
-	classPrompt = PlayerCharacter
-	contusionTimeRemaining = 0
-	playerTeam = SpectatorPlayer
-	intellectShouldDeleteAfterDetach = False
-	position = 13.64448 5.959613 1.786757
-	editorAlignmentMethod = ByBounds
-	name = Human_0
-	weapons
-	{
-		item
-		{
-			exists = False
-			normalBulletCount = 0
-			normalMagazineCount = 0
-			alternativeBulletCount = 0
-			alternativeMagazineCount = 0
-		}
-		item
-		{
-			exists = False
-			normalBulletCount = 0
-			normalMagazineCount = 0
-			alternativeBulletCount = 0
-			alternativeMagazineCount = 0
-		}
-		item
-		{
-			exists = False
-			normalBulletCount = 0
-			normalMagazineCount = 0
-			alternativeBulletCount = 0
-			alternativeMagazineCount = 0
-		}
-	}
-}
-entity
-{
-	type = Statue
-	uin = 12
-	classPrompt = PlayerCharacter
-	contusionTimeRemaining = 0
-	playerTeam = SpectatorPlayer
-	intellectShouldDeleteAfterDetach = False
-	position = 12.097 7.8066 1.512203
-	editorAlignmentMethod = ByBounds
-	name = Statue_0
-	weapons
-	{
-		item
-		{
-			exists = False
-			normalBulletCount = 0
-			normalMagazineCount = 0
-			alternativeBulletCount = 0
-			alternativeMagazineCount = 0
-		}
-	}
+	classPrompt = MapObject
+	position = 21.1421 -2.068755 2.225154
+	name = Painting_Ship_0
 }

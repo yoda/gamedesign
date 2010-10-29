@@ -1,0 +1,370 @@
+type = GameMap
+uin = 2
+classPrompt = GameMap
+gameMusic = Sounds\Music\Game.ogg
+ambientLight = 0.2 0.2 0.2
+editorCameraPosition = 78.82568 -5.486693 14.29213
+editorCameraDirection = 1.548229 -0.2255361
+shadowColor = 1 1 1
+logicSystemManager = 3
+shadowTechnique = ShadowmapMedium
+rootEditorLayer
+{
+}
+entity
+{
+	type = LogicSystemManager
+	uin = 3
+	mapClassManager = 4
+	entity
+	{
+		type = LogicClassManager
+		uin = 4
+	}
+}
+entity
+{
+	type = SkyBox
+	uin = 5
+	classPrompt = SkyBox
+	textureName = Types\Base\SkyBox\DefaultSkyBox.jpg
+	color = 1 1 1
+	power = 1
+}
+entity
+{
+	type = HeightmapTerrain
+	uin = 6
+	classPrompt = HeightmapTerrain
+	position = 0 0 -50
+	horizontalSize = 1000
+	verticalSize = 100
+	dataDirectory = HeightmapTerrain
+	masksSize = 1024
+	detailMapsDistance = 50
+	renderQueueGroup = WorldGeometry1
+	collisionMaterialName = Default
+	bottomClipHeight = -10000
+	castDynamicShadows = False
+	receiveStaticShadows = True
+	simpleRendering = False
+	tileSize = 16
+	layers
+	{
+		item
+		{
+			name = base
+			baseMap = Types\Base\HeightmapTerrain\DefaultLayer0Base.jpg
+			baseScale = 10
+			detailMap = Types\Base\HeightmapTerrain\DefaultLayer0Detail.jpg
+			detailScale = 2
+		}
+		item
+		{
+			name = second
+			baseMap = Types\Base\HeightmapTerrain\DefaultLayer1Base.jpg
+			baseScale = 10
+			detailMap = Types\Base\HeightmapTerrain\DefaultLayer1Detail.jpg
+			detailScale = 2
+		}
+	}
+}
+entity
+{
+	type = SpawnPoint
+	uin = 7
+	classPrompt = SpawnPoint
+	defaultPoint = False
+	position = 74.90825 6.696418 0.04474201
+	name = SpawnPoint_0
+}
+entity
+{
+	type = StaticBox
+	uin = 8
+	classPrompt = MapObject
+	position = 3.148905 14.93677 0.5029107
+	name = StaticBox_0
+}
+entity
+{
+	type = PipeCorner
+	uin = 9
+	classPrompt = MapObject
+	position = -149.4117 -403.4888 0.4996593
+	name = PipeCorner_0
+}
+entity
+{
+	type = Plane001
+	uin = 10
+	classPrompt = MapObject
+	position = 83.41403 0.2219959 0.01
+	name = Plane001_0
+}
+entity
+{
+	type = Plane001
+	uin = 11
+	classPrompt = MapObject
+	position = 3.985544 0.4564896 0.01
+	name = Plane002_0
+}
+entity
+{
+	type = Plane001
+	uin = 12
+	classPrompt = MapObject
+	position = -41.83411 6.915591 0.01
+	name = Plane003_0
+}
+entity
+{
+	type = Plane001
+	uin = 13
+	classPrompt = MapObject
+	position = 47.34077 6.513356 0.01
+	rotation = 0 0 -1 -4.371139E-08
+	name = Plane004_0
+}
+entity
+{
+	type = Plane001
+	uin = 14
+	classPrompt = MapObject
+	position = 1.751673 51.21446 0.01
+	rotation = 0 0 -0.7009559 -0.7132046
+	name = Plane005_0
+}
+entity
+{
+	type = SubmachineGunItem
+	uin = 15
+	classPrompt = WeaponItem
+	respawnTime = 10
+	position = 80.09946 -2.70215 0.3491153
+}
+entity
+{
+	type = Plane001
+	uin = 16
+	classPrompt = MapObject
+	position = 83.35956 0.1972482 -0.7686718
+	name = Ceiling_0
+}
+entity
+{
+	type = Palm
+	uin = 17
+	classPrompt = MapObject
+	position = 101.4046 -0.0141829 2.422993
+	scale = 1 2.388417 1.94153
+	name = Painting_Clown_0
+}
+entity
+{
+	type = Light
+	uin = 18
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 0 0 0
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = -29.83819 199.4587 107.3407
+	rotation = -0.2372244 -0.1345286 0.7124747 -0.646534
+	name = Light_1
+}
+entity
+{
+	type = Light
+	uin = 20
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 1 1 1
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = 0 0 0
+	name = Light_0
+}
+entity
+{
+	type = Light
+	uin = 22
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 1 1 1
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = 0 0 0
+	name = Light_2
+}
+entity
+{
+	type = Light
+	uin = 21
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 1 1 1
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = 78.02781 12.45357 1.160179
+	name = Light_3
+}
+entity
+{
+	type = Human
+	uin = 19
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	torch = 23
+	intellectShouldDeleteAfterDetach = False
+	position = 78.02781 12.45357 1.160179
+	name = Human_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Light
+	uin = 23
+	classPrompt = Light
+	lightType = Spot
+	diffuseColor = 1 1 1
+	diffusePower = 1
+	specularColor = 1 1 1
+	specularPower = 1
+	attenuationRangeAutomatic = True
+	attenuationRange = Infinity
+	attenuationConstant = 1
+	attenuationLinear = 0
+	attenuationQuadric = 0
+	spotlightInnerAngle = 30
+	spotlightOuterAngle = 40
+	spotlightFalloff = 1
+	castShadows = True
+	allowStaticLighting = False
+	allowDynamicLighting = True
+	position = 78.02781 12.45357 1.160179
+	name = Light_4
+}

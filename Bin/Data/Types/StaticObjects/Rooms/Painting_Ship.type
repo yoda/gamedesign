@@ -10,14 +10,5 @@ type Painting_Ship
 			collision = True
 			alias = shipDoor
 		}
-		particle
-		{
-			particleName = SmallSmokeParticle
-		}
-		particle
-		{
-			particleName = BigFireParticle
-			position = -0.1554799 0 0
-		}
 	}
 }

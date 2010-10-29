@@ -26,17 +26,12 @@ namespace GameEntities
 	{
 		static GameWorld instance;
 
-        string[] names = new string[2] { "Statue", "Human" };
-        Random Rand;
-       
 		//for moving player character between maps
 		string shouldChangeMapName;
 		string shouldChangeMapSpawnPointName;
 		PlayerCharacter.ChangeMapInformation shouldChangeMapPlayerCharacterInformation;
 
 		bool needWorldDestroy;
-        string factionstring;
-
 
 		//
 
@@ -45,9 +40,6 @@ namespace GameEntities
 		public GameWorld()
 		{
 			instance = this;
-            Rand = new Random(DateTime.Now.Second);
-
-           
 		}
 
 		public static new GameWorld Instance
@@ -86,8 +78,6 @@ namespace GameEntities
 		protected override void OnTick()
 		{
 			base.OnTick();
-
-//            GameNetworkClient.Instance.UserManagementService.ThisUser.
 
 			//single mode. recreate player units if need
 			if( EntitySystemWorld.Instance.IsSingle() )
@@ -294,18 +284,54 @@ namespace GameEntities
 		Unit ServerOrSingle_CreatePlayerUnit( PlayerManager.ServerOrSingle_Player player,
 			SpawnPoint spawnPoint )
 		{
+            SpawnPoint sp = spawnPoint;
 			string unitTypeName;
-            this.factionstring = this.names[this.Rand.Next(0, this.names.Length)];
-			if( !player.Bot )
-				unitTypeName = factionstring;
-			else
-				unitTypeName = player.Name;
+            if (!player.Bot)
+            {
+                //unitTypeName = "Human";
+                //new stuff
+                ICollection<Entity> icol = Entities.Instance.EntitiesCollection;
+                IEnumerator<Entity> num = icol.GetEnumerator();
+                num.Reset();
+                num.MoveNext();
+                int human_ctr = 0;
+                int statue_ctr = 0;
+                //Console.WriteLine(icol.Count);
+                for (int i = 0; i < icol.Count; i++)
+                {
+                    Entity mo = num.Current;
+                    Console.WriteLine(mo.Type.ToString());
+                    
+                    if (mo.Name.ToString().Contains("Human"))
+                    {
+                        human_ctr++;
+                    }
+                    if (mo.Name.ToString().Contains("Statue"))
+                    {
+                        statue_ctr++;
+                    }
+                    num.MoveNext();
+                }
+                if (human_ctr <= statue_ctr)
+                {
+                    unitTypeName = "Human";
+                    sp = Entities.Instance.GetByName("human_spawn") as SpawnPoint;
+                }
+                else
+                {
+                    unitTypeName = "Statue";
+                    sp = Entities.Instance.GetByName("statue_spawn") as SpawnPoint;
+                }
+                //end 
+            }
+            else
+                unitTypeName = player.Name;
 
 			Unit unit = (Unit)Entities.Instance.Create( unitTypeName, Map.Instance );
 
 			Vec3 posOffset = new Vec3( 0, 0, 1.5f );//!!!!temp
-			unit.Position = spawnPoint.Position + posOffset;
-			unit.Rotation = spawnPoint.Rotation;
+			unit.Position = sp.Position + posOffset;
+			unit.Rotation = sp.Rotation;
 			unit.PostCreate();
 
 			if( player.Intellect != null )

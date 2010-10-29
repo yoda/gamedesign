@@ -1,0 +1,24 @@
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameEntities.dll
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameEntities.pdb
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\GameEntities.xml
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameEntities\obj\Debug\ResolveAssemblyReference.cache
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameEntities\obj\Debug\GameEntities.dll
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameEntities\obj\Debug\GameEntities.pdb
+C:\Users\yoda\Desktop\gamedesign\GameEntities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\gamedesign\GameEntities\obj\Debug\GameEntities.dll
+C:\Users\yoda\Desktop\gamedesign\GameEntities\obj\Debug\GameEntities.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.dll
+C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\GameEntities.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\GameEntities.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\GameEntities.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\GameEntities\obj\Debug\ResolveAssemblyReference.cache
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\GameEntities\obj\Debug\GameEntities.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\GameEntities\obj\Debug\GameEntities.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\GameEntities.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\GameEntities.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\GameEntities.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameEntities\obj\Debug\ResolveAssemblyReference.cache
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameEntities\obj\Debug\GameEntities.dll
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameEntities\obj\Debug\GameEntities.pdb

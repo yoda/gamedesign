@@ -267,8 +267,8 @@ namespace GameEntities
 					{
 						PlayerManager.ServerOrSingle_Player player = PlayerManager.Instance.
 							ServerOrSingle_GetPlayer( Intellect );
-						if( player != null )
-							player.Frags--;
+                        if (player != null) { }
+							//player.Frags--;
 					}
 				}
 			}

@@ -1,0 +1,40 @@
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\DedicatedServer.exe
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\DedicatedServer.pdb
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Bin\DedicatedServer.xml
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\Debug\ResolveAssemblyReference.cache
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\Debug\DedicatedServer.MainForm.resources
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\Debug\DedicatedServer.Properties.Resources.resources
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\Debug\DedicatedServer.exe
+C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\Debug\DedicatedServer.pdb
+C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.MainForm.resources
+C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.Properties.Resources.resources
+C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.exe
+C:\Users\yoda\Desktop\gamedesign\DedicatedServer\obj\Debug\DedicatedServer.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.exe
+C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.pdb
+C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\DedicatedServer.exe
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\DedicatedServer.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\Bin\DedicatedServer.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\DedicatedServer\obj\Debug\ResolveAssemblyReference.cache
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\DedicatedServer\obj\Debug\DedicatedServer.MainForm.resources
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\DedicatedServer\obj\Debug\DedicatedServer.Properties.Resources.resources
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\DedicatedServer\obj\Debug\GenerateResource-ResGen.read.1.tlog
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\DedicatedServer\obj\Debug\GenerateResource-ResGen.write.1.tlog
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\DedicatedServer\obj\Debug\DedicatedServer.exe
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign2\DedicatedServer\obj\Debug\DedicatedServer.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\DedicatedServer.exe
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\DedicatedServer.pdb
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Bin\DedicatedServer.xml
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\ResolveAssemblyReference.cache
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\DedicatedServer.MainForm.resources
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\DedicatedServer.Properties.Resources.resources
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\GenerateResource-ResGen.read.1.tlog
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\GenerateResource-ResGen.write.1.tlog
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\DedicatedServer.exe
+\\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\DedicatedServer.pdb

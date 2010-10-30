@@ -376,6 +376,10 @@ namespace GameEntities
 				forceMoveVectorTimer--;
 		}
 
+        protected Boolean IsBlindable()
+        {
+            return true; //base.IsBlindable();
+        }
 		/// <summary>Overridden from <see cref="Engine.EntitySystem.Entity.Client_OnTick()"/>.</summary>
 		protected override void Client_OnTick()
 		{

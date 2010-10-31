@@ -25,6 +25,15 @@ C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\Game\obj\Debug\Game.
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Game\obj\Debug\GenerateResource-ResGen.write.1.tlog
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Game\obj\Debug\Game.exe
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\Game\obj\Debug\Game.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\Game.exe
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\Game.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\Game.xml
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Game\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Game\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Game\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Game\obj\Debug\Game.exe
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Game\obj\Debug\Game.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\Game.exe
 C:\Users\yoda\Desktop\gamedesign\Bin\Game.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\Game.xml

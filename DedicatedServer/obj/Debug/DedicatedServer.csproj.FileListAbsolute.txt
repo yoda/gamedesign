@@ -28,6 +28,16 @@ C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\DedicatedServer\obj\
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\GenerateResource-ResGen.write.1.tlog
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\DedicatedServer.exe
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\DedicatedServer\obj\Debug\DedicatedServer.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\DedicatedServer.exe
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\DedicatedServer.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\DedicatedServer.xml
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\DedicatedServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\DedicatedServer\obj\Debug\DedicatedServer.MainForm.resources
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\DedicatedServer\obj\Debug\DedicatedServer.Properties.Resources.resources
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\DedicatedServer\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\DedicatedServer\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\DedicatedServer\obj\Debug\DedicatedServer.exe
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\DedicatedServer\obj\Debug\DedicatedServer.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.exe
 C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\DedicatedServer.xml

@@ -16,6 +16,12 @@ C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameCommon\obj\Debug
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameCommon\obj\Debug\ResolveAssemblyReference.cache
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameCommon\obj\Debug\GameCommon.dll
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameCommon\obj\Debug\GameCommon.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\GameCommon.dll
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\GameCommon.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\GameCommon.xml
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\GameCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\GameCommon\obj\Debug\GameCommon.dll
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\GameCommon\obj\Debug\GameCommon.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.dll
 C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameCommon.xml

@@ -16,6 +16,12 @@ C:\NeoAxis\NeoAxis Engine Non-Commercial SDK 0.852\Game\Src\GameEntities\obj\Deb
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameEntities\obj\Debug\ResolveAssemblyReference.cache
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameEntities\obj\Debug\GameEntities.dll
 \\labs\lab-server\undergraduate\3\20381063\config\windows\Desktop\gamedesign22 - Copy\GameEntities\obj\Debug\GameEntities.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\GameEntities.dll
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\GameEntities.pdb
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\Bin\GameEntities.xml
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\GameEntities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\GameEntities\obj\Debug\GameEntities.dll
+C:\Users\yoda\Desktop\yoda-gamedesign-3de15e5\GameEntities\obj\Debug\GameEntities.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.dll
 C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.pdb
 C:\Users\yoda\Desktop\gamedesign\Bin\GameEntities.xml

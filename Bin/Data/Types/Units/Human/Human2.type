@@ -1,0 +1,99 @@
+type Human2
+{
+	class = PlayerCharacter
+	weaponAttachPosition = 0.4 -0.1 -0.1
+	weaponFPSAttachPosition = 0.4 -0.3 -0.5
+	optimalAttackDistanceRange = 0 3
+	walkAnimationVelocityMultiplier = 0.6
+	height = 1.7
+	radius = 0.35
+	bottomRadius = 0.2
+	walkMaxVelocity = 5
+	walkForce = 6000
+	flyControlMaxVelocity = 0
+	flyControlForce = 700
+	soundJump = "Types/Units/Rabbit/Jump.ogg"
+	allowPlayerControl = True
+	initialAI = DefaultGameCharacterAI
+	viewRadius = 70
+	lifeMax = 1
+	targetPriority = 1
+	substance = Flesh
+	allowEditorCreate = True
+	networkType = Synchronized
+	weapons
+	{
+		item
+		{
+			weaponType = SubmachineGun
+		}
+		item
+		{
+			weaponType = Shotgun
+		}
+		item
+		{
+			weaponType = Hammer
+		}
+	}
+	attachedObjects
+	{
+		mesh
+		{
+			meshName = Types\Units\Human\Human.mesh
+			castDynamicShadows = True
+			forceMaterial = NewMaterial
+			castStaticShadows = True
+			receiveStaticShadows = True
+			position = -0.2928487 0 -1.02195
+			boneSlot hand
+			{
+				bone = finger_middle.02.L
+			}
+			boneSlot head
+			{
+				bone = head
+				position = 0 0.235 -0.15
+			}
+			boneSlot torch
+			{
+				bone = hand.R.001
+				position = 0.17 0.08 0.05
+				rotation = 0.007596123 -0.08682408 -0.08682408 0.9924039
+			}
+			boneSlot modesty
+			{
+				bone = pelvis
+				position = 0 0.3 0.15
+			}
+		}
+		light
+		{
+			lightType = Spot
+			attenuationConstant = 0
+			attenuationLinear = 0.0005
+			attenuationQuadric = 0.001
+			spotlightInnerAngle = 20
+			spotlightOuterAngle = 25
+			alias = torchlight
+			boneSlot = torch
+		}
+		billboard
+		{
+			materialName = Torch
+			size = 0.13 0.13
+			cameraVisibleCheck = True
+			billboardType = PerpendicularCommon
+			commonDirection = 1 0 0
+			alias = torchbil
+			boneSlot = torch
+			rotation = -0.2164397 0 0 -0.976296
+		}
+		helper
+		{
+			alias = FPShead
+			boneSlot = head
+			scale = 0.05 0.05 0.05
+		}
+	}
+}

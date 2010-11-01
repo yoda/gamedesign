@@ -2,14 +2,14 @@ type = GameMap
 uin = 2
 classPrompt = GameMap
 gameType = None
+gameMusic = Sounds\Music\Game.ogg
 ambientLight = 0.2 0.2 0.2
-editorCameraPosition = 16.31659 -6.13976 23.9377
-editorCameraDirection = 3.061358 -1.034504
-shadowTechnique = None
+editorCameraPosition = -0.4855894 -2.067368 25.05727
+editorCameraDirection = 3.164566 -1.560796
 shadowColor = 0.75 0.75 0.75
-fov = 80
 logicSystemManager = 3
 name = GameMap_0
+shadowTechnique = None
 rootEditorLayer
 {
 }
@@ -22,6 +22,326 @@ entity
 	{
 		type = LogicClassManager
 		uin = 4
+		entity
+		{
+			type = LogicClass
+			uin = 37
+			className = startup
+			customScriptCodeCreated = True
+			entity
+			{
+				type = LogicDesignerMethod
+				uin = 36
+				actions = 66 63 33 38 43 48 53 56
+				methodName = startup
+				returnType = System.Void
+				parameters = 
+				isEntityEventMethod = False
+				entity
+				{
+					type = LogicCallStaticSystemMethodAction
+					uin = 33
+					className = CutSceneManager
+					methodName = PlayObjectAnimation
+					parameterActions = 34 35
+					parameterTypeNames
+					{
+						item
+						{
+							value = MapObject
+						}
+						item
+						{
+							value = String
+						}
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 34
+						relationships = 24
+						entity = 24
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 35
+						valueType = System.String
+						value = idle
+					}
+				}
+				entity
+				{
+					type = LogicCallStaticSystemMethodAction
+					uin = 38
+					className = CutSceneManager
+					methodName = PlayObjectAnimation
+					parameterActions = 58 42
+					parameterTypeNames
+					{
+						item
+						{
+							value = MapObject
+						}
+						item
+						{
+							value = String
+						}
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 39
+						relationships = 24
+						entity = 24
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 40
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 42
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 58
+						relationships = 25
+						entity = 25
+					}
+				}
+				entity
+				{
+					type = LogicCallStaticSystemMethodAction
+					uin = 43
+					className = CutSceneManager
+					methodName = PlayObjectAnimation
+					parameterActions = 41 47
+					parameterTypeNames
+					{
+						item
+						{
+							value = MapObject
+						}
+						item
+						{
+							value = String
+						}
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 44
+						relationships = 24
+						entity = 24
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 45
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 47
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 41
+						relationships = 26
+						entity = 26
+					}
+				}
+				entity
+				{
+					type = LogicCallStaticSystemMethodAction
+					uin = 48
+					className = CutSceneManager
+					methodName = PlayObjectAnimation
+					parameterActions = 46 52
+					parameterTypeNames
+					{
+						item
+						{
+							value = MapObject
+						}
+						item
+						{
+							value = String
+						}
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 49
+						relationships = 24
+						entity = 24
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 50
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 52
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 46
+						relationships = 27
+						entity = 27
+					}
+				}
+				entity
+				{
+					type = LogicCallStaticSystemMethodAction
+					uin = 53
+					className = CutSceneManager
+					methodName = PlayObjectAnimation
+					parameterActions = 51 57
+					parameterTypeNames
+					{
+						item
+						{
+							value = MapObject
+						}
+						item
+						{
+							value = String
+						}
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 54
+						relationships = 24
+						entity = 24
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 55
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 57
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 51
+						relationships = 28
+						entity = 28
+					}
+				}
+				entity
+				{
+					type = LogicCallStaticSystemMethodAction
+					uin = 56
+					className = CutSceneManager
+					methodName = PlayObjectAnimation
+					parameterActions = 61 62
+					parameterTypeNames
+					{
+						item
+						{
+							value = MapObject
+						}
+						item
+						{
+							value = String
+						}
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 59
+						relationships = 24
+						entity = 24
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 60
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicGetConstantValueAction
+						uin = 62
+						valueType = System.String
+						value = idle
+					}
+					entity
+					{
+						type = LogicCallGetEntityMethodAction
+						uin = 61
+						relationships = 29
+						entity = 29
+					}
+				}
+				entity
+				{
+					type = LogicCallStaticSystemMethodAction
+					uin = 63
+					className = CutSceneManager
+					propertyName = CutSceneEnable
+					dotPathAction = 64
+					entity
+					{
+						type = LogicAssignPropertyAction
+						uin = 64
+						valueAction = 65
+						entity
+						{
+							type = LogicGetConstantValueAction
+							uin = 65
+							valueType = System.Boolean
+							value = True
+						}
+					}
+				}
+				entity
+				{
+					type = LogicCallGetEntityMethodAction
+					uin = 66
+					relationships = 8
+					entity = 8
+					dotPathAction = 32
+					entity
+					{
+						type = LogicCallNonStaticMethodAction
+						uin = 32
+						methodName = AddTimer
+					}
+				}
+			}
+		}
 	}
 }
 entity
@@ -31,7 +351,9 @@ entity
 	classPrompt = Light
 	lightType = Point
 	diffuseColor = 1 1 1
+	diffusePower = 1
 	specularColor = 1 1 1
+	specularPower = 1
 	attenuationRangeAutomatic = True
 	attenuationRange = Infinity
 	attenuationConstant = 1
@@ -42,6 +364,7 @@ entity
 	spotlightFalloff = 1
 	castShadows = True
 	allowStaticLighting = False
+	allowDynamicLighting = True
 	position = 0.3874392 -1.393759 16.25432
 	name = Light_0
 }
@@ -58,6 +381,506 @@ entity
 	type = StaticMesh
 	uin = 7
 	classPrompt = StaticMesh
-	position = 0 0 0
+	position = 0 -0.1261845 -1.448689
 	meshName = Maps\MainMenu\StaticGeometry\Data.mesh
+}
+entity
+{
+	type = MapCameraCurve
+	uin = 8
+	classPrompt = MapCameraCurve
+	relationships = 13 14 15 16 17 18 19 20 21 9 66
+	fov = 0
+	curveType = UniformCubicSpline
+	points = 8 21 9 20 19 18 17 16 15 14 13
+	owner = 8
+	time = 0
+	position = 6.916844 -1.600199 0.5152168
+	name = MapCameraCurve_0
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 13
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 10
+	position = 6.916844 -1.600199 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 14
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 9
+	position = 6.684998 2.940908 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 15
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 8
+	position = 3.763828 5.43059 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 16
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 7
+	position = -0.8191299 5.586252 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 17
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 6
+	position = -5.860996 5.044174 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 18
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 5
+	position = -10.64423 2.859932 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 19
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 4
+	position = -10.57854 -2.363202 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 20
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 3
+	position = -5.631207 -4.668735 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 21
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 1
+	position = 4.023643 -4.099164 0.5152168
+}
+entity
+{
+	type = MapCameraCurvePoint
+	uin = 9
+	classPrompt = MapCameraCurvePoint
+	relationships = 8
+	fov = 0
+	owner = 8
+	time = 2
+	position = -0.3940727 -4.80863 0.5152168
+}
+entity
+{
+	type = Statue
+	uin = 10
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	position = -5.538283 4.279359 -0.4480827
+	name = Statue_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Statue
+	uin = 11
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	position = -4.976727 6.798967 -0.442422
+	name = Statue_1
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Statue
+	uin = 12
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	position = -1.96244 4.597919 -0.4440653
+	name = Statue_2
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Statue
+	uin = 22
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	position = 0.564826 7.23585 -0.4442407
+	name = Statue_3
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Statue
+	uin = 23
+	classPrompt = PlayerCharacter
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	position = 1.033296 3.111902 -0.4444763
+	name = Statue_4
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Human
+	uin = 24
+	classPrompt = PlayerCharacter
+	relationships = 34 39 44 49 54 59
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	initialAI = DefaultGameCharacterAI
+	position = -8.15727 -6.101232 -0.3413925
+	name = Human_0
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Human
+	uin = 25
+	classPrompt = PlayerCharacter
+	relationships = 58
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	initialAI = DefaultGameCharacterAI
+	position = -6.840704 -2.54157 -0.3429554
+	name = Human_1
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Human
+	uin = 26
+	classPrompt = PlayerCharacter
+	relationships = 41
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	initialAI = DefaultGameCharacterAI
+	position = -3.670083 -6.48338 -0.3437822
+	name = Human_2
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Human
+	uin = 27
+	classPrompt = PlayerCharacter
+	relationships = 46
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	initialAI = DefaultGameCharacterAI
+	position = -2.16139 -2.556256 -0.3413031
+	name = Human_3
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Human
+	uin = 28
+	classPrompt = PlayerCharacter
+	relationships = 51
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	initialAI = DefaultGameCharacterAI
+	position = 0.9522852 -2.339005 -0.3440795
+	name = Human_4
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = Human
+	uin = 29
+	classPrompt = PlayerCharacter
+	relationships = 61
+	contusionTimeRemaining = 0
+	playerTeam = SpectatorPlayer
+	pos = 0 0 0
+	intellectShouldDeleteAfterDetach = False
+	initialAI = DefaultGameCharacterAI
+	position = 3.604213 -6.181672 -0.3470466
+	name = Human_5
+	weapons
+	{
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+		item
+		{
+			exists = False
+			normalBulletCount = 0
+			normalMagazineCount = 0
+			alternativeBulletCount = 0
+			alternativeMagazineCount = 0
+		}
+	}
+}
+entity
+{
+	type = CutSceneManager
+	uin = 30
+	classPrompt = CutSceneManager
+}
+entity
+{
+	type = MapCamera
+	uin = 31
+	classPrompt = MapCamera
+	fov = 0
+	position = -1.418346 10.4916 -1.232236
+	name = MapCamera_0
 }
